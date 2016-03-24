@@ -5,9 +5,33 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprites name="Characters">
+      <sprite>sprites\spr_ninja_idle</sprite>
+      <sprite>sprites\spr_ninja_limping</sprite>
+      <sprite>sprites\spr_ninja_running</sprite>
+    </sprites>
+    <sprites name="Blocks">
+      <sprite>sprites\spr_grassblock</sprite>
+      <sprite>sprites\spr_dirtblock</sprite>
+    </sprites>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\Sky</background>
+  </backgrounds>
   <paths name="paths"/>
+  <objects name="objects">
+    <objects name="Characters">
+      <object>objects\obj_ninja</object>
+    </objects>
+    <objects name="Blocks">
+      <object>objects\obj_grassblock</object>
+      <object>objects\obj_dirtblock</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_testarea</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
