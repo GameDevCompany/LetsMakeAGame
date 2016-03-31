@@ -8,6 +8,8 @@
   <sprites name="sprites">
     <sprites name="Characters">
       <sprite>sprites\spr_ninja_idle</sprite>
+      <sprite>sprites\spr_ninja_punch</sprite>
+      <sprite>sprites\spr_ninja_roll</sprite>
       <sprite>sprites\spr_ninja_limping</sprite>
       <sprite>sprites\spr_ninja_running</sprite>
     </sprites>
@@ -20,6 +22,21 @@
     <background>background\Sky</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Character">
+      <script>scripts\Movement.gml</script>
+      <script>scripts\Collision.gml</script>
+      <script>scripts\GetControls_Keyboard.gml</script>
+      <script>scripts\GetControls_Gamepad.gml</script>
+      <script>scripts\Physics.gml</script>
+      <script>scripts\HandleAnimation.gml</script>
+      <script>scripts\Jump.gml</script>
+      <script>scripts\GetGamepad.gml</script>
+    </scripts>
+    <scripts name="System">
+      <script>scripts\Setup.gml</script>
+    </scripts>
+  </scripts>
   <objects name="objects">
     <objects name="Characters">
       <object>objects\obj_ninja</object>
@@ -28,6 +45,7 @@
       <object>objects\obj_grassblock</object>
       <object>objects\obj_dirtblock</object>
     </objects>
+    <object>objects\System</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_testarea</room>
