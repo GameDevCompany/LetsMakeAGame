@@ -8,13 +8,13 @@ if(horizontalSpeed != 0) {
     }
 }
 
-//Switching animation depending if character is moving
-if(attackKeyPressed) {
-  sprite_index = spr_ninja_punch;
+//Switching animation depending on character state.
+if(attackTimer > global.time) {
+  sprite_index = punchSprite;
 } else if(!grounded) {
-  sprite_index = spr_ninja_roll;
+  sprite_index = rollSprite;
 } else if(horizontalSpeed != 0) {
-  sprite_index = spr_ninja_running;
+  sprite_index = runningSprite;
 } else {
-  sprite_index = spr_ninja_idle;
+  sprite_index = idleSprite;
 }

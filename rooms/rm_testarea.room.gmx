@@ -89,7 +89,7 @@
     <instance objName="obj_grassblock" x="384" y="256" name="inst_A61FF1EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="416" y="256" name="inst_D5CE0C00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="448" y="256" name="inst_EA46A7B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ninja" x="352" y="160" name="inst_E7E22412" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ninja" x="288" y="256" name="inst_E7E22412" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

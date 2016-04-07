@@ -7,10 +7,13 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="Characters">
+      <sprite>sprites\spr_pirate_idle</sprite>
+      <sprite>sprites\spr_pirate_punch</sprite>
+      <sprite>sprites\spr_pirate_roll</sprite>
+      <sprite>sprites\spr_pirate_running</sprite>
       <sprite>sprites\spr_ninja_idle</sprite>
       <sprite>sprites\spr_ninja_punch</sprite>
       <sprite>sprites\spr_ninja_roll</sprite>
-      <sprite>sprites\spr_ninja_limping</sprite>
       <sprite>sprites\spr_ninja_running</sprite>
     </sprites>
     <sprites name="Blocks">
@@ -32,6 +35,9 @@
       <script>scripts\HandleAnimation.gml</script>
       <script>scripts\Jump.gml</script>
       <script>scripts\GetGamepad.gml</script>
+      <script>scripts\InitCharacter.gml</script>
+      <script>scripts\checkHealth.gml</script>
+      <script>scripts\Attack.gml</script>
     </scripts>
     <scripts name="System">
       <script>scripts\Setup.gml</script>

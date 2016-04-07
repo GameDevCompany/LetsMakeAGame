@@ -2,6 +2,8 @@
 grounded = false;
 
 //Apply gravity if terminal velocity has been reached
-if(verticalSpeed < 20) {
+maxVerticalSpeed = 20;
+
+if(verticalSpeed < maxVerticalSpeed) {
   verticalSpeed += grav;
 }
