@@ -7,14 +7,24 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="Characters">
-      <sprite>sprites\spr_pirate_idle</sprite>
-      <sprite>sprites\spr_pirate_punch</sprite>
-      <sprite>sprites\spr_pirate_roll</sprite>
-      <sprite>sprites\spr_pirate_running</sprite>
-      <sprite>sprites\spr_ninja_idle</sprite>
-      <sprite>sprites\spr_ninja_punch</sprite>
-      <sprite>sprites\spr_ninja_roll</sprite>
-      <sprite>sprites\spr_ninja_running</sprite>
+      <sprites name="pirate">
+        <sprite>sprites\spr_pirate_punch</sprite>
+        <sprite>sprites\spr_pirate_punch_mask</sprite>
+        <sprite>sprites\spr_pirate_roll</sprite>
+        <sprite>sprites\spr_pirate_crouch</sprite>
+        <sprite>sprites\spr_pirate_running</sprite>
+        <sprite>sprites\spr_pirate_idle</sprite>
+        <sprite>sprites\spr_pirate_crouch_walk</sprite>
+      </sprites>
+      <sprites name="ninja">
+        <sprite>sprites\spr_ninja_idle</sprite>
+        <sprite>sprites\spr_ninja_punch_mask</sprite>
+        <sprite>sprites\spr_ninja_running</sprite>
+        <sprite>sprites\spr_ninja_roll</sprite>
+        <sprite>sprites\spr_ninja_punch</sprite>
+        <sprite>sprites\spr_ninja_crouch_walk</sprite>
+        <sprite>sprites\spr_ninja_crouch</sprite>
+      </sprites>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\spr_grassblock</sprite>

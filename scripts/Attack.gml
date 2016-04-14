@@ -1,9 +1,15 @@
 if(attacked) {
-    var inst = collision_rectangle(x, y+5, x+(8*image_xscale), y+9, obj_ninja, false, true);
+    var mask = mask_index;
+    mask_index = asset_get_index("spr_" + characterType + "_punch_mask"); 
+    var inst = instance_place(x, y, all);
     if (inst != noone) {
-       with (inst) {
-         inst.HP--;
+       with(inst) {
+          if(object_get_name(object_index) == "obj_ninja") {
+            HP--;
+          }
        }
     }
+    mask_index = mask; 
+    
     attacked = false;
 }

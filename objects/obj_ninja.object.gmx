@@ -49,7 +49,10 @@
           <argument>
             <kind>1</kind>
             <string>checkHealth();
-GetControls_Gamepad();
+GetControls_Keyboard();
+
+
+
 Physics();
 Collision();
 Jump();

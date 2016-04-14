@@ -14,7 +14,15 @@ if(attackTimer > global.time) {
 } else if(!grounded) {
   sprite_index = rollSprite;
 } else if(horizontalSpeed != 0) {
-  sprite_index = runningSprite;
+  if(isCrouched && grounded) {
+    sprite_index = crouchWalkSprite;
+  } else { 
+    sprite_index = runningSprite;
+  }
 } else {
-  sprite_index = idleSprite;
+  if(isCrouched) {
+    sprite_index = crouchSprite;
+  } else {
+    sprite_index = idleSprite;
+  }
 }
