@@ -9,7 +9,8 @@ if(horizontalSpeed != 0) {
 }
 
 //Switching animation depending on character state.
-if(attackTimer > global.time) {
+
+if(attackTimer > global.time || throwKeyPressed) {
   sprite_index = punchSprite;
 } else if(!grounded) {
   sprite_index = rollSprite;

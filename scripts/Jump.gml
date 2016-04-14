@@ -15,8 +15,9 @@ if(lastTouchedGround + timeToIncreaseJump > global.time) {
 
 //Set rotation speed when not grounded
 if(!grounded) {
-  rotationSpeed -= horizontalSpeed * 3;
+  rotationSpeed = horizontalSpeed * 3;
 } else {
   rotationSpeed = 0;
+  image_angle = 0;
 }
-image_angle = rotationSpeed * global.timeScale;
+

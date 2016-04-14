@@ -18,9 +18,9 @@ gamepad_index = GetGamepad();
   instance_destroy();
 }*/
 if(gamepad_index == 0) {
-  characterType = "pirate";
-} else {
   characterType = "ninja";
+} else {
+  characterType = "pirate";
 }
 
 idleSprite = asset_get_index("spr_" + characterType + "_idle"); 

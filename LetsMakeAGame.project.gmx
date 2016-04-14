@@ -30,6 +30,9 @@
       <sprite>sprites\spr_grassblock</sprite>
       <sprite>sprites\spr_dirtblock</sprite>
     </sprites>
+    <sprites name="Weapons">
+      <sprite>sprites\Shuriken</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\Sky</background>
@@ -48,10 +51,16 @@
       <script>scripts\InitCharacter.gml</script>
       <script>scripts\checkHealth.gml</script>
       <script>scripts\Attack.gml</script>
+      <script>scripts\Throw.gml</script>
     </scripts>
     <scripts name="System">
       <script>scripts\Setup.gml</script>
     </scripts>
+    <scripts name="Weapons">
+      <script>scripts\InitThrowable.gml</script>
+      <script>scripts\Damageble.gml</script>
+    </scripts>
+    <script>scripts\Rotate.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Characters">
@@ -62,6 +71,9 @@
       <object>objects\obj_dirtblock</object>
     </objects>
     <object>objects\System</object>
+    <objects name="Weapons">
+      <object>objects\obj_shuriken</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_testarea</room>
