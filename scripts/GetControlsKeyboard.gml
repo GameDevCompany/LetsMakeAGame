@@ -18,5 +18,6 @@ jumpKeyPressed = keyboard_check(vk_space);
 attackKeyPressed = keyboard_check(ord('Z'));
 if(attackKeyPressed && attackTimer < global.time) {
   attacked = true;
+    image_index = 0;
   attackTimer = global.time + 250000;
 }

@@ -5,7 +5,7 @@ if(attacked) {
     if (inst != noone) {
        with(inst) {
           if(object_get_name(object_index) == "obj_ninja") {
-            HP--;
+            HP -= other.dmg;
           }
        }
     }

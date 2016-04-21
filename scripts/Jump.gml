@@ -15,7 +15,9 @@ if(lastTouchedGround + timeToIncreaseJump > global.time) {
 
 //Set rotation speed when not grounded
 if(!grounded) {
-  rotationSpeed = horizontalSpeed * 3;
+  if(characterType != "elemental") {
+    rotationSpeed = horizontalSpeed * 3;
+  }
 } else {
   rotationSpeed = 0;
   image_angle = 0;

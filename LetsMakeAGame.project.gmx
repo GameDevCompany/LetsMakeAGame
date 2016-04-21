@@ -25,6 +25,15 @@
         <sprite>sprites\spr_ninja_crouch_walk</sprite>
         <sprite>sprites\spr_ninja_crouch</sprite>
       </sprites>
+      <sprites name="dinosaur">
+        <sprite>sprites\spr_elemental_idle</sprite>
+        <sprite>sprites\spr_elemental_punch</sprite>
+        <sprite>sprites\spr_elemental_punch_mask</sprite>
+        <sprite>sprites\spr_elemental_crouch</sprite>
+        <sprite>sprites\spr_elemental_crouch_walk</sprite>
+        <sprite>sprites\spr_elemental_running</sprite>
+        <sprite>sprites\spr_elemental_roll</sprite>
+      </sprites>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\spr_grassblock</sprite>
@@ -42,25 +51,28 @@
     <scripts name="Character">
       <script>scripts\Movement.gml</script>
       <script>scripts\Collision.gml</script>
-      <script>scripts\GetControls_Keyboard.gml</script>
-      <script>scripts\GetControls_Gamepad.gml</script>
+      <script>scripts\GetControlsKeyboard.gml</script>
+      <script>scripts\GetControlsGamepad.gml</script>
       <script>scripts\Physics.gml</script>
       <script>scripts\HandleAnimation.gml</script>
       <script>scripts\Jump.gml</script>
       <script>scripts\GetGamepad.gml</script>
       <script>scripts\InitCharacter.gml</script>
-      <script>scripts\checkHealth.gml</script>
+      <script>scripts\CheckHealth.gml</script>
       <script>scripts\Attack.gml</script>
       <script>scripts\Throw.gml</script>
+      <script>scripts\TransformCharacter.gml</script>
     </scripts>
     <scripts name="System">
       <script>scripts\Setup.gml</script>
+      <script>scripts\shake_camera.gml</script>
     </scripts>
     <scripts name="Weapons">
       <script>scripts\InitThrowable.gml</script>
       <script>scripts\Damageble.gml</script>
     </scripts>
     <script>scripts\Rotate.gml</script>
+    <script>scripts\drawHealthBar.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Characters">
