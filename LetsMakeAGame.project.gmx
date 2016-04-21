@@ -74,6 +74,7 @@
     <objects name="Weapons">
       <object>objects\obj_shuriken</object>
     </objects>
+    <object>objects\obj_collidable</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_testarea</room>

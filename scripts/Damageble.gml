@@ -4,8 +4,8 @@ var inst = instance_place(x, y, all);
 if (inst != noone) {
    with(inst) {
       if(object_get_name(object_index) == "obj_ninja") {
-      show_debug_message("hit");
         HP--;
       }
    }
+   instance_destroy();
 }

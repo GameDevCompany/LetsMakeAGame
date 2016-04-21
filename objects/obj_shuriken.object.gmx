@@ -49,7 +49,7 @@
           <argument>
             <kind>1</kind>
             <string>Physics();
-Collision();
+//Collision();
 if(!grounded) {
   Rotate();
 }
