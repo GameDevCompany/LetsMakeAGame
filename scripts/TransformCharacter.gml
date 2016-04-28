@@ -17,7 +17,7 @@ if(attackHeld > 500000 && attackHeld < 2000000) {
   }
   attackHeld = 0;
 }
-
+/*
 if(characterType == "elemental") {
   HP -= delta_time/1500000;
-}
+}*/

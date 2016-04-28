@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="System" x="0" y="0" name="inst_F340A057" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ninja" x="192" y="256" name="inst_5B0F1953" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_character" x="192" y="256" name="inst_5B0F1953" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="160" y="288" name="inst_AF18BB55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="192" y="288" name="inst_E0C59CFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="192" y="288" name="inst_374DB2FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -89,7 +89,7 @@
     <instance objName="obj_grassblock" x="128" y="288" name="inst_A61FF1EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="416" y="256" name="inst_D5CE0C00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="448" y="256" name="inst_EA46A7B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ninja" x="288" y="256" name="inst_E7E22412" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_character" x="288" y="256" name="inst_E7E22412" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="544" y="288" name="inst_69AEBF3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="576" y="288" name="inst_80487055" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="608" y="288" name="inst_7FFDA8AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -111,6 +111,97 @@
     <instance objName="obj_grassblock" x="544" y="32" name="inst_EB83C0ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="544" y="64" name="inst_6B443758" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="576" y="96" name="inst_901E1BFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="0" name="inst_21C58DCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="32" name="inst_E2E0A123" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="64" name="inst_205195B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="64" name="inst_9966716F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="96" name="inst_3AEF6418" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="96" name="inst_22F86FDF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="128" name="inst_626A47F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="160" name="inst_8E81D0B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="192" name="inst_A6995601" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="224" name="inst_AF37DDC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="256" name="inst_A27792A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="288" name="inst_3D708C3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="352" name="inst_073BC88F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="320" name="inst_E6C55207" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="352" name="inst_6143F886" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="384" name="inst_01A9848A" locked="0" code="" scaleX="0.5" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="416" name="inst_70490883" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="384" name="inst_A62371BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="416" name="inst_D7952DBE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="448" name="inst_7AE072ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="0" y="480" name="inst_06930C84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="64" y="480" name="inst_A9AFFB47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="32" y="480" name="inst_FFF7D4DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="96" y="448" name="inst_5DB5A9FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="96" y="480" name="inst_5994CD52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="128" y="480" name="inst_8D0FF29C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="160" y="448" name="inst_3F48815F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="160" y="480" name="inst_7CD13CD3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="192" y="480" name="inst_BC9BBEF2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="224" y="480" name="inst_B54229BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="256" y="480" name="inst_2956EDBE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="288" y="480" name="inst_5AD777EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="320" y="480" name="inst_F670325E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="320" y="480" name="inst_DED1327C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="352" y="448" name="inst_DACEA440" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="352" y="480" name="inst_A8658F94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="384" y="480" name="inst_79ABDEF2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="416" y="480" name="inst_1F56E87B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="448" y="480" name="inst_90C8C0F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="480" y="480" name="inst_E054EC38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="480" y="480" name="inst_64CA178A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="512" y="480" name="inst_7813B024" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="544" y="480" name="inst_2F14F326" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="576" y="480" name="inst_29FD4275" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="576" y="480" name="inst_3814A245" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="608" y="448" name="inst_4FD3CC74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="608" y="480" name="inst_0E2DB22B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="608" y="480" name="inst_B3942904" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="640" y="448" name="inst_6596D5E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="608" y="480" name="inst_676C62E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="640" y="480" name="inst_D7CA79D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="608" y="416" name="inst_BE71023E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="640" y="384" name="inst_0F71DB72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="640" y="384" name="inst_D4D13871" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="640" y="416" name="inst_DFD628A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="640" y="320" name="inst_A595D782" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="640" y="352" name="inst_2B313DC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="608" y="288" name="inst_5B77BF8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="640" y="256" name="inst_503C88F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="640" y="288" name="inst_A6CDC94F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="640" y="64" name="inst_A450511E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="640" y="96" name="inst_280FB3D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="640" y="0" name="inst_168BCF0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="640" y="0" name="inst_8F82E8F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="640" y="32" name="inst_213F246F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="576" y="0" name="inst_EC3379F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="32" y="0" name="inst_DCFB4AEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="64" y="0" name="inst_DFDC8851" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="96" y="0" name="inst_210543B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="96" y="0" name="inst_FF643168" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="128" y="0" name="inst_71B8A1EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="160" y="0" name="inst_F268606B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="192" y="0" name="inst_F415DD31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="224" y="0" name="inst_B64BBDCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="256" y="0" name="inst_B700D072" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="256" y="0" name="inst_5268856F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="256" y="0" name="inst_79CEC62C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="288" y="0" name="inst_0C3FD2D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="320" y="0" name="inst_162B9925" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="352" y="0" name="inst_6DA5D588" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="384" y="0" name="inst_D59B9022" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="416" y="0" name="inst_74EBFC0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="448" y="0" name="inst_17036EFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="448" y="0" name="inst_B2E168EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="448" y="0" name="inst_91BA37AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="480" y="0" name="inst_15E075B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="512" y="0" name="inst_52215273" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="544" y="0" name="inst_43FF5B5D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="608" y="0" name="inst_AACCADF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="608" y="32" name="inst_27AA3690" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dirtblock" x="608" y="64" name="inst_6BCBDEDD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

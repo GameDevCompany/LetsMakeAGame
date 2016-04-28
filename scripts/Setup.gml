@@ -5,3 +5,6 @@ for(var i = 0;i < gamepads_available;i++;) {
 }
 global.time = 0;
 global.timeScale = 1;
+global.lastIndex = 0;
+global.grav = 0.981;
+randomize();

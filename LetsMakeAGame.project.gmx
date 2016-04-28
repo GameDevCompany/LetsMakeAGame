@@ -8,24 +8,36 @@
   <sprites name="sprites">
     <sprites name="Characters">
       <sprites name="pirate">
+        <sprite>sprites\spr_pirate_idle</sprite>
+        <sprite>sprites\spr_pirate_running</sprite>
         <sprite>sprites\spr_pirate_punch</sprite>
         <sprite>sprites\spr_pirate_punch_mask</sprite>
         <sprite>sprites\spr_pirate_roll</sprite>
         <sprite>sprites\spr_pirate_crouch</sprite>
-        <sprite>sprites\spr_pirate_running</sprite>
-        <sprite>sprites\spr_pirate_idle</sprite>
         <sprite>sprites\spr_pirate_crouch_walk</sprite>
+        <sprites name="parts">
+          <sprite>sprites\spr_pirate_head</sprite>
+          <sprite>sprites\spr_pirate_body</sprite>
+          <sprite>sprites\spr_pirate_arm</sprite>
+          <sprite>sprites\spr_pirate_leg</sprite>
+        </sprites>
       </sprites>
       <sprites name="ninja">
         <sprite>sprites\spr_ninja_idle</sprite>
-        <sprite>sprites\spr_ninja_punch_mask</sprite>
         <sprite>sprites\spr_ninja_running</sprite>
-        <sprite>sprites\spr_ninja_roll</sprite>
         <sprite>sprites\spr_ninja_punch</sprite>
-        <sprite>sprites\spr_ninja_crouch_walk</sprite>
+        <sprite>sprites\spr_ninja_punch_mask</sprite>
+        <sprite>sprites\spr_ninja_roll</sprite>
         <sprite>sprites\spr_ninja_crouch</sprite>
+        <sprite>sprites\spr_ninja_crouch_walk</sprite>
+        <sprites name="parts">
+          <sprite>sprites\spr_ninja_head</sprite>
+          <sprite>sprites\spr_ninja_body</sprite>
+          <sprite>sprites\spr_ninja_arm</sprite>
+          <sprite>sprites\spr_ninja_leg</sprite>
+        </sprites>
       </sprites>
-      <sprites name="dinosaur">
+      <sprites name="elemental">
         <sprite>sprites\spr_elemental_idle</sprite>
         <sprite>sprites\spr_elemental_punch</sprite>
         <sprite>sprites\spr_elemental_punch_mask</sprite>
@@ -34,6 +46,7 @@
         <sprite>sprites\spr_elemental_running</sprite>
         <sprite>sprites\spr_elemental_roll</sprite>
       </sprites>
+      <sprite>sprites\nocollision</sprite>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\spr_grassblock</sprite>
@@ -50,6 +63,7 @@
   <scripts name="scripts">
     <scripts name="Character">
       <script>scripts\Movement.gml</script>
+      <script>scripts\Rotate.gml</script>
       <script>scripts\Collision.gml</script>
       <script>scripts\GetControlsKeyboard.gml</script>
       <script>scripts\GetControlsGamepad.gml</script>
@@ -66,17 +80,21 @@
     <scripts name="System">
       <script>scripts\Setup.gml</script>
       <script>scripts\shake_camera.gml</script>
+      <script>scripts\GetPlayerIndex.gml</script>
     </scripts>
     <scripts name="Weapons">
       <script>scripts\InitThrowable.gml</script>
       <script>scripts\Damageble.gml</script>
     </scripts>
-    <script>scripts\Rotate.gml</script>
     <script>scripts\drawHealthBar.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\uiFont</font>
+  </fonts>
   <objects name="objects">
     <objects name="Characters">
-      <object>objects\obj_ninja</object>
+      <object>objects\obj_character</object>
+      <object>objects\obj_bodypart</object>
     </objects>
     <objects name="Blocks">
       <object>objects\obj_grassblock</object>

@@ -4,8 +4,11 @@ if(attacked) {
     var inst = instance_place(x, y, all);
     if (inst != noone) {
        with(inst) {
-          if(object_get_name(object_index) == "obj_ninja") {
+          if(object_get_name(object_index) == "obj_character") {
             HP -= other.dmg;
+            if(HP <= 0) {
+              global.scores[other.index] += 1;
+            }
           }
        }
     }

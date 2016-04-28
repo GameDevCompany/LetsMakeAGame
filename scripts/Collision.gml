@@ -27,4 +27,15 @@ if(place_meeting(x,y,obj_collidable)) {
   if(moveY < maxVerticalSpeed) {
     y -= moveY;
   }
+  
+  
+  var moveY = 1;
+  while(place_meeting(x,y+moveY,obj_collidable) && moveY < 20) {
+     moveY += 1;
+  }
+  if(moveY < maxVerticalSpeed) {
+    y += moveY;
+  }
 }
+
+

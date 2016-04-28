@@ -1,16 +1,27 @@
 verticalSpeed = 0;
 horizontalSpeed = 0;
 movementSpeed = 5;
-grav = 0.981;
-jumpSpeed = 2;
+jumpSpeed = 3;
 state = "idle";
 rotationSpeed = 0;
-HP = 30;
+HP = 1;
 maxHP = HP;
 isCrouched = false;
+timeOfDeath = 0;
+speedFactor = 1;
+
 dmg = 1;
 image_speed = 0.2;
 
+
+enum characterStates {
+  alive,
+  dead
+}
+
+state = characterStates.alive;
+
+index = GetPlayerIndex();
 
 gamepad_index = GetGamepad();
 /*if(gamepad_index == -100) {
