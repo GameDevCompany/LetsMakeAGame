@@ -1,13 +1,17 @@
-var timeToIncreaseJump = 250000;
+var timeToIncreaseJump = 500000;
+
+if(hit) {
+  lastTouchedGround = 0;
+}
 
 if(grounded) {
-  verticalSpeed = jumpKeyPressed * -jumpSpeed;
+  //verticalSpeed = jumpKeyPressed * -jumpSpeed;
   lastTouchedGround = global.time;
-} 
+}
 
 if(lastTouchedGround + timeToIncreaseJump > global.time) {
   if(jumpKeyPressed) {
-    verticalSpeed = -jumpSpeed * 5;
+    verticalSpeed = -jumpSpeed;
   } else {
     lastTouchedGround = 0;
   }

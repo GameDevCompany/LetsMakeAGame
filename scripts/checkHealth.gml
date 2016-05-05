@@ -4,31 +4,23 @@ if(HP <= 0 && state != characterStates.dead) {
   visible = false;
   temp_mask = mask_index;
   mask_index = nocollision;
-  with(instance_create(x,y,obj_bodypart)) {
-    part = "head";
-    characterType = other.characterType;
+  bodyparts[0] = "head";
+  bodyparts[1] = "body";
+  bodyparts[2] = "arm";
+  bodyparts[3] = "arm";
+  bodyparts[4] = "leg";
+  bodyparts[5] = "leg";
+  for(i = 0; i < array_length_1d(bodyparts); i++;) {
+    with(instance_create(x,y,obj_bodypart)) {
+      part = other.bodyparts[other.i];
+      characterType = other.characterType;
+      created_on = get_timer();
+    }
   }
-  with(instance_create(x,y,obj_bodypart)) {
-    part = "body";
-    characterType = other.characterType;
+  repeat(50)
+  {
+    part_particles_create(global.particleSystem, x, y, global.bloodParticles, 1);
   }
-  with(instance_create(x,y,obj_bodypart)) {
-    part = "arm";
-    characterType = other.characterType;
-  }
-  with(instance_create(x,y,obj_bodypart)) {
-    part = "arm";
-    characterType = other.characterType;
-  }
-  with(instance_create(x,y,obj_bodypart)) {
-    part = "leg";
-    characterType = other.characterType;
-  }
-  with(instance_create(x,y,obj_bodypart)) {
-    part = "leg";
-    characterType = other.characterType;
-  }
-   
 }
 
 if(state == characterStates.dead && timeOfDeath + 5000000  < get_timer()) {

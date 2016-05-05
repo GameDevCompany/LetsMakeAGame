@@ -81,12 +81,16 @@
       <script>scripts\Setup.gml</script>
       <script>scripts\shake_camera.gml</script>
       <script>scripts\GetPlayerIndex.gml</script>
+      <script>scripts\draw_text_outlined.gml</script>
     </scripts>
     <scripts name="Weapons">
       <script>scripts\InitThrowable.gml</script>
       <script>scripts\Damageble.gml</script>
     </scripts>
     <script>scripts\drawHealthBar.gml</script>
+    <scripts name="particles">
+      <script>scripts\particles.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\uiFont</font>

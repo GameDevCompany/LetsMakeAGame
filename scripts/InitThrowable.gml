@@ -4,3 +4,4 @@ movementSpeed = 5;
 grav = 0.4;
 rotationSpeed = 10;
 grounded = false;
+hit = false;

@@ -78,10 +78,13 @@ if(keyboard_check_released(ord('R'))) {
           <argument>
             <kind>1</kind>
             <string>draw_set_font(uiFont);
+draw_set_colour(c_black);
 for (var i = 1; i &lt; array_length_1d(global.scores); i++;)
 {
-  draw_text(10, -11 + (i * 21),"Player " + string(i) + ": " + string(global.scores[i]));
+  var textString = "Player " + string(i) + ": " + string(global.scores[i]);
+  draw_text_outlined(15, -6 + (i * 21),textString,c_white,c_black);
 }
+
 </string>
           </argument>
         </arguments>

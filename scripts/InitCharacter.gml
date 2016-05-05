@@ -1,7 +1,7 @@
 verticalSpeed = 0;
 horizontalSpeed = 0;
 movementSpeed = 5;
-jumpSpeed = 3;
+jumpSpeed = 7.5;
 state = "idle";
 rotationSpeed = 0;
 HP = 1;
@@ -9,7 +9,7 @@ maxHP = HP;
 isCrouched = false;
 timeOfDeath = 0;
 speedFactor = 1;
-
+hit = false;
 dmg = 1;
 image_speed = 0.2;
 
