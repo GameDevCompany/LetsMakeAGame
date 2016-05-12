@@ -10,3 +10,4 @@ global.grav = 0.981;
 global.particleSystem = part_system_create();
 particles();
 randomize();
+

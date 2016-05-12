@@ -1,9 +1,6 @@
 var object = obj_grassblock;
 hit = false;
 
-
-
-
 //Vertical collision
 if(place_meeting(x,y + verticalSpeed,obj_collidable)) {
   while(!place_meeting(x,y+sign(verticalSpeed),obj_collidable)) {
@@ -22,11 +19,6 @@ if(place_meeting(x + horizontalSpeed,y,obj_collidable)) {
   hit = true;
   horizontalSpeed = 0;
 }
-
-
-
-
-
 
 if(place_meeting(x,y,obj_collidable)) {
   var moveY = 1;
@@ -64,6 +56,7 @@ if(place_meeting(x,y,obj_collidable)) {
 
 //Check grounded
 if(place_meeting(x,y + 1,obj_collidable)) {
-  grounded = true;
+    grounded = true;
+    
 }
 

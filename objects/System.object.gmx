@@ -51,7 +51,7 @@
           <argument>
             <kind>1</kind>
             <string>global.time += global.timeScale * delta_time;
-
+global.timeScale = 1;
 if(keyboard_check_released(ord('R'))) {
   room_goto ( rm_testarea );
 }

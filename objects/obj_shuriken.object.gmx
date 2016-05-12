@@ -49,11 +49,11 @@
           <argument>
             <kind>1</kind>
             <string>Physics();
-//Collision();
+Damageble();
+Collision();
 if(!grounded) {
   Rotate();
 }
-Damageble();
 Movement();
 </string>
           </argument>

@@ -2,9 +2,10 @@ verticalSpeed = 0;
 horizontalSpeed = 0;
 movementSpeed = 5;
 jumpSpeed = 7.5;
+lastGroundSpeed = 0;
 state = "idle";
 rotationSpeed = 0;
-HP = 1;
+HP = 4;
 maxHP = HP;
 isCrouched = false;
 timeOfDeath = 0;
@@ -13,6 +14,7 @@ hit = false;
 dmg = 1;
 image_speed = 0.2;
 
+damageColor = 0;
 
 enum characterStates {
   alive,

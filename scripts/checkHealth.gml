@@ -17,10 +17,10 @@ if(HP <= 0 && state != characterStates.dead) {
       created_on = get_timer();
     }
   }
-  repeat(50)
+  /*repeat(50)
   {
     part_particles_create(global.particleSystem, x, y, global.bloodParticles, 1);
-  }
+  }*/
 }
 
 if(state == characterStates.dead && timeOfDeath + 5000000  < get_timer()) {
@@ -33,7 +33,8 @@ if(state == characterStates.dead && timeOfDeath + 5000000  < get_timer()) {
     x = random_range(0,view_wview[0]);
     y = random_range(0,view_hview[0]);
   }
-  
+  horizontalSpeed = 0;
+  verticalSpeed = 0;
   visible = true;
   state = characterStates.alive;
 }

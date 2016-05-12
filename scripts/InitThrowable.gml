@@ -5,3 +5,6 @@ grav = 0.4;
 rotationSpeed = 10;
 grounded = false;
 hit = false;
+dmg = 1;
+playerIndex = 0;
+destroyInstance = 0;

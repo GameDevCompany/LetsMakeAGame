@@ -17,6 +17,9 @@ if(attackHeld > 500000 && attackHeld < 2000000) {
   }
   attackHeld = 0;
 }
+
+image_speed = global.timeScale * 0.2;
+
 /*
 if(characterType == "elemental") {
   HP -= delta_time/1500000;

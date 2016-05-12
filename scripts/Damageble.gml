@@ -1,11 +1,11 @@
 //show_debug_message("frame");
-
-var inst = instance_place(x, y, all);
+var inst = instance_place(x+horizontalSpeed, y+verticalSpeed, all);
+doDamage(inst,dmg,playerIndex,x,y);
 if (inst != noone) {
-   with(inst) {
-      if(object_get_name(object_index) == "obj_ninja") {
-        HP--;
-      }
-   }
-   instance_destroy();
+  if(destroyInstance == 0) {
+    destroyInstance = global.time + 5000000;
+  }
+}
+if(global.time > destroyInstance && destroyInstance != 0) {
+  instance_destroy();
 }

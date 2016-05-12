@@ -86,6 +86,7 @@
     <scripts name="Weapons">
       <script>scripts\InitThrowable.gml</script>
       <script>scripts\Damageble.gml</script>
+      <script>scripts\doDamage.gml</script>
     </scripts>
     <script>scripts\drawHealthBar.gml</script>
     <scripts name="particles">
