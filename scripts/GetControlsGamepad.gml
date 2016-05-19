@@ -20,22 +20,17 @@ if(crouching == 1)  {
 }
 
 //Jumping
-jumpKeyPressed = gamepad_button_check(gamepad_index, gp_face1);
-
+jumpKeyHeld = gamepad_button_check(gamepad_index, gp_face1);
+jumpKeyPressed = gamepad_button_check_pressed(gamepad_index, gp_face1);
 //Throw
 throwKeyPressed = gamepad_button_check_pressed(gamepad_index, gp_face4);
 
 //Attacking
-var attackKeyPressed = gamepad_button_check_pressed(gamepad_index, gp_face3);
-if(attackKeyPressed && attackTimer < global.time) {
-  attacked = true;
-  attackTimer = global.time + 250000;
-}
-var attackKeyHold = gamepad_button_check(gamepad_index, gp_face3);
+attackKeyPressed = gamepad_button_check_pressed(gamepad_index, gp_face3);
+attackKeyHold = gamepad_button_check(gamepad_index, gp_face3);
 if(attackKeyHold) {
   attackHeld += global.timeScale * delta_time;
 } else {
   attackHeld = 0;
 }
-
 

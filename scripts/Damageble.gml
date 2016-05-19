@@ -1,6 +1,9 @@
 //show_debug_message("frame");
 var inst = instance_place(x+horizontalSpeed, y+verticalSpeed, all);
-doDamage(inst,dmg,playerIndex,x,y);
+var didDamage = doDamage(inst,dmg,playerIndex,x,y);
+if(didDamage) {
+  instance_destroy();
+}
 if (inst != noone) {
   if(destroyInstance == 0) {
     destroyInstance = global.time + 5000000;

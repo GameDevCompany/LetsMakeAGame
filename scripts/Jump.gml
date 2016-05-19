@@ -1,23 +1,18 @@
 var timeToIncreaseJump = 500000;
-
 if(hit) {
   lastTouchedGround = 0;
   lastGroundSpeed = 0;
 }
-
-if(grounded) {
-  //verticalSpeed = jumpKeyPressed * -jumpSpeed;
+if(jumpKeyPressed && grounded) {
   lastTouchedGround = global.time;
 }
-
 if(lastTouchedGround + timeToIncreaseJump > global.time) {
-  if(jumpKeyPressed) {
+  if(jumpKeyHeld) {
     verticalSpeed = -jumpSpeed;
   } else {
     lastTouchedGround = 0;
   }
 }
-
 //Set rotation speed when not grounded
 if(!grounded) {
   if(characterType != "elemental") {

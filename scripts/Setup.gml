@@ -8,6 +8,9 @@ global.timeScale = 1;
 global.lastIndex = 0;
 global.grav = 0.981;
 global.particleSystem = part_system_create();
+global.objectLimit = 1000;
+global.amountOfObjects = 0;
+
 particles();
 randomize();
 

@@ -1,11 +1,13 @@
 
 //Flip animation depending on direction of movement
-if(horizontalSpeed != 0) {
-    if(horizontalSpeed < 0) {
-      image_xscale = -1;
-    } else {
-      image_xscale = 1;
-    }
+if(grounded) {
+  if(horizontalSpeed != 0) {
+      if(horizontalSpeed < 0) {
+        image_xscale = -1;
+      } else {
+        image_xscale = 1;
+      }
+  }
 }
 
 //Switching animation depending on character state.

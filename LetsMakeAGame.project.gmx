@@ -47,6 +47,7 @@
         <sprite>sprites\spr_elemental_roll</sprite>
       </sprites>
       <sprite>sprites\nocollision</sprite>
+      <sprite>sprites\spr_slash</sprite>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\spr_grassblock</sprite>
@@ -82,6 +83,7 @@
       <script>scripts\shake_camera.gml</script>
       <script>scripts\GetPlayerIndex.gml</script>
       <script>scripts\draw_text_outlined.gml</script>
+      <script>scripts\MoveTowards.gml</script>
     </scripts>
     <scripts name="Weapons">
       <script>scripts\InitThrowable.gml</script>
@@ -110,6 +112,7 @@
       <object>objects\obj_shuriken</object>
     </objects>
     <object>objects\obj_collidable</object>
+    <object>objects\obj_slash</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_testarea</room>

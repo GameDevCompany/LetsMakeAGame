@@ -8,6 +8,7 @@ rotationSpeed = 0;
 HP = 4;
 maxHP = HP;
 isCrouched = false;
+  doSmoke = false;
 timeOfDeath = 0;
 speedFactor = 1;
 hit = false;
@@ -29,7 +30,10 @@ gamepad_index = GetGamepad();
 /*if(gamepad_index == -100) {
   instance_destroy();
 }*/
-if(gamepad_index == 0) {
+if(gamepad_index == -100) {
+  //image_alpha = 0.5; 
+}
+if(gamepad_index == 1) {
   characterType = "ninja";
 } else {
   characterType = "pirate";

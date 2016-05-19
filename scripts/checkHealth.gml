@@ -11,10 +11,13 @@ if(HP <= 0 && state != characterStates.dead) {
   bodyparts[4] = "leg";
   bodyparts[5] = "leg";
   for(i = 0; i < array_length_1d(bodyparts); i++;) {
-    with(instance_create(x,y,obj_bodypart)) {
-      part = other.bodyparts[other.i];
-      characterType = other.characterType;
-      created_on = get_timer();
+    if(global.amountOfObjects < global.objectLimit) {
+      global.amountOfObjects++;
+      with(instance_create(x,y,obj_bodypart)) {
+        part = other.bodyparts[other.i];
+        characterType = other.characterType;
+        created_on = get_timer();
+      }
     }
   }
   /*repeat(50)
