@@ -56,6 +56,10 @@
     <sprites name="Weapons">
       <sprite>sprites\Shuriken</sprite>
     </sprites>
+    <sprites name="UI">
+      <sprite>sprites\spr_panel</sprite>
+      <sprite>sprites\spr_winner</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\Sky</background>
@@ -63,20 +67,21 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Character">
+      <script>scripts\InitCharacter.gml</script>
+      <script>scripts\GetControlsKeyboard.gml</script>
+      <script>scripts\GetControlsGamepad.gml</script>
       <script>scripts\Movement.gml</script>
       <script>scripts\Rotate.gml</script>
       <script>scripts\Collision.gml</script>
-      <script>scripts\GetControlsKeyboard.gml</script>
-      <script>scripts\GetControlsGamepad.gml</script>
       <script>scripts\Physics.gml</script>
       <script>scripts\HandleAnimation.gml</script>
       <script>scripts\Jump.gml</script>
       <script>scripts\GetGamepad.gml</script>
-      <script>scripts\InitCharacter.gml</script>
       <script>scripts\CheckHealth.gml</script>
       <script>scripts\Attack.gml</script>
       <script>scripts\Throw.gml</script>
       <script>scripts\TransformCharacter.gml</script>
+      <script>scripts\ResetCharacter.gml</script>
     </scripts>
     <scripts name="System">
       <script>scripts\Setup.gml</script>
@@ -84,6 +89,8 @@
       <script>scripts\GetPlayerIndex.gml</script>
       <script>scripts\draw_text_outlined.gml</script>
       <script>scripts\MoveTowards.gml</script>
+      <script>scripts\GameEnd.gml</script>
+      <script>scripts\ResultScreen.gml</script>
     </scripts>
     <scripts name="Weapons">
       <script>scripts\InitThrowable.gml</script>
@@ -93,6 +100,9 @@
     <script>scripts\drawHealthBar.gml</script>
     <scripts name="particles">
       <script>scripts\particles.gml</script>
+    </scripts>
+    <scripts name="GameModes">
+      <script>scripts\GameMode_DeathMatch.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -113,9 +123,14 @@
     </objects>
     <object>objects\obj_collidable</object>
     <object>objects\obj_slash</object>
+    <objects name="UI">
+      <object>objects\obj_ui_panel</object>
+      <object>objects\obj_ui_winner</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_testarea</room>
+    <room>rooms\rm_result</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

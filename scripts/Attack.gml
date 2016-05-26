@@ -3,10 +3,11 @@ if(attackKeyPressed && attackTimer < global.time) {
   attackTimer = global.time + 250000;
   
   var flipX = 180 * ((image_xscale*0.5)-0.5);
-  var dash = MoveTowards(image_angle + flipX, 20);
+  var dash = MoveTowards(image_angle + flipX, 10);
+
   horizontalSpeed += dash[0];
   verticalSpeed += dash[1];
-    
+  lastGroundSpeed += dash[0];
   var inst = instance_create(x,y,obj_slash);
   with(inst) {
     depth = other.depth - 1;
@@ -15,8 +16,6 @@ if(attackKeyPressed && attackTimer < global.time) {
     parent = other.id;
   }
 }
-
-
 
 if(attacked) {
     var mask = mask_index;

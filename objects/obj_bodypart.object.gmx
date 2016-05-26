@@ -87,10 +87,10 @@ if(created_on + particleDelay &gt; get_timer()) {
   part_type_life(bloodSpurtParticle, room_speed*1, room_speed*1.2);
   part_particles_create(global.particleSystem, x, y, bloodSpurtParticle, 1);
 }
-/*
+
 if(created_on + 30000000 &lt; get_timer()) {
   instance_destroy();
-}*/
+}
 
 </string>
           </argument>

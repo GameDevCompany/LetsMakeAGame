@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>15391148</colour>
   <showcolour>-1</showcolour>
-  <code>Setup();</code>
+  <code></code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -53,6 +53,7 @@
   <instances>
     <instance objName="System" x="0" y="0" name="inst_F340A057" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_character" x="544" y="128" name="inst_5B0F1953" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_character" x="160" y="128" name="inst_E7E22412" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="128" y="160" name="inst_AF18BB55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="192" y="160" name="inst_E0C59CFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="160" y="160" name="inst_374DB2FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -67,7 +68,6 @@
     <instance objName="obj_grassblock" x="512" y="352" name="inst_007EEFA2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="544" y="352" name="inst_49C9B9FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="96" y="160" name="inst_A61FF1EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_character" x="160" y="128" name="inst_E7E22412" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="480" y="160" name="inst_5975D250" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="512" y="160" name="inst_11460259" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grassblock" x="544" y="160" name="inst_A5C9AE56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

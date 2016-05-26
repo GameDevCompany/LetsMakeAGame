@@ -13,13 +13,9 @@ if (inst != noone) {
           global.scores[playerIndex] += 1;
         }
         damageColor = 255;
-        /*repeat(50)
-        {
-          part_particles_create(global.particleSystem, x, y, global.bloodParticles, 1);
-        }*/
         
         var flipX = 180 * ((other.image_xscale*0.5)-0.5);
-        var dash = MoveTowards(other.image_angle + flipX + (10*other.image_xscale), 40);
+        var dash = MoveTowards(other.image_angle + flipX + (10*other.image_xscale), 19);
         horizontalSpeed += dash[0];
         verticalSpeed += dash[1];
         

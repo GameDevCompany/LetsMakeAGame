@@ -1,11 +1,11 @@
 //Take left joystick from gamepad and apply it to horizontal speed.
-horizontalSpeed *= 0.4;
+horizontalSpeed *= 0.5;
 horizontalSpeed += movementSpeed * round(gamepad_axis_value(gamepad_index,gp_axislh));
-var tempSpeed = floor(abs(horizontalSpeed));
-horizontalSpeed = sign(horizontalSpeed)*tempSpeed;
+if(horizontalSpeed < 1 && horizontalSpeed > -1) {
+  horizontalSpeed = 0;
+}
 
 // slowmotion
-//if(index == 1) {
 var timebutton = clamp(1-gamepad_button_value(gamepad_index,gp_shoulderrb),0.2,1);
 if(global.timeScale > timebutton) {
   global.timeScale = timebutton;

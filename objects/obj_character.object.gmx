@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>obj_collidable</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -31,6 +31,31 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(state != characterStates.dead) {
+  GetControlsGamepad(); //Gets movement input from gamepad
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -48,19 +73,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>CheckHealth();
-if(state != characterStates.dead) {
-  GetControlsGamepad(); //Gets movement input from gamepad
-  TransformCharacter(); //Transforms character to elemental form
-  Physics(); //Applies gravity
-  Collision(); //Checks for Collision
-  
-  Jump();
-  Rotate();
-  HandleAnimation();
-  Movement();
-  Attack();
-  Throw();
+            <string>if(global.inGame) {
+  CheckHealth();
+  if(state != characterStates.dead) {
+    TransformCharacter(); //Transforms character to elemental form
+    Physics(); //Applies gravity
+    Collision(); //Checks for Collision
+    Jump();
+    Rotate();
+    HandleAnimation();
+    Attack();
+    Throw();
+    Movement();
+  }
+} else {
+  ResetCharacter();
 }
 </string>
           </argument>
@@ -107,8 +134,9 @@ if(state != characterStates.dead) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>drawHealthBar();
-
+            <string>if(global.inGame) {
+  drawHealthBar();
+}
 </string>
           </argument>
         </arguments>
@@ -132,20 +160,22 @@ if(state != characterStates.dead) {
           <argument>
             <kind>1</kind>
             <string>if(damageColor &gt; 0) {
-  damageColor -= 40;
+  damageColor -= 10;
   if(damageColor &lt; 0) {
     damageColor = 0;
   }
 }
+
 image_blend = make_colour_hsv(0, damageColor, 255);
 draw_self();
+
 </string>
           </argument>
         </arguments>
       </action>
     </event>
   </events>
-  <PhysicsObject>-1</PhysicsObject>
+  <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
@@ -156,8 +186,5 @@ draw_self();
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints>
-    <point>16,16</point>
-    <point>16,16</point>
-  </PhysicsShapePoints>
+  <PhysicsShapePoints/>
 </object>

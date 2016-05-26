@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -55,12 +55,16 @@ global.timeScale = 1;
 if(keyboard_check_released(ord('R'))) {
   room_goto ( rm_testarea );
 }
+
+scriptToCall = asset_get_index("GameMode_"+string(global.gameMode));
+script_execute(scriptToCall);
+
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="7" enumb="3">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -77,14 +81,7 @@ if(keyboard_check_released(ord('R'))) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(uiFont);
-draw_set_colour(c_black);
-for (var i = 1; i &lt; array_length_1d(global.scores); i++;)
-{
-  var textString = "Player " + string(i) + ": " + string(global.scores[i]);
-  draw_text_outlined(15, -6 + (i * 21),textString,c_white,c_black);
-}
-
+            <string>GameEnd();
 </string>
           </argument>
         </arguments>

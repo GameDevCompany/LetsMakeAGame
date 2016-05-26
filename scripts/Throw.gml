@@ -1,4 +1,4 @@
-if(throwKeyPressed) {
+/*if(throwKeyPressed) {
   var flipX = 180 * ((image_xscale*0.5)-0.5);
   
   var throw = MoveTowards(image_angle + flipX, 20);
@@ -11,4 +11,4 @@ if(throwKeyPressed) {
     verticalSpeed = throwY * 1;
     playerIndex = other.index;
   }
-}
+}*/
