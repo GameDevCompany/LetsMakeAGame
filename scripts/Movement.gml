@@ -7,7 +7,7 @@ if(grounded && horizontalSpeed != 0) {
   part_particles_create(global.particleSystem, x, bbox_bottom, global.dirtParticles, random_range(1,3));
 } 
 
-move_wrap(true, true, 0);
+move_wrap(global.hwrap, global.vwrap, 0);
 
 x += horizontalSpeed * global.timeScale;
 y += verticalSpeed * global.timeScale;

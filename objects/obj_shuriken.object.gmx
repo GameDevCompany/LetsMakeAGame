@@ -48,9 +48,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Physics();
+            <string>Gravity();
 Damageble();
-Collision();
+Collision(obj_collidable,true,true);
 if(!grounded) {
   Rotate();
 }

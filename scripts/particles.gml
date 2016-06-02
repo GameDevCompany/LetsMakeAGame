@@ -41,6 +41,18 @@ part_type_speed(global.dirtParticles, 1 , 2 , 0, 0);
 part_type_life(global.dirtParticles, room_speed*0.5, room_speed*1);
 
 
+global.crumbleParticles = part_type_create();
+part_type_shape(global.crumbleParticles, pt_shape_square);
+part_type_size(global.crumbleParticles, 0.02, 0.04, 0, 0);
+//part_type_scale(global.bloodParticles, 1, 1);
+part_type_colour1(global.crumbleParticles, c_maroon);
+part_type_alpha2(global.crumbleParticles, 1, 0);
+part_type_speed(global.crumbleParticles, 0, 1, 0, 0);
+part_type_direction(global.crumbleParticles, 200, 300, 0, 0);
+part_type_gravity(global.crumbleParticles, 0.50, 270);
+part_type_orientation(global.crumbleParticles, 0, 0, 0, 0, 1);
+//part_type_blend(global.bloodParticles, 0);
+part_type_life(global.crumbleParticles, room_speed*0.3, room_speed*0.5);
 
 
 

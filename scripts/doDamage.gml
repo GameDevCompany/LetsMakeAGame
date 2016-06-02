@@ -9,8 +9,8 @@ if (inst != noone) {
       if(object_get_name(object_index) == "obj_character") {
         HP -= dmg;
         didDamage = true;
-        if(HP <= 0) {
-          global.scores[playerIndex] += 1;
+        if(HP <= 0 && global.gameMode == "DeathMatch") {
+          IncreaseScore(playerIndex);
         }
         damageColor = 255;
         
@@ -18,7 +18,6 @@ if (inst != noone) {
         var dash = MoveTowards(other.image_angle + flipX + (10*other.image_xscale), 19);
         horizontalSpeed += dash[0];
         verticalSpeed += dash[1];
-        
       }
    }
 }

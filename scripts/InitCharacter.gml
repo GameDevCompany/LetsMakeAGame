@@ -16,7 +16,7 @@ grounded = false;
 dmg = 1;
 winner = false;
 image_speed = 0.2;
-
+maxVerticalSpeed = 20;
 damageColor = 0;
 
 enum characterStates {
@@ -30,14 +30,12 @@ index = GetPlayerIndex();
 global.players[index] = id;
 gamepad_index = GetGamepad();
 
-if(gamepad_index == 1) {
+if(gamepad_index == 0) {
   characterType = "ninja";
 } else {
   characterType = "pirate";
 }
-
 originalCharacter = characterType;
-
 attacked = false;
 
 //Timers for various purposes

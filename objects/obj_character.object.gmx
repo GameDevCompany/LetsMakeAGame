@@ -77,8 +77,8 @@
   CheckHealth();
   if(state != characterStates.dead) {
     TransformCharacter(); //Transforms character to elemental form
-    Physics(); //Applies gravity
-    Collision(); //Checks for Collision
+    Gravity(); //Applies gravity
+    Collision(obj_collidable,true,true); //Checks for Collision
     Jump();
     Rotate();
     HandleAnimation();
@@ -86,9 +86,9 @@
     Throw();
     Movement();
   }
-} else {
+} /*else {
   ResetCharacter();
-}
+}*/
 </string>
           </argument>
         </arguments>

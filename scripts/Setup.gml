@@ -10,8 +10,9 @@ global.grav = 0.981;
 global.particleSystem = part_system_create();
 
 global.inGame = true;
-global.gameMode = "DeathMatch";
-
+global.gameMode = "Last";
+global.hwrap = true;
+global.vwrap = false;
 particles();
 randomize();
 

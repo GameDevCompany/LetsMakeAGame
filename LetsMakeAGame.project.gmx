@@ -66,14 +66,16 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\Gravity.gml</script>
+    <script>scripts\Collision.gml</script>
+    <script>scripts\doDamage.gml</script>
+    <script>scripts\Movement.gml</script>
+    <script>scripts\IncreaseScore.gml</script>
     <scripts name="Character">
       <script>scripts\InitCharacter.gml</script>
       <script>scripts\GetControlsKeyboard.gml</script>
       <script>scripts\GetControlsGamepad.gml</script>
-      <script>scripts\Movement.gml</script>
       <script>scripts\Rotate.gml</script>
-      <script>scripts\Collision.gml</script>
-      <script>scripts\Physics.gml</script>
       <script>scripts\HandleAnimation.gml</script>
       <script>scripts\Jump.gml</script>
       <script>scripts\GetGamepad.gml</script>
@@ -82,9 +84,11 @@
       <script>scripts\Throw.gml</script>
       <script>scripts\TransformCharacter.gml</script>
       <script>scripts\ResetCharacter.gml</script>
+      <script>scripts\KillCharacter.gml</script>
     </scripts>
     <scripts name="System">
       <script>scripts\Setup.gml</script>
+      <script>scripts\StartGame.gml</script>
       <script>scripts\shake_camera.gml</script>
       <script>scripts\GetPlayerIndex.gml</script>
       <script>scripts\draw_text_outlined.gml</script>
@@ -95,7 +99,6 @@
     <scripts name="Weapons">
       <script>scripts\InitThrowable.gml</script>
       <script>scripts\Damageble.gml</script>
-      <script>scripts\doDamage.gml</script>
     </scripts>
     <script>scripts\drawHealthBar.gml</script>
     <scripts name="particles">
@@ -103,6 +106,7 @@
     </scripts>
     <scripts name="GameModes">
       <script>scripts\GameMode_DeathMatch.gml</script>
+      <script>scripts\GameMode_Last.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -116,6 +120,7 @@
     <objects name="Blocks">
       <object>objects\obj_grassblock</object>
       <object>objects\obj_dirtblock</object>
+      <object>objects\rootObject</object>
     </objects>
     <object>objects\System</object>
     <objects name="Weapons">

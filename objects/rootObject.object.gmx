@@ -4,8 +4,8 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <persistent>0</persistent>
+  <parentName>obj_collidable</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,9 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Setup();
-
-
+            <string>verticalSpeed = 0;
+horizontalSpeed = 0;
+maxVerticalSpeed = 30;
+grounded = false;
+falling = false;
+stepTimer = 0;
+stepped = false;
+image_speed = 0.5;
 </string>
           </argument>
         </arguments>
@@ -50,38 +55,40 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.time += global.timeScale * delta_time;
-global.timeScale = 1;
-if(keyboard_check_released(ord('R'))) {
-  StartGame();
+            <string>if(global.gameMode == "Last") {
+  var inst = instance_place(x, y-1, obj_collidable);
+  if (inst != noone) { 
+    with(inst) {
+      if(object_get_name(object_index) == "obj_character") {
+        other.stepped = true;
+      }
+      if(object_get_name(object_index) == "obj_grassblock") {
+        if(falling) {
+          other.stepped = true;
+        }
+      }
+      if(object_get_name(object_index) == "obj_dirtblock") {
+        if(falling) {
+          other.stepped = true;
+        }
+      }
+    }
+  }
+  if(stepped) {
+    stepTimer += global.timeScale * delta_time;
+    part_particles_create(global.particleSystem, x+random_range(0,32), y+32, global.crumbleParticles,1);
+  }
+  if(stepTimer &gt; 500000) {
+    falling = true;
+    stepped = false;
+  }
+  if(falling) {
+    Gravity();
+  }
+
+  Collision(obj_collidable,false,true);
+  Movement();
 }
-
-scriptToCall = asset_get_index("GameMode_"+string(global.gameMode));
-script_execute(scriptToCall);
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="3">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>GameEnd();
 </string>
           </argument>
         </arguments>
