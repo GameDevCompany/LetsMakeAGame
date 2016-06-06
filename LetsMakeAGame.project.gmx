@@ -52,6 +52,8 @@
     <sprites name="Blocks">
       <sprite>sprites\spr_grassblock</sprite>
       <sprite>sprites\spr_dirtblock</sprite>
+      <sprite>sprites\spr_cloudblock</sprite>
+      <sprite>sprites\spr_balloonblock</sprite>
     </sprites>
     <sprites name="Weapons">
       <sprite>sprites\Shuriken</sprite>
@@ -60,9 +62,14 @@
       <sprite>sprites\spr_panel</sprite>
       <sprite>sprites\spr_winner</sprite>
     </sprites>
+    <sprites name="Background">
+      <sprite>sprites\spr_plane</sprite>
+      <sprite>sprites\spr_bg_cloud</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\Sky</background>
+    <background>background\SkyTall</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -121,6 +128,7 @@
       <object>objects\obj_grassblock</object>
       <object>objects\obj_dirtblock</object>
       <object>objects\rootObject</object>
+      <object>objects\obj_balloonblock</object>
     </objects>
     <object>objects\System</object>
     <objects name="Weapons">
@@ -132,6 +140,12 @@
       <object>objects\obj_ui_panel</object>
       <object>objects\obj_ui_winner</object>
     </objects>
+    <objects name="Background">
+      <object>objects\obj_plane</object>
+      <object>objects\obj_bg_cloud</object>
+    </objects>
+    <object>objects\ball</object>
+    <object>objects\object15</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_testarea</room>

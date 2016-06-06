@@ -87,8 +87,9 @@ image_speed = 0.5;
   }
 
   Collision(obj_collidable,false,true);
-  Movement();
+
 }
+  Movement();
 </string>
           </argument>
         </arguments>
