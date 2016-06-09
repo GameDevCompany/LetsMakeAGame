@@ -48,10 +48,26 @@
       </sprites>
       <sprite>sprites\nocollision</sprite>
       <sprite>sprites\spr_slash</sprite>
+      <sprites name="robot">
+        <sprite>sprites\spr_robot_idle</sprite>
+        <sprite>sprites\spr_robot_roll</sprite>
+        <sprite>sprites\spr_robot_punch</sprite>
+        <sprite>sprites\spr_robot_punch_mask</sprite>
+        <sprite>sprites\spr_robot_running</sprite>
+        <sprite>sprites\spr_robot_crouch</sprite>
+        <sprite>sprites\spr_robot_crouch_walk</sprite>
+        <sprites name="parts">
+          <sprite>sprites\spr_robot_head</sprite>
+          <sprite>sprites\spr_robot_body</sprite>
+          <sprite>sprites\spr_robot_arm</sprite>
+          <sprite>sprites\spr_robot_leg</sprite>
+        </sprites>
+      </sprites>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\spr_grassblock</sprite>
       <sprite>sprites\spr_dirtblock</sprite>
+      <sprite>sprites\spr_metalblock</sprite>
       <sprite>sprites\spr_cloudblock</sprite>
       <sprite>sprites\spr_balloonblock</sprite>
     </sprites>
@@ -115,6 +131,9 @@
       <script>scripts\GameMode_DeathMatch.gml</script>
       <script>scripts\GameMode_Last.gml</script>
     </scripts>
+    <scripts name="Block">
+      <script>scripts\Fall.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\uiFont</font>
@@ -125,9 +144,9 @@
       <object>objects\obj_bodypart</object>
     </objects>
     <objects name="Blocks">
-      <object>objects\obj_grassblock</object>
-      <object>objects\obj_dirtblock</object>
       <object>objects\rootObject</object>
+      <object>objects\obj_cloudBlock</object>
+      <object>objects\obj_metalblock</object>
       <object>objects\obj_balloonblock</object>
     </objects>
     <object>objects\System</object>

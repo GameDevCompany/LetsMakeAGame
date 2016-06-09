@@ -1,7 +1,8 @@
 verticalSpeed = 0;
 horizontalSpeed = 0;
 movementSpeed = 3;
-jumpSpeed = 7.5;
+//jumpSpeed = 7.5;
+jumpSpeed = 10;
 lastGroundSpeed = 0;
 state = "idle";
 rotationSpeed = 0;
@@ -18,6 +19,11 @@ winner = false;
 image_speed = 0.2;
 maxVerticalSpeed = 20;
 damageColor = 0;
+color = c_maroon;
+
+initX = x;
+initY = y;
+
 
 enum characterStates {
   alive,
@@ -31,9 +37,9 @@ global.players[index] = id;
 gamepad_index = GetGamepad();
 
 if(gamepad_index == 0) {
-  characterType = "ninja";
+  characterType = "robot";
 } else {
-  characterType = "pirate";
+  characterType = "ninja";
 }
 originalCharacter = characterType;
 attacked = false;

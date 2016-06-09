@@ -1,4 +1,4 @@
-var timeToIncreaseJump = 500000;
+var timeToIncreaseJump = 300000;
 if(hit) {
   lastTouchedGround = 0;
   lastGroundSpeed = 0;
@@ -15,7 +15,7 @@ if(lastTouchedGround + timeToIncreaseJump > global.time) {
 }
 //Set rotation speed when not grounded
 if(!grounded) {
-  if(characterType != "elemental") {
+  if(characterType != "elemental" /*&& characterType != "robot"*/) {
     rotationSpeed = horizontalSpeed * 3;
   }
   horizontalSpeed = (lastGroundSpeed*0.5) + (horizontalSpeed *0.5);

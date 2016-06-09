@@ -10,7 +10,6 @@ if(checkVertical) {
     while(!place_meeting(x,y+sign(verticalSpeed),object)) {
        y += sign(verticalSpeed);
     }
-  
     hit = true;
     verticalSpeed = 0;
   }
@@ -65,6 +64,10 @@ if(place_meeting(x,y,object)) {
 
 //Check grounded
 if(place_meeting(x,y + 1,object)) {
-    grounded = true;
+  grounded = true;
+  var inst = instance_place(x, y+1, object);
+  if (inst != noone) {
+    groundObject = inst;
+ }
 }
 

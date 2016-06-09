@@ -16,6 +16,9 @@ for(i = 0; i < array_length_1d(bodyparts); i++;) {
       part = other.bodyparts[other.i];
       characterType = other.characterType;
       created_on = get_timer();
+      if(other.characterType == "robot") {
+        particleDelay = 0;
+      }
     }
 }
 

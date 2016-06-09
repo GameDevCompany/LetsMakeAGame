@@ -8,11 +8,15 @@ global.timeScale = 1;
 global.lastIndex = 0;
 global.grav = 0.981;
 global.particleSystem = part_system_create();
-
 global.inGame = true;
-global.gameMode = "Last";
+global.gameMode = "DeathMatch";
 global.hwrap = true;
 global.vwrap = false;
+
+global.shakeAmount = 2;
+global.shakeTime = 0;
+
+
 particles();
 randomize();
 

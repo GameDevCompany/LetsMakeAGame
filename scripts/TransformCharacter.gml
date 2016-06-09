@@ -4,7 +4,7 @@ rollSprite = asset_get_index("spr_" + characterType + "_roll");
 punchSprite = asset_get_index("spr_" + characterType + "_punch"); 
 crouchSprite = asset_get_index("spr_" + characterType + "_crouch"); 
 crouchWalkSprite = asset_get_index("spr_" + characterType + "_crouch_walk"); 
-
+/*
 if(attackHeld > 500000 && attackHeld < 2000000) {
   shake_camera(2);
 } else if (attackHeld > 2000000) {
@@ -17,7 +17,7 @@ if(attackHeld > 500000 && attackHeld < 2000000) {
   }
   attackHeld = 0;
 }
-
+*/
 image_speed = global.timeScale * 0.2;
 
 /*

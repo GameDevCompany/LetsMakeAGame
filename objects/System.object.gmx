@@ -28,6 +28,7 @@
             <string>Setup();
 
 
+
 </string>
           </argument>
         </arguments>
@@ -55,6 +56,13 @@ global.timeScale = 1;
 if(keyboard_check_released(ord('R'))) {
   StartGame();
 }
+
+if(global.shakeTime &gt; 0) {
+  shake_camera(global.shakeAmount);
+  global.shakeTime -= delta_time * global.timeScale;
+}
+
+
 
 scriptToCall = asset_get_index("GameMode_"+string(global.gameMode));
 script_execute(scriptToCall);
