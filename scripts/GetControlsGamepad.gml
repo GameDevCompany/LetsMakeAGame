@@ -1,6 +1,7 @@
 //Take left joystick from gamepad and apply it to horizontal speed.
 horizontalSpeed *= 0.5;
-horizontalSpeed += movementSpeed * round(gamepad_axis_value(gamepad_index,gp_axislh));
+horizontalSpeed += movementSpeed * gamepad_axis_value(gamepad_index,gp_axislh);
+upndown =  gamepad_axis_value(gamepad_index,gp_axislv);
 if(horizontalSpeed < 1 && horizontalSpeed > -1) {
   horizontalSpeed = 0;
 }

@@ -82,6 +82,9 @@
       <sprite>sprites\spr_plane</sprite>
       <sprite>sprites\spr_bg_cloud</sprite>
     </sprites>
+    <sprites name="Objects">
+      <sprite>sprites\spr_Parachute</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\Sky</background>
@@ -94,6 +97,8 @@
     <script>scripts\doDamage.gml</script>
     <script>scripts\Movement.gml</script>
     <script>scripts\IncreaseScore.gml</script>
+    <script>scripts\Damageble.gml</script>
+    <script>scripts\drawHealthBar.gml</script>
     <scripts name="Character">
       <script>scripts\InitCharacter.gml</script>
       <script>scripts\GetControlsKeyboard.gml</script>
@@ -121,10 +126,8 @@
     </scripts>
     <scripts name="Weapons">
       <script>scripts\InitThrowable.gml</script>
-      <script>scripts\Damageble.gml</script>
     </scripts>
-    <script>scripts\drawHealthBar.gml</script>
-    <scripts name="particles">
+    <scripts name="Particles">
       <script>scripts\particles.gml</script>
     </scripts>
     <scripts name="GameModes">
@@ -163,8 +166,9 @@
       <object>objects\obj_plane</object>
       <object>objects\obj_bg_cloud</object>
     </objects>
-    <object>objects\ball</object>
-    <object>objects\object15</object>
+    <objects name="Objects">
+      <object>objects\obj_parachute</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_testarea</room>

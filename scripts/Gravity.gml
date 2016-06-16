@@ -7,4 +7,6 @@ if(verticalSpeed < maxVerticalSpeed) {
   } else {
     verticalSpeed += (global.grav*global.timeScale);
   }
+} else {
+  verticalSpeed = maxVerticalSpeed;
 }

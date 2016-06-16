@@ -3,7 +3,7 @@ if(attackKeyPressed && attackTimer < global.time) {
   attackTimer = global.time + 250000;
   
   var flipX = 180 * ((image_xscale*0.5)-0.5);
-  var dash = MoveTowards(image_angle + flipX, 10);
+  var dash = MoveTowards(image_angle + flipX, 1);
 
   horizontalSpeed += dash[0];
   verticalSpeed += dash[1];

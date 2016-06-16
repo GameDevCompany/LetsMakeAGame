@@ -18,7 +18,11 @@ if(!grounded) {
   if(characterType != "elemental" /*&& characterType != "robot"*/) {
     rotationSpeed = horizontalSpeed * 3;
   }
-  horizontalSpeed = (lastGroundSpeed*0.5) + (horizontalSpeed *0.5);
+  lastGroundSpeed *= 0.99;
+  horizontalSpeed =  (lastGroundSpeed*0)+(horizontalSpeed *1);
+  if(verticalSpeed + 0.1 > maxVerticalSpeed) {
+      verticalSpeed += upndown*movementSpeed;
+  }
 } else {
   lastGroundSpeed = horizontalSpeed;
   rotationSpeed = 0;

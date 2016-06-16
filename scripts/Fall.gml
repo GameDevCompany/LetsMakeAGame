@@ -9,7 +9,6 @@ if (inst != noone) {
       }
     }
   }
-
 }
 if(stepped) {
   stepTimer += global.timeScale * delta_time;

@@ -7,7 +7,7 @@ var didDamage = false;
 if (inst != noone) {
    with(inst) {
       if(object_get_name(object_index) == "obj_character") {
-        HP -= dmg;
+        //HP -= dmg;
         didDamage = true;
         global.shakeAmount = 4*dmg;
         global.shakeTime = 450000*dmg;
