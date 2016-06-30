@@ -6,7 +6,6 @@ if(y > room_height + 64 && state != characterStates.dead) {
   show_debug_message("character died");
 } 
 
-
 if(state == characterStates.dead && timeOfDeath + 5000000  < get_timer()) {
   if(global.gameMode != "Last") {
     ResetCharacter();

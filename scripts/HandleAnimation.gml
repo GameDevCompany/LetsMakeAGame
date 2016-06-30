@@ -1,3 +1,5 @@
+setSprites();
+image_speed = global.timeScale * 0.2;
 
 //Flip animation depending on direction of movement
 if(grounded) {
@@ -10,20 +12,29 @@ if(grounded) {
   }
 }
 
+if(grounded && sprite_index == rollSprite) {
+  var bbottom = bbox_bottom;
+  sprite_index = idleSprite;
+  y -=  bbox_bottom - bbottom;
+}
+
 //Switching animation depending on character state.
-if(attackTimer > global.time || throwKeyPressed) {
+if(attackTimer > global.time) {
   if(sprite_index != punchSprite) {
     sprite_index = punchSprite;
     image_index = 0;
   }
+  
 } else if(!grounded) {
   sprite_index = rollSprite;
 } else if(horizontalSpeed != 0) {
+
   if(isCrouched && grounded) {
     sprite_index = crouchWalkSprite;
   } else { 
     sprite_index = runningSprite;
   }
+  
 } else {
   if(isCrouched) {
     sprite_index = crouchSprite;

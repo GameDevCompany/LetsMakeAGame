@@ -3,7 +3,7 @@ if(attackKeyPressed && attackTimer < global.time) {
   attackTimer = global.time + 250000;
   
   var flipX = 180 * ((image_xscale*0.5)-0.5);
-  var dash = MoveTowards(image_angle + flipX, 1);
+  var dash = MoveTowards(sprite_angle + flipX, 1);
 
   horizontalSpeed += dash[0];
   verticalSpeed += dash[1];
@@ -12,7 +12,7 @@ if(attackKeyPressed && attackTimer < global.time) {
   with(inst) {
     depth = other.depth - 1;
     image_xscale = other.image_xscale;
-    image_angle = other.image_angle;
+    image_angle = other.sprite_angle;
     parent = other.id;
   }
 }

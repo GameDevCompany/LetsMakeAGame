@@ -15,9 +15,6 @@ if(lastTouchedGround + timeToIncreaseJump > global.time) {
 }
 //Set rotation speed when not grounded
 if(!grounded) {
-  if(characterType != "elemental" /*&& characterType != "robot"*/) {
-    rotationSpeed = horizontalSpeed * 3;
-  }
   lastGroundSpeed *= 0.99;
   horizontalSpeed =  (lastGroundSpeed*0)+(horizontalSpeed *1);
   if(verticalSpeed + 0.1 > maxVerticalSpeed) {
@@ -25,7 +22,4 @@ if(!grounded) {
   }
 } else {
   lastGroundSpeed = horizontalSpeed;
-  rotationSpeed = 0;
-  image_angle = 0;
 }
-

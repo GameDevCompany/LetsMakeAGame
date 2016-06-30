@@ -17,4 +17,5 @@ if(global.inGame) {
     global.inGame = false;
     room_goto( rm_result );
   }
+  global.takeDamage = false;
 }

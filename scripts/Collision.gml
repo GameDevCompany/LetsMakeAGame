@@ -7,25 +7,28 @@ hit = false;
 //Vertical collision
 if(checkVertical) {
   if(place_meeting(x,y + verticalSpeed,object)) {
-    while(!place_meeting(x,y+sign(verticalSpeed),object)) {
-       y += sign(verticalSpeed);
+    var moveVer = 0; 
+    while(!place_meeting(x ,y+sign(verticalSpeed)+moveVer,object)) {
+       moveVer += sign(verticalSpeed);
     }
     hit = true;
-    verticalSpeed = 0;
+    verticalSpeed = moveVer;
   }
-}
+} 
+
 //Horizontal collision
 if(checkHorizontal) {
-  if(place_meeting(x + horizontalSpeed,y,object)) {
-    while(!place_meeting(x+sign(horizontalSpeed),y,object)) {
-       x += sign(horizontalSpeed);
+  if(place_meeting(x + horizontalSpeed,y + verticalSpeed,object)) {
+    var moveHor = 0; 
+    while(!place_meeting(x+sign(horizontalSpeed)+moveHor,y + verticalSpeed,object)) {
+       moveHor += sign(horizontalSpeed);
     }
     hit = true;
-    horizontalSpeed = 0;
+    horizontalSpeed = moveHor;
   }
 }
 
-if(place_meeting(x,y,object)) {
+if(place_meeting(x+horizontalSpeed,y+verticalSpeed,object)) {
   if(checkVertical) {
     var moveY = 1;
     while(place_meeting(x,y-moveY,object) && moveY < 20) {
@@ -63,11 +66,13 @@ if(place_meeting(x,y,object)) {
 }
 
 //Check grounded
-if(place_meeting(x,y + 1,object)) {
+var inst = collision_rectangle( bbox_left+horizontalSpeed, bbox_bottom+verticalSpeed, bbox_right+horizontalSpeed, bbox_bottom+verticalSpeed+1, object, true, true );
+if (inst != noone) {
   grounded = true;
-  var inst = instance_place(x, y+1, object);
-  if (inst != noone) {
-    groundObject = inst;
- }
+  groundObject = inst;
+} else {
+   grounded = false;
 }
+
+
 

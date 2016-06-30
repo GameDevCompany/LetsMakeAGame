@@ -46,8 +46,6 @@
         <sprite>sprites\spr_elemental_running</sprite>
         <sprite>sprites\spr_elemental_roll</sprite>
       </sprites>
-      <sprite>sprites\nocollision</sprite>
-      <sprite>sprites\spr_slash</sprite>
       <sprites name="robot">
         <sprite>sprites\spr_robot_idle</sprite>
         <sprite>sprites\spr_robot_roll</sprite>
@@ -63,6 +61,10 @@
           <sprite>sprites\spr_robot_leg</sprite>
         </sprites>
       </sprites>
+      <sprite>sprites\nocollision</sprite>
+      <sprite>sprites\spr_slash</sprite>
+      <sprite>sprites\spr_char_display</sprite>
+      <sprite>sprites\spr_para_display</sprite>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\spr_grassblock</sprite>
@@ -77,13 +79,15 @@
     <sprites name="UI">
       <sprite>sprites\spr_panel</sprite>
       <sprite>sprites\spr_winner</sprite>
+      <sprite>sprites\spr_dot</sprite>
     </sprites>
     <sprites name="Background">
       <sprite>sprites\spr_plane</sprite>
       <sprite>sprites\spr_bg_cloud</sprite>
     </sprites>
     <sprites name="Objects">
-      <sprite>sprites\spr_Parachute</sprite>
+      <sprite>sprites\spr_parachute</sprite>
+      <sprite>sprites\spr_parachute_deployed</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -92,27 +96,31 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\Rotate.gml</script>
     <script>scripts\Gravity.gml</script>
     <script>scripts\Collision.gml</script>
     <script>scripts\doDamage.gml</script>
     <script>scripts\Movement.gml</script>
     <script>scripts\IncreaseScore.gml</script>
     <script>scripts\Damageble.gml</script>
-    <script>scripts\drawHealthBar.gml</script>
     <scripts name="Character">
       <script>scripts\InitCharacter.gml</script>
-      <script>scripts\GetControlsKeyboard.gml</script>
-      <script>scripts\GetControlsGamepad.gml</script>
-      <script>scripts\Rotate.gml</script>
+      <scripts name="Controls">
+        <script>scripts\GetGamepad.gml</script>
+        <script>scripts\GetControlsKeyboard.gml</script>
+        <script>scripts\GetControlsGamepad.gml</script>
+      </scripts>
       <script>scripts\HandleAnimation.gml</script>
       <script>scripts\Jump.gml</script>
-      <script>scripts\GetGamepad.gml</script>
       <script>scripts\CheckHealth.gml</script>
       <script>scripts\Attack.gml</script>
-      <script>scripts\Throw.gml</script>
-      <script>scripts\TransformCharacter.gml</script>
       <script>scripts\ResetCharacter.gml</script>
       <script>scripts\KillCharacter.gml</script>
+      <script>scripts\drawHealthBar.gml</script>
+      <script>scripts\Pickup.gml</script>
+      <script>scripts\getCharacters.gml</script>
+      <script>scripts\selectCharacter.gml</script>
+      <script>scripts\setSprites.gml</script>
     </scripts>
     <scripts name="System">
       <script>scripts\Setup.gml</script>
@@ -161,6 +169,7 @@
     <objects name="UI">
       <object>objects\obj_ui_panel</object>
       <object>objects\obj_ui_winner</object>
+      <object>objects\obj_char_select</object>
     </objects>
     <objects name="Background">
       <object>objects\obj_plane</object>
@@ -169,8 +178,10 @@
     <objects name="Objects">
       <object>objects\obj_parachute</object>
     </objects>
+    <object>objects\Camera</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_charselect</room>
     <room>rooms\rm_testarea</room>
     <room>rooms\rm_result</room>
   </rooms>

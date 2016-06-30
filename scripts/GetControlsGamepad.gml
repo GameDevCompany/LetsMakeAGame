@@ -6,6 +6,10 @@ if(horizontalSpeed < 1 && horizontalSpeed > -1) {
   horizontalSpeed = 0;
 }
 
+if(keyboard_check(vk_right)) {
+  damageColor = 100;
+}
+
 // slowmotion
 var timebutton = clamp(1-gamepad_button_value(gamepad_index,gp_shoulderrb),0.2,1);
 if(global.timeScale > timebutton) {
@@ -23,8 +27,6 @@ if(crouching == 1)  {
 //Jumping
 jumpKeyHeld = gamepad_button_check(gamepad_index, gp_face1);
 jumpKeyPressed = gamepad_button_check_pressed(gamepad_index, gp_face1);
-//Throw
-throwKeyPressed = gamepad_button_check_pressed(gamepad_index, gp_face4);
 
 //Attacking
 attackKeyPressed = gamepad_button_check_pressed(gamepad_index, gp_face3);

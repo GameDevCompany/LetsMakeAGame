@@ -62,13 +62,20 @@ image_speed = 0.5;
   if(isFallable) {
     Fall();
   }
-  if(isFloating) {
+  /*if(isFloating) {
     var inst = instance_place(x, y-1, obj_character);
     if(inst != noone) {
       verticalSpeed = 1;
     }
-  }
+  }*/
   
+  if(verticalSpeed == maxVerticalSpeed) {
+    var inst = instance_place(x, y+verticalSpeed, obj_character);
+    if(inst != noone) {
+      var didDamage = doDamage(inst,1,inst.index,x,y);
+    }
+  
+  }
   
   Collision(rootObject,false,true);
 }

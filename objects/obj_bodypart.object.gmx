@@ -32,7 +32,7 @@ verticalSpeed = random_range(-1,1)*spd;
 rotationSpeed = horizontalSpeed;
 maxVerticalSpeed = 20;
 hit = false;
-
+sprite_angle = 0;
 characterType = "ninja";
 part = "head";
 sprite = asset_get_index("spr_" + characterType + "_"+part);
@@ -67,12 +67,14 @@ Collision(obj_collidable,true,true);
 Movement();
 Rotate();
 sprite = asset_get_index("spr_" + characterType + "_"+part);
+sprite_index = sprite;
+
 if(grounded) {
   horizontalSpeed -= sign(horizontalSpeed);
   rotationSpeed = horizontalSpeed;
 }
 
-sprite_index = sprite;
+
 if(created_on + particleDelay &gt; get_timer()) {
   var bloodSpurtParticle = part_type_create();
   part_type_shape(bloodSpurtParticle, pt_shape_square);

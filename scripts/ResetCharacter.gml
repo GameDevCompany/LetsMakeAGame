@@ -1,9 +1,3 @@
-  /*x = random_range(0,view_wview[0]);
-  y = random_range(0,view_hview[0]);
-  while(place_meeting(x,y,obj_collidable)) {
-    x = random_range(0,view_wview[0]);
-    y = random_range(0,view_hview[0]);
-  }*/
   x = initX;
   y = initY;
   HP = maxHP;

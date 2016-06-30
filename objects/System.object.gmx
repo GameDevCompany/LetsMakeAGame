@@ -61,12 +61,23 @@ if(global.shakeTime &gt; 0) {
   shake_camera(global.shakeAmount);
   global.shakeTime -= delta_time * global.timeScale;
 }
-
-
-
 scriptToCall = asset_get_index("GameMode_"+string(global.gameMode));
 script_execute(scriptToCall);
 
+
+if(global.selectCharacters) {
+  var numReady = array_length_1d(global.players)-1;
+  for (var i = 1; i &lt; array_length_1d(global.players); i++;) {
+    if(global.players[i].ready) {
+      numReady--;
+    }
+  }
+  if(numReady == 3) {
+    global.selectCharacters = false;
+    global.inGame = true;
+    room_goto(rm_testarea);
+  }
+}
 </string>
           </argument>
         </arguments>

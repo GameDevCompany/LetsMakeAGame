@@ -73,22 +73,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.inGame) {
+            <string>if(global.selectCharacters) {
+  selectCharacter();
+} else if(global.inGame) {
   CheckHealth();
   if(state != characterStates.dead) {
-    TransformCharacter(); //Transforms character to elemental form
     Gravity(); //Applies gravity
-    Collision(obj_collidable,true,true); //Checks for Collision
     Jump();
+    
+    Pickup();
+    
+    Collision(obj_collidable,true,true); //Checks for Collision
     Rotate();
     HandleAnimation();
     Attack();
-    Throw();
     Movement();
   }
-} /*else {
-  ResetCharacter();
-}*/
+}
 </string>
           </argument>
         </arguments>
@@ -166,8 +167,15 @@
   }
 }
 
+if(y &lt; view_yview[0]) {
+  draw_sprite(spr_char_display,0,x,view_yview + 26);
+}
+if(y &gt; view_yview[0]+view_hview[0]) {
+   draw_sprite(spr_char_display,0,x,view_yview[0]+view_hview[0] - 26);
+}
+
 image_blend = make_colour_hsv(0, damageColor, 255);
-draw_self();
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, sprite_angle, image_blend, image_alpha);
 
 </string>
           </argument>

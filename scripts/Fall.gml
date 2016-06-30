@@ -1,4 +1,7 @@
 var inst = instance_place(x, y-1, obj_collidable);
+if(inst == noone) {
+  inst =  instance_place(x, y-1, obj_parachute);
+}
 if (inst != noone) { 
   with(inst) {
     if(object_get_name(object_index) == "obj_character") {
