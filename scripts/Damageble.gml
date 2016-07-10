@@ -1,7 +1,6 @@
-//show_debug_message("frame");
-var inst = instance_place(x+horizontalSpeed, y+verticalSpeed, all);
-var didDamage = doDamage(inst,dmg,playerIndex,x,y);
-if(didDamage) {
+var inst = instance_place(x+horizontalSpeed, y+verticalSpeed, obj_character);
+if(inst != noone) {
+  dealDamage(inst,dmg,playerIndex,x,y);
   instance_destroy();
 }
 if (inst != noone) {

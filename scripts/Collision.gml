@@ -28,6 +28,7 @@ if(checkHorizontal) {
   }
 }
 
+//Move objects out of walls
 if(place_meeting(x+horizontalSpeed,y+verticalSpeed,object)) {
   if(checkVertical) {
     var moveY = 1;
@@ -64,15 +65,3 @@ if(place_meeting(x+horizontalSpeed,y+verticalSpeed,object)) {
     }
   }
 }
-
-//Check grounded
-var inst = collision_rectangle( bbox_left+horizontalSpeed, bbox_bottom+verticalSpeed, bbox_right+horizontalSpeed, bbox_bottom+verticalSpeed+1, object, true, true );
-if (inst != noone) {
-  grounded = true;
-  groundObject = inst;
-} else {
-   grounded = false;
-}
-
-
-

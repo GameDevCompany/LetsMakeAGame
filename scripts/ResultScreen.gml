@@ -4,7 +4,6 @@ var center = room_width/2;
 var startPosition = center - ((numPanels*panelWidth)/2);
 for (var i = 0; i < numPanels; i++;)
 {
-    
     //Placing character
     var player = global.players[i+1];
     with(player) {

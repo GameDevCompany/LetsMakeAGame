@@ -1,3 +1,10 @@
+if(attackKeyHold) {
+  attackHeld += global.timeScale * delta_time;
+} else {
+  attackHeld = 0;
+}
+
+
 if(attackKeyPressed && attackTimer < global.time) {
   attacked = true;
   attackTimer = global.time + 250000;
@@ -20,8 +27,8 @@ if(attackKeyPressed && attackTimer < global.time) {
 if(attacked) {
     var mask = mask_index;
     mask_index = asset_get_index("spr_" + characterType + "_punch_mask"); 
-    var inst = instance_place(x, y, all);
-    var didDamage = doDamage(inst,dmg,index,x,y);
+    var inst = instance_place(x, y, obj_character);
+    dealDamage(inst,dmg,index,x,y);
     mask_index = mask; 
 }
 

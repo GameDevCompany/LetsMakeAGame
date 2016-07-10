@@ -54,7 +54,7 @@
             <string>global.time += global.timeScale * delta_time;
 global.timeScale = 1;
 if(keyboard_check_released(ord('R'))) {
-  StartGame();
+  StartMatch();
 }
 
 if(global.shakeTime &gt; 0) {

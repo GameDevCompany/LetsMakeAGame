@@ -25,21 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spd = 20;//random_range(20,30);
-
-horizontalSpeed = random_range(-1,1)*spd;
-verticalSpeed = random_range(-1,1)*spd;
-rotationSpeed = horizontalSpeed;
-maxVerticalSpeed = 20;
-hit = false;
-sprite_angle = 0;
-characterType = "ninja";
-part = "head";
-sprite = asset_get_index("spr_" + characterType + "_"+part);
-
-created_on = 0;
-particleDelay = irandom_range(3000000,5000000);
-
+            <string>InitBodyPart();
 </string>
           </argument>
         </arguments>
@@ -62,39 +48,7 @@ particleDelay = irandom_range(3000000,5000000);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Gravity();
-Collision(obj_collidable,true,true);
-Movement();
-Rotate();
-sprite = asset_get_index("spr_" + characterType + "_"+part);
-sprite_index = sprite;
-
-if(grounded) {
-  horizontalSpeed -= sign(horizontalSpeed);
-  rotationSpeed = horizontalSpeed;
-}
-
-
-if(created_on + particleDelay &gt; get_timer()) {
-  var bloodSpurtParticle = part_type_create();
-  part_type_shape(bloodSpurtParticle, pt_shape_square);
-  part_type_size(bloodSpurtParticle, 0.02, 0.04, 0, 0);
-  //part_type_scale(bloodSpurtParticle, 1, 1);
-  part_type_colour1(bloodSpurtParticle, c_red);
-  part_type_alpha2(bloodSpurtParticle, 1, 0);
-  part_type_speed(bloodSpurtParticle, 3, 9, 0, 0);
-  part_type_direction(bloodSpurtParticle, image_angle - 2, image_angle + 2, 0, 0);
-  part_type_gravity(bloodSpurtParticle, 0.50, 270);
-  part_type_orientation(bloodSpurtParticle, 0, 0, 0, 0, 1);
-  //part_type_blend(bloodParticles, 0);
-  part_type_life(bloodSpurtParticle, room_speed*1, room_speed*1.2);
-  part_particles_create(global.particleSystem, x, y, bloodSpurtParticle, 1);
-}
-
-if(created_on + 30000000 &lt; get_timer()) {
-  instance_destroy();
-}
-
+            <string>UpdateBodyPart();
 </string>
           </argument>
         </arguments>

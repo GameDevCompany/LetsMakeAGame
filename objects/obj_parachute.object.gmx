@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>self</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -65,10 +65,11 @@ deployed = false;
             <string>if(parent == noone) {
   Gravity();
   Collision(obj_collidable,true,true);
+  grounded = IsGrounded(obj_collidable);
   if(!grounded) {
-    Rotate();
+    Rotate(horizontalSpeed,false);
   }
-  Movement();
+  Translate();
 } else {
   x = parent.x;
   y = parent.y;

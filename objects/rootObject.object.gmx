@@ -25,17 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>verticalSpeed = 0;
-horizontalSpeed = 0;
-maxVerticalSpeed = 30;
-isFallable = true;
-isFloating = false;
-grounded = false;
-falling = false;
-stepTimer = 0;
-stepped = false;
-color = c_white;
-image_speed = 0.5;
+            <string>InitBlock();
 </string>
           </argument>
         </arguments>
@@ -58,38 +48,7 @@ image_speed = 0.5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.gameMode == "Last") {
-  if(isFallable) {
-    Fall();
-  }
-  /*if(isFloating) {
-    var inst = instance_place(x, y-1, obj_character);
-    if(inst != noone) {
-      verticalSpeed = 1;
-    }
-  }*/
-  
-  if(verticalSpeed == maxVerticalSpeed) {
-    var inst = instance_place(x, y+verticalSpeed, obj_character);
-    if(inst != noone) {
-      var didDamage = doDamage(inst,1,inst.index,x,y);
-    }
-  
-  }
-  
-  Collision(rootObject,false,true);
-}
-Movement();
-
-if(falling) {
-  if(y &gt; view_hview[0] + view_yview[0]) {
-    instance_destroy();
-  }
-}
-
-
-
-
+            <string>UpdateBlock();
 </string>
           </argument>
         </arguments>

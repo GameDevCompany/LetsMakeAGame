@@ -1,7 +1,7 @@
-if(!grounded) {
-  rotationSpeed = horizontalSpeed * 3;
+rotationSpeed = argument0;
+reset = argument1;
+if(!reset) {
   sprite_angle -= rotationSpeed * global.timeScale;
 } else {  
-  rotationSpeed = 0;
   sprite_angle = 0;
 }

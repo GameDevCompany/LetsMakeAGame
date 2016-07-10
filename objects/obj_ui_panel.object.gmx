@@ -28,7 +28,6 @@
             <string>draw_set_font(uiFont);
 draw_set_colour(c_maroon);
 var textString = "Kills: " + string(global.scores[playerIndex]);
-//draw_text(x+20,y+100,textString);
 draw_text_transformed(x+20, y+100, textString, 0.28, 0.28, 0);
 </string>
           </argument>

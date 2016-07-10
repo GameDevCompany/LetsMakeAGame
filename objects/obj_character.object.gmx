@@ -48,9 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(state != characterStates.dead) {
-  GetControlsGamepad(); //Gets movement input from gamepad
-}
+            <string>BeginUpdateCharacter();
 </string>
           </argument>
         </arguments>
@@ -73,23 +71,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.selectCharacters) {
-  selectCharacter();
-} else if(global.inGame) {
-  CheckHealth();
-  if(state != characterStates.dead) {
-    Gravity(); //Applies gravity
-    Jump();
-    
-    Pickup();
-    
-    Collision(obj_collidable,true,true); //Checks for Collision
-    Rotate();
-    HandleAnimation();
-    Attack();
-    Movement();
-  }
-}
+            <string>UpdateCharacter();
 </string>
           </argument>
         </arguments>
@@ -136,7 +118,7 @@
           <argument>
             <kind>1</kind>
             <string>if(global.inGame) {
-  drawHealthBar();
+  drawHealthBar(HP,maxHP);
 }
 </string>
           </argument>

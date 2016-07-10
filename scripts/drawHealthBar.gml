@@ -1,3 +1,6 @@
+HP = argument0;
+maxHP = argument1;
+
 if(global.takeDamage) {
   draw_set_colour(c_red);
   hbar_width = 20;

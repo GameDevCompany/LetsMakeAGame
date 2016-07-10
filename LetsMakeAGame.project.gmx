@@ -99,60 +99,79 @@
     <script>scripts\Rotate.gml</script>
     <script>scripts\Gravity.gml</script>
     <script>scripts\Collision.gml</script>
-    <script>scripts\doDamage.gml</script>
-    <script>scripts\Movement.gml</script>
+    <script>scripts\dealDamage.gml</script>
+    <script>scripts\Translate.gml</script>
     <script>scripts\IncreaseScore.gml</script>
     <script>scripts\Damageble.gml</script>
-    <scripts name="Character">
-      <script>scripts\InitCharacter.gml</script>
-      <scripts name="Controls">
-        <script>scripts\GetGamepad.gml</script>
-        <script>scripts\GetControlsKeyboard.gml</script>
-        <script>scripts\GetControlsGamepad.gml</script>
-      </scripts>
-      <script>scripts\HandleAnimation.gml</script>
-      <script>scripts\Jump.gml</script>
-      <script>scripts\CheckHealth.gml</script>
-      <script>scripts\Attack.gml</script>
-      <script>scripts\ResetCharacter.gml</script>
-      <script>scripts\KillCharacter.gml</script>
-      <script>scripts\drawHealthBar.gml</script>
-      <script>scripts\Pickup.gml</script>
-      <script>scripts\getCharacters.gml</script>
-      <script>scripts\selectCharacter.gml</script>
-      <script>scripts\setSprites.gml</script>
-    </scripts>
+    <script>scripts\MoveTowards.gml</script>
+    <script>scripts\IsGrounded.gml</script>
+    <script>scripts\draw_text_outlined.gml</script>
     <scripts name="System">
       <script>scripts\Setup.gml</script>
-      <script>scripts\StartGame.gml</script>
-      <script>scripts\shake_camera.gml</script>
+      <script>scripts\StartMatch.gml</script>
+      <script>scripts\ShakeCamera.gml</script>
       <script>scripts\GetPlayerIndex.gml</script>
-      <script>scripts\draw_text_outlined.gml</script>
-      <script>scripts\MoveTowards.gml</script>
       <script>scripts\GameEnd.gml</script>
-      <script>scripts\ResultScreen.gml</script>
-    </scripts>
-    <scripts name="Weapons">
-      <script>scripts\InitThrowable.gml</script>
-    </scripts>
-    <scripts name="Particles">
-      <script>scripts\particles.gml</script>
     </scripts>
     <scripts name="GameModes">
       <script>scripts\GameMode_DeathMatch.gml</script>
       <script>scripts\GameMode_Last.gml</script>
     </scripts>
+    <scripts name="BodyParts">
+      <script>scripts\InitBodyPart.gml</script>
+      <script>scripts\UpdateBodyPart.gml</script>
+    </scripts>
+    <scripts name="Character">
+      <script>scripts\InitCharacter.gml</script>
+      <script>scripts\BeginUpdateCharacter.gml</script>
+      <script>scripts\UpdateCharacter.gml</script>
+      <script>scripts\HandleAnimation.gml</script>
+      <script>scripts\CheckHealth.gml</script>
+      <script>scripts\ResetCharacter.gml</script>
+      <script>scripts\KillCharacter.gml</script>
+      <script>scripts\drawHealthBar.gml</script>
+      <script>scripts\getCharacters.gml</script>
+      <script>scripts\selectCharacter.gml</script>
+      <script>scripts\setSprites.gml</script>
+      <scripts name="Controls">
+        <script>scripts\GetGamepad.gml</script>
+        <script>scripts\GetControlsKeyboard.gml</script>
+        <script>scripts\GetControlsGamepad.gml</script>
+      </scripts>
+      <scripts name="Mechanics">
+        <script>scripts\Attack.gml</script>
+        <script>scripts\Pickup.gml</script>
+        <script>scripts\Jump.gml</script>
+        <script>scripts\SlowMotion.gml</script>
+        <script>scripts\Crouching.gml</script>
+        <script>scripts\Move.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="Particles">
+      <script>scripts\particles.gml</script>
+    </scripts>
     <scripts name="Block">
-      <script>scripts\Fall.gml</script>
+      <script>scripts\InitBlock.gml</script>
+      <script>scripts\UpdateBlock.gml</script>
+      <scripts name="Mechnics">
+        <script>scripts\Fall.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="Screens">
+      <script>scripts\ResultScreen.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\uiFont</font>
   </fonts>
   <objects name="objects">
+    <object>objects\System</object>
+    <object>objects\obj_collidable</object>
+    <object>objects\Camera</object>
     <objects name="Characters">
       <object>objects\obj_character</object>
       <object>objects\obj_bodypart</object>
+      <object>objects\obj_slash</object>
     </objects>
     <objects name="Blocks">
       <object>objects\rootObject</object>
@@ -160,12 +179,6 @@
       <object>objects\obj_metalblock</object>
       <object>objects\obj_balloonblock</object>
     </objects>
-    <object>objects\System</object>
-    <objects name="Weapons">
-      <object>objects\obj_shuriken</object>
-    </objects>
-    <object>objects\obj_collidable</object>
-    <object>objects\obj_slash</object>
     <objects name="UI">
       <object>objects\obj_ui_panel</object>
       <object>objects\obj_ui_winner</object>
@@ -178,10 +191,10 @@
     <objects name="Objects">
       <object>objects\obj_parachute</object>
     </objects>
-    <object>objects\Camera</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_charselect</room>
+    <room>rooms\rm_startgame</room>
+    <room>rooms\rm_character_select</room>
     <room>rooms\rm_testarea</room>
     <room>rooms\rm_result</room>
   </rooms>

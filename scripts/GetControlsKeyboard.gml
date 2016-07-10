@@ -1,23 +1,22 @@
 //Take left joystick from keyboard and apply it to horizontal speed.
-horizontalSpeed = 0;
-if(keyboard_check(vk_left)) {
- horizontalSpeed -= 1;
-} 
-if(keyboard_check(vk_right)) {
- horizontalSpeed += 1;
-} 
-horizontalSpeed *= movementSpeed;
 
-//Crouching
-isCrouched = keyboard_check(vk_down);
+//Left Stick
+horizontalAxis = 0;
+horizontalAxis -= keyboard_check(vk_left);
+horizontalAxis += keyboard_check(vk_right);
+
+verticalAxis = 0;
+horizontalAxis -= keyboard_check(vk_up);
+horizontalAxis += keyboard_check(vk_down);
+
+//Secondary action
+timebutton = keyboard_check(ord('X'));
 
 //Jump
-jumpKeyPressed = keyboard_check(vk_space);
+jumpKeyHeld = keyboard_check(vk_space);
+jumpKeyPressed = keyboard_check_pressed(vk_space);
 
 //Attacking
-attackKeyPressed = keyboard_check(ord('Z'));
-if(attackKeyPressed && attackTimer < global.time) {
-  attacked = true;
-    image_index = 0;
-  attackTimer = global.time + 250000;
-}
+attackKeyPressed = keyboard_check_pressed(ord('Z'));
+attackKeyHold = keyboard_check(ord('Z'));
+
