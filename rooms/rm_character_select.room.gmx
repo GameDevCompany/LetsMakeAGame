@@ -52,10 +52,10 @@
   </views>
   <instances>
     <instance objName="System" x="0" y="0" name="inst_A365FD74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_character" x="96" y="144" name="inst_2D164471" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_character" x="240" y="144" name="inst_7E2C4765" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_character" x="400" y="144" name="inst_26BD4CDA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_character" x="560" y="144" name="inst_C96755DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_character" x="96" y="144" name="inst_2D164471" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_char_select" x="32" y="96" name="inst_D4F9669C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_char_select" x="176" y="96" name="inst_B5F912AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_char_select" x="336" y="96" name="inst_8D8F9DFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

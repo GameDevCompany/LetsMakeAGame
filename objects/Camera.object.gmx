@@ -52,7 +52,7 @@
 posY = 0;
 numPlayers = array_length_1d(global.players);
 numAlivePlayers = 0;
-for(var i = 0; i &lt; numPlayers;i++) {
+for(var i = 1; i &lt; numPlayers;i++) {
   if(global.players[i].state == characterStates.alive) {
     posY += global.players[i].y;
     numAlivePlayers++;
@@ -60,16 +60,9 @@ for(var i = 0; i &lt; numPlayers;i++) {
 }
 posY += global.parachute.y;
 posY /= (numAlivePlayers + 1);
-
 if(posY &lt; global.parachute.y) {
   posY = global.parachute.y;
 }
-/*
-if(posY &gt; global.parachute.y + view_hview[0]) {
-  posY = global.parachute.y + view_hview[0];
-}*/
-
-
 y = posY;
 
 </string>

@@ -1,4 +1,4 @@
-var inst = instance_place(x, y-1, obj_collidable);
+/*var inst = instance_place(x, y-1, obj_collidable);
 if(inst == noone) {
   inst =  instance_place(x, y-1, obj_parachute);
 }
@@ -21,7 +21,7 @@ if(stepped) {
 if(stepTimer > 1000000) {
   falling = true;
   stepped = false;
-}
+}*/
 if(falling) {
   Gravity();
 }

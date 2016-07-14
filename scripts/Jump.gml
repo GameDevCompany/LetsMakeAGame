@@ -17,9 +17,9 @@ if(lastTouchedGround + timeToIncreaseJump > global.time) {
 if(!grounded) {
   lastGroundSpeed *= 0.99;
   horizontalSpeed =  (lastGroundSpeed*0)+(horizontalSpeed *1);
-  if(verticalSpeed + 0.1 > maxVerticalSpeed) {
-      verticalSpeed += upndown*movementSpeed;
-  }
+  //if(verticalSpeed + 0.1 > maxVerticalSpeed) {
+      verticalSpeed += verticalAxis * movementSpeed;
+  //}
 } else {
   lastGroundSpeed = horizontalSpeed;
 }

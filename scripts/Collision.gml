@@ -7,7 +7,7 @@ hit = false;
 //Vertical collision
 if(checkVertical) {
   if(place_meeting(x,y + verticalSpeed,object)) {
-    var moveVer = 0; 
+    var moveVer = 0;
     while(!place_meeting(x ,y+sign(verticalSpeed)+moveVer,object)) {
        moveVer += sign(verticalSpeed);
     }

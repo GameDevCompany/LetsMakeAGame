@@ -1,8 +1,12 @@
 //Take left joystick from gamepad and apply it to horizontal speed.
 
 //Left Stick
-horizontalAxis =  gamepad_axis_value(gamepad_index,gp_axislh);
+horizontalAxis = gamepad_axis_value(gamepad_index,gp_axislh);
 verticalAxis = gamepad_axis_value(gamepad_index,gp_axislv);
+
+horizontalSpeed *= 0.5;
+horizontalSpeed += horizontalAxis * movementSpeed;
+
 
 //Secondary action
 timebutton = clamp(1-gamepad_button_value(gamepad_index,gp_shoulderrb),0.2,1);

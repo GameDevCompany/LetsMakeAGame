@@ -5,9 +5,12 @@ horizontalAxis = 0;
 horizontalAxis -= keyboard_check(vk_left);
 horizontalAxis += keyboard_check(vk_right);
 
+horizontalSpeed *= 0.5;
+horizontalSpeed += horizontalAxis * movementSpeed;
+
 verticalAxis = 0;
-horizontalAxis -= keyboard_check(vk_up);
-horizontalAxis += keyboard_check(vk_down);
+verticalAxis -= keyboard_check(vk_up);
+verticalAxis += keyboard_check(vk_down);
 
 //Secondary action
 timebutton = keyboard_check(ord('X'));

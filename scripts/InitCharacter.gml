@@ -27,14 +27,12 @@ ready = false;
 characterTypeIndex = 0;
 lastAxis = 0;
 
-enum characterStates {
-  alive,
-  dead
-}
+
 
 characterType = "robot";
 state = characterStates.alive;
 index = GetPlayerIndex();
+show_debug_message(index);
 gamepad_index = GetGamepad();
 //if(gamepad_index != -100) {
   global.players[index] = id;

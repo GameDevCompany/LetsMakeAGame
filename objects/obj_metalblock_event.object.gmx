@@ -28,16 +28,23 @@
             <string>verticalSpeed = 0;
 horizontalSpeed = 0;
 maxVerticalSpeed = 10;
+
 grounded = false;
 falling = false;
+
 stepTimer = 0;
+
 isFallable = false;
 isFloating = false;
-isEventBlock = false;
+isEventBlock = true;
 
 stepped = false;
 color = c_maroon;
 image_speed = 0.5;
+
+visible = false;
+temp_mask = mask_index;
+mask_index = nocollision;
 </string>
           </argument>
         </arguments>

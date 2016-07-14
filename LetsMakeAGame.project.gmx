@@ -89,6 +89,7 @@
       <sprite>sprites\spr_parachute</sprite>
       <sprite>sprites\spr_parachute_deployed</sprite>
     </sprites>
+    <sprite>sprites\sprite57</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Sky</background>
@@ -145,6 +146,7 @@
         <script>scripts\SlowMotion.gml</script>
         <script>scripts\Crouching.gml</script>
         <script>scripts\Move.gml</script>
+        <script>scripts\Smash.gml</script>
       </scripts>
     </scripts>
     <scripts name="Particles">
@@ -160,6 +162,7 @@
     <scripts name="Screens">
       <script>scripts\ResultScreen.gml</script>
     </scripts>
+    <script>scripts\DrawCollider.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\uiFont</font>
@@ -178,6 +181,9 @@
       <object>objects\obj_cloudBlock</object>
       <object>objects\obj_metalblock</object>
       <object>objects\obj_balloonblock</object>
+      <objects name="eventBlocks">
+        <object>objects\obj_metalblock_event</object>
+      </objects>
     </objects>
     <objects name="UI">
       <object>objects\obj_ui_panel</object>
@@ -193,9 +199,9 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_startgame</room>
     <room>rooms\rm_character_select</room>
     <room>rooms\rm_testarea</room>
+    <room>rooms\rm_startgame</room>
     <room>rooms\rm_result</room>
   </rooms>
   <help>

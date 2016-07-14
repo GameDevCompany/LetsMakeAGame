@@ -158,7 +158,7 @@ if(y &gt; view_yview[0]+view_hview[0]) {
 
 image_blend = make_colour_hsv(0, damageColor, 255);
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, sprite_angle, image_blend, image_alpha);
-
+//DrawCollider();
 </string>
           </argument>
         </arguments>

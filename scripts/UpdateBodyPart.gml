@@ -3,7 +3,6 @@ Collision(obj_collidable,true,true);
 grounded = IsGrounded(obj_collidable);
 Rotate(horizontalSpeed, grounded);
 
-
 Translate();
 sprite = asset_get_index("spr_" + characterType + "_"+part);
 sprite_index = sprite;

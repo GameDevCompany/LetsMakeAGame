@@ -12,13 +12,17 @@ global.particleSystem = part_system_create();
 global.inGame = false;
 global.selectCharacters = true;
 global.gameMode = "Last";
-global.hwrap = true;
+global.hwrap = false;
 global.vwrap = false;
 global.takeDamage = true;
 global.shakeAmount = 2;
 global.shakeTime = 0;
 display_set_gui_size(640 , 480);
 
+enum characterStates {
+  alive,
+  dead
+}
 
 particles();
 randomize();

@@ -3,14 +3,17 @@ if(global.selectCharacters) {
 } else if(global.inGame) {
   CheckHealth();
   if(state != characterStates.dead) {
-    Gravity(); //Applies gravity
-    Jump();
-    Pickup();
+    x = xprevious;
+    y = yprevious;
     Collision(obj_collidable,true,true); //Checks for Collision
+    Smash();
     grounded = IsGrounded(obj_collidable);
-    Rotate(horizontalSpeed,grounded);
+   
+    Pickup();
+    //Rotate(horizontalSpeed,grounded);
     HandleAnimation();
     Attack();
+
     Translate();
   }
 }

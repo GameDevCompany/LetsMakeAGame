@@ -63,7 +63,7 @@ deployed = false;
           <argument>
             <kind>1</kind>
             <string>if(parent == noone) {
-  Gravity();
+  //Gravity();
   Collision(obj_collidable,true,true);
   grounded = IsGrounded(obj_collidable);
   if(!grounded) {
