@@ -1,7 +1,7 @@
 var object = argument0;
 var checkHorizontal = argument1;
 var checkVertical = argument2;
-
+var checkInside = argument3;
 hit = false;
 
 //Vertical collision
@@ -29,39 +29,41 @@ if(checkHorizontal) {
 }
 
 //Move objects out of walls
-if(place_meeting(x+horizontalSpeed,y+verticalSpeed,object)) {
-  if(checkVertical) {
-    var moveY = 1;
-    while(place_meeting(x,y-moveY,object) && moveY < 20) {
-       moveY += 1;
+if(checkInside) {
+  if(place_meeting(x+horizontalSpeed,y+verticalSpeed,object)) {
+    if(checkVertical) {
+      var moveY = 1;
+      while(place_meeting(x+horizontalSpeed,y+verticalSpeed-moveY,object) && moveY < 20) {
+         moveY += 1;
+      }
+      if(moveY < maxVerticalSpeed) {
+        verticalSpeed -= moveY;
+      }
+      
+      var moveY = 1;
+      while(place_meeting(x+horizontalSpeed,y+verticalSpeed+moveY,object) && moveY < 20) {
+         moveY += 1;
+      }
+      if(moveY < maxVerticalSpeed) {
+        verticalSpeed += moveY;
+      }
     }
-    if(moveY < maxVerticalSpeed) {
-      y -= moveY;
-    }
-    
-    var moveY = 1;
-    while(place_meeting(x,y+moveY,object) && moveY < 20) {
-       moveY += 1;
-    }
-    if(moveY < maxVerticalSpeed) {
-      y += moveY;
-    }
-  }
-  if(checkHorizontal) {
-    var moveX = 1;
-    while(place_meeting(x-moveX,y,object) && moveX < 10) {
-       moveX += 1;
-    }
-    if(moveX < 10) {
-      x -= moveX;
-    }
-    
-    var moveX = 1;
-    while(place_meeting(x+moveX,y,object) && moveX < 10) {
-       moveX += 1;
-    }
-    if(moveX < 10) {
-      x += moveX;
+    if(checkHorizontal) {
+      var moveX = 1;
+      while(place_meeting(x+horizontalSpeed-moveX,y+verticalSpeed,object) && moveX < 10) {
+         moveX += 1;
+      }
+      if(moveX < 10) {
+        horizontalSpeed -= moveX;
+      }
+      
+      var moveX = 1;
+      while(place_meeting(x+horizontalSpeed+moveX,y+verticalSpeed,object) && moveX < 10) {
+         moveX += 1;
+      }
+      if(moveX < 10) {
+        horizontalSpeed += moveX;
+      }
     }
   }
 }

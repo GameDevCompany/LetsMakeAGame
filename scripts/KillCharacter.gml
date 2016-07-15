@@ -1,5 +1,5 @@
 timeOfDeath = get_timer();
-state = characterStates.dead;
+alive = false;
 visible = false;
 temp_mask = mask_index;
 mask_index = nocollision;

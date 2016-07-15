@@ -1,4 +1,4 @@
-setSprites();
+//SetSprites();
 image_speed = global.timeScale * 0.2;
 
 //Flip animation depending on direction of movement
@@ -18,8 +18,26 @@ if(grounded && sprite_index == rollSprite) {
   y -=  bbox_bottom - bbottom;
 }
 
+switch(state) {
+  case "attacking":
+    sprite_index = punchSprite;
+    break;
+  case "idle":
+    sprite_index = idleSprite;
+    break;
+  case "running":
+    sprite_index = runningSprite;
+    break;
+  default:
+    sprite_index = rollSprite;
+}
+
+
+
+
+
 //Switching animation depending on character state.
-if(attackTimer > global.time) {
+/*if(attackTimer > global.time) {
   if(sprite_index != punchSprite) {
     sprite_index = punchSprite;
     image_index = 0;
@@ -41,4 +59,4 @@ if(attackTimer > global.time) {
   } else {
     sprite_index = idleSprite;
   }
-}
+}*/

@@ -1,5 +1,8 @@
-Gravity();
-Collision(obj_collidable,true,true);
+//Gravity();
+
+verticalSpeed -= 1;
+
+Collision(obj_collidable,true,true,true);
 grounded = IsGrounded(obj_collidable);
 Rotate(horizontalSpeed, grounded);
 
@@ -20,7 +23,7 @@ if(created_on + particleDelay > get_timer()) {
   part_type_alpha2(bloodSpurtParticle, 1, 0);
   part_type_speed(bloodSpurtParticle, 3, 9, 0, 0);
   part_type_direction(bloodSpurtParticle, image_angle - 2, image_angle + 2, 0, 0);
-  part_type_gravity(bloodSpurtParticle, 0.50, 270);
+  part_type_gravity(bloodSpurtParticle, -0.50, 270);
   part_type_orientation(bloodSpurtParticle, 0, 0, 0, 0, 1);
   part_type_life(bloodSpurtParticle, room_speed*1, room_speed*1.2);
   part_particles_create(global.particleSystem, x, y, bloodSpurtParticle, 1);

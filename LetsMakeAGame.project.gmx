@@ -94,25 +94,27 @@
   <backgrounds name="background">
     <background>background\Sky</background>
     <background>background\SkyTall</background>
+    <background>background\test_bg</background>
+    <background>background\background3</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\Rotate.gml</script>
     <script>scripts\Gravity.gml</script>
     <script>scripts\Collision.gml</script>
-    <script>scripts\dealDamage.gml</script>
+    <script>scripts\DealDamage.gml</script>
     <script>scripts\Translate.gml</script>
     <script>scripts\IncreaseScore.gml</script>
     <script>scripts\Damageble.gml</script>
     <script>scripts\MoveTowards.gml</script>
     <script>scripts\IsGrounded.gml</script>
-    <script>scripts\draw_text_outlined.gml</script>
     <scripts name="System">
       <script>scripts\Setup.gml</script>
       <script>scripts\StartMatch.gml</script>
       <script>scripts\ShakeCamera.gml</script>
       <script>scripts\GetPlayerIndex.gml</script>
       <script>scripts\GameEnd.gml</script>
+      <script>scripts\particles.gml</script>
     </scripts>
     <scripts name="GameModes">
       <script>scripts\GameMode_DeathMatch.gml</script>
@@ -126,14 +128,13 @@
       <script>scripts\InitCharacter.gml</script>
       <script>scripts\BeginUpdateCharacter.gml</script>
       <script>scripts\UpdateCharacter.gml</script>
-      <script>scripts\HandleAnimation.gml</script>
       <script>scripts\CheckHealth.gml</script>
       <script>scripts\ResetCharacter.gml</script>
       <script>scripts\KillCharacter.gml</script>
-      <script>scripts\drawHealthBar.gml</script>
-      <script>scripts\getCharacters.gml</script>
-      <script>scripts\selectCharacter.gml</script>
-      <script>scripts\setSprites.gml</script>
+      <script>scripts\DrawHealthBar.gml</script>
+      <script>scripts\GetAvailableCharacters.gml</script>
+      <script>scripts\SelectCharacter.gml</script>
+      <script>scripts\SetSprites.gml</script>
       <scripts name="Controls">
         <script>scripts\GetGamepad.gml</script>
         <script>scripts\GetControlsKeyboard.gml</script>
@@ -141,19 +142,22 @@
       </scripts>
       <scripts name="Mechanics">
         <script>scripts\Attack.gml</script>
+        <script>scripts\Move.gml</script>
         <script>scripts\Pickup.gml</script>
         <script>scripts\Jump.gml</script>
         <script>scripts\SlowMotion.gml</script>
         <script>scripts\Crouching.gml</script>
-        <script>scripts\Move.gml</script>
         <script>scripts\Smash.gml</script>
       </scripts>
-    </scripts>
-    <scripts name="Particles">
-      <script>scripts\particles.gml</script>
+      <scripts name="Animation">
+        <script>scripts\SetState.gml</script>
+        <script>scripts\HandleAnimation.gml</script>
+        <script>scripts\ResetState.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Block">
       <script>scripts\InitBlock.gml</script>
+      <script>scripts\BeginUpdateBlock.gml</script>
       <script>scripts\UpdateBlock.gml</script>
       <scripts name="Mechnics">
         <script>scripts\Fall.gml</script>
@@ -162,7 +166,14 @@
     <scripts name="Screens">
       <script>scripts\ResultScreen.gml</script>
     </scripts>
-    <script>scripts\DrawCollider.gml</script>
+    <scripts name="Utils">
+      <script>scripts\DrawCollider.gml</script>
+      <script>scripts\DrawTextOutlined.gml</script>
+    </scripts>
+    <scripts name="LevelGeneration">
+      <script>scripts\InitLevel.gml</script>
+      <script>scripts\UpdateLevel.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\uiFont</font>

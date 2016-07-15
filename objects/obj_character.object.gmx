@@ -95,6 +95,7 @@
           <argument>
             <kind>1</kind>
             <string>attacked = false;
+animationComplete = true;
 </string>
           </argument>
         </arguments>
@@ -117,8 +118,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.inGame) {
-  drawHealthBar(HP,maxHP);
+            <string>if(global.inGame &amp;&amp; alive) {
+  DrawHealthBar(HP,maxHP);
 }
 </string>
           </argument>

@@ -64,7 +64,7 @@ deployed = false;
             <kind>1</kind>
             <string>if(parent == noone) {
   //Gravity();
-  Collision(obj_collidable,true,true);
+  Collision(obj_collidable,true,true,true);
   grounded = IsGrounded(obj_collidable);
   if(!grounded) {
     Rotate(horizontalSpeed,false);
@@ -75,7 +75,7 @@ deployed = false;
   y = parent.y;
   verticalSpeed = parent.verticalSpeed;
   if(deployed) {
-    parent.verticalSpeed = 0.1;
+    parent.verticalSpeed = -10;
   } else {
     if(parent.damageColor &gt; 0) {
       parent = noone;

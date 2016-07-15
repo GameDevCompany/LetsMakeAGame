@@ -8,7 +8,9 @@ if(attackKeyHold) {
 if(attackKeyPressed && attackTimer < global.time) {
   attacked = true;
   attackTimer = global.time + 250000;
-  
+
+  SetState("attacking",true);
+
   var flipX = 180 * ((image_xscale*0.5)-0.5);
   var dash = MoveTowards(sprite_angle + flipX, 1);
 
@@ -28,7 +30,7 @@ if(attacked) {
     var mask = mask_index;
     mask_index = asset_get_index("spr_" + characterType + "_punch_mask"); 
     var inst = instance_place(x, y, obj_character);
-    dealDamage(inst,dmg,index,x,y);
+    DealDamage(inst,dmg,index,x,y);
     mask_index = mask; 
 }
 

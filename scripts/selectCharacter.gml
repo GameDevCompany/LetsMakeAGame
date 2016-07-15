@@ -1,5 +1,5 @@
 if(!ready) {
-  var chars = getCharacters();
+  var chars = GetAvailableCharacters();
   if(round(gamepad_axis_value(gamepad_index,gp_axislh)) != lastAxis) {
     lastAxis = round(gamepad_axis_value(gamepad_index,gp_axislh));
     characterTypeIndex += lastAxis;
@@ -11,7 +11,7 @@ if(!ready) {
       }
     }
   characterType = chars[characterTypeIndex];
-  setSprites();
+  SetSprites();
   sprite_index = idleSprite;
 }
 

@@ -1,0 +1,3 @@
+if(animationComplete) {
+  state = "";
+}

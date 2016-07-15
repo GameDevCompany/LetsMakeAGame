@@ -9,6 +9,8 @@ global.timeScale = 1;
 global.lastIndex = 0;
 global.grav = 0.981;
 global.particleSystem = part_system_create();
+part_system_depth(global.particleSystem, 100000 );
+
 global.inGame = false;
 global.selectCharacters = true;
 global.gameMode = "Last";
@@ -18,11 +20,6 @@ global.takeDamage = true;
 global.shakeAmount = 2;
 global.shakeTime = 0;
 display_set_gui_size(640 , 480);
-
-enum characterStates {
-  alive,
-  dead
-}
 
 particles();
 randomize();

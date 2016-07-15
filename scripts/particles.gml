@@ -58,6 +58,36 @@ part_type_life(global.crumbleParticles, room_speed*0.3, room_speed*0.5);
 
 
 
+global.trailParticles = part_type_create();
+part_type_shape(global.trailParticles, pt_shape_sphere);
+part_type_size(global.trailParticles, 0.02, 0.04, 0, 0.5);
+part_type_scale(global.trailParticles, 1, 1);
+part_type_colour1(global.trailParticles, c_white);
+part_type_alpha2(global.trailParticles, 0.5, 0);
+part_type_speed(global.trailParticles, 0, 1, 0, 0);
+//part_type_direction(global.trailParticles, 200, 300, 0, 0);
+part_type_gravity(global.trailParticles, -1, 270);
+part_type_orientation(global.trailParticles, 0, 0, 0, 0, 1);
+part_type_blend(global.trailParticles, false);
+part_type_life(global.trailParticles, room_speed*0.5, room_speed*0.8);
+
+
+
+global.trailParticles2 = part_type_create();
+part_type_shape(global.trailParticles2, pt_shape_sphere);
+part_type_size(global.trailParticles2, 0.01, 0.02, 0, 0.2);
+part_type_scale(global.trailParticles2, 1, 1);
+part_type_colour1(global.trailParticles2, c_white);
+part_type_alpha2(global.trailParticles2, 0.5, 0);
+part_type_speed(global.trailParticles2, 0, 1, 0, 0);
+//part_type_direction(global.trailParticles, 200, 300, 0, 0);
+part_type_gravity(global.trailParticles2, -1, 270);
+part_type_orientation(global.trailParticles2, 0, 0, 0, 0, 1);
+part_type_blend(global.trailParticles2, false);
+part_type_life(global.trailParticles2, room_speed*0.5, room_speed*0.8);
+
+
+      //
 
 
 

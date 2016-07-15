@@ -53,7 +53,7 @@ posY = 0;
 numPlayers = array_length_1d(global.players);
 numAlivePlayers = 0;
 for(var i = 1; i &lt; numPlayers;i++) {
-  if(global.players[i].state == characterStates.alive) {
+  if(global.players[i].alive) {
     posY += global.players[i].y;
     numAlivePlayers++;
   }

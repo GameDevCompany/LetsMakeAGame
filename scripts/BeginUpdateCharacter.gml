@@ -1,14 +1,17 @@
 if(global.inGame) {
-  if(state != characterStates.dead) {
+  ResetState();
+  if(alive) {
     GetControlsGamepad(); //Gets movement input from gamepad
-    //Gravity(); //Applies gravity
-    verticalSpeed *= 0.5;
-    if(verticalSpeed >= maxVerticalSpeed) {
-      verticalSpeed = maxVerticalSpeed;
-    }
+    //Set here anything that changes position
     
-    
-    Jump();
+    //Gravity(); 
+    Attack();
+    Move();
+
+
+  
+    //Initial movement of object
+    //Collision(obj_collidable,true,true,true); //Checks for Collision
     Translate();
   }
 }

@@ -1,12 +1,12 @@
-if(HP <= 0 && state != characterStates.dead) {
+if(HP <= 0 && alive) {
   KillCharacter();
 }
-if(y > room_height + 64 && state != characterStates.dead) {
+if(y > room_height + 64 && alive) {
   KillCharacter();
   show_debug_message("character died");
 } 
 
-if(state == characterStates.dead && timeOfDeath + 5000000  < get_timer()) {
+if(!alive && timeOfDeath + 5000000  < get_timer()) {
   if(global.gameMode != "Last") {
     ResetCharacter();
   }

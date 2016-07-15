@@ -1,6 +1,6 @@
 var inst = instance_place(x+horizontalSpeed, y+verticalSpeed, obj_character);
 if(inst != noone) {
-  dealDamage(inst,dmg,playerIndex,x,y);
+  DealDamage(inst,dmg,playerIndex,x,y);
   instance_destroy();
 }
 if (inst != noone) {

@@ -3,23 +3,25 @@ if(hit) {
   lastTouchedGround = 0;
   lastGroundSpeed = 0;
 }
+
 if(jumpKeyPressed && grounded) {
   lastTouchedGround = global.time;
+  with(groundObject) {
+    if(verticalSpeed < other.verticalSpeed) {
+      other.verticalSpeed = verticalSpeed;
+    }
+  }
 }
+
 if(lastTouchedGround + timeToIncreaseJump > global.time) {
   if(jumpKeyHeld) {
-    verticalSpeed = -jumpSpeed;
+    verticalSpeed += -jumpSpeed;
   } else {
     lastTouchedGround = 0;
   }
 }
-//Set rotation speed when not grounded
-if(!grounded) {
-  lastGroundSpeed *= 0.99;
-  horizontalSpeed =  (lastGroundSpeed*0)+(horizontalSpeed *1);
-  //if(verticalSpeed + 0.1 > maxVerticalSpeed) {
-      verticalSpeed += verticalAxis * movementSpeed;
-  //}
-} else {
+
+if(grounded) {
   lastGroundSpeed = horizontalSpeed;
 }
+

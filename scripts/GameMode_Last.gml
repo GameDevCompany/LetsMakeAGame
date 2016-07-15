@@ -6,7 +6,7 @@ if(global.inGame) {
     var player = global.players[i];
     with(player) {
       winner = false;
-      if(state ==  characterStates.dead) {
+      if(!alive) {
         numAlive--;
       } else {
         winner = true;
