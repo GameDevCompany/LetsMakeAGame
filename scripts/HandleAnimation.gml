@@ -12,7 +12,7 @@ if(grounded) {
   }
 }
 
-if(grounded && sprite_index == rollSprite) {
+if(grounded && (sprite_index == fallingSprite || sprite_index == hoverSprite)) {
   var bbottom = bbox_bottom;
   sprite_index = idleSprite;
   y -=  bbox_bottom - bbottom;
@@ -20,7 +20,7 @@ if(grounded && sprite_index == rollSprite) {
 
 switch(state) {
   case "attacking":
-    sprite_index = punchSprite;
+    sprite_index = idleSprite;
     break;
   case "idle":
     sprite_index = idleSprite;
@@ -28,8 +28,11 @@ switch(state) {
   case "running":
     sprite_index = runningSprite;
     break;
+  case "hover":
+    sprite_index = hoverSprite;
+    break;
   default:
-    sprite_index = rollSprite;
+    sprite_index = fallingSprite;
 }
 
 

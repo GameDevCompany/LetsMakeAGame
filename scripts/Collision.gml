@@ -10,6 +10,9 @@ if(checkVertical) {
     var moveVer = 0;
     while(!place_meeting(x ,y+sign(verticalSpeed)+moveVer,object)) {
        moveVer += sign(verticalSpeed);
+       if(abs(moveVer) > 36) {
+          break;
+       }
     }
     hit = true;
     verticalSpeed = moveVer;
@@ -22,6 +25,9 @@ if(checkHorizontal) {
     var moveHor = 0; 
     while(!place_meeting(x+sign(horizontalSpeed)+moveHor,y + verticalSpeed,object)) {
        moveHor += sign(horizontalSpeed);
+       if(abs(moveHor) > 36) {
+          break;
+       }
     }
     hit = true;
     horizontalSpeed = moveHor;

@@ -9,4 +9,4 @@ for(var i = 1; i < array_length_1d(global.players); i++) {
     ResetCharacter();
   }
 }
-room_goto( rm_testarea );
+room_goto(rm_testarea);

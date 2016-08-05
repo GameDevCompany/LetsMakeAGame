@@ -1,29 +1,24 @@
-
-if(isEventBlock) {
-  if(y < view_yview[0] - 36) {
-    mask_index = temp_mask;
-    falling = true;
-    isFallable = true;
-    visible = true;
+if(falling) {
+  Fall(grav);
+  var inst = instance_place(x+horizontalSpeed, y+verticalSpeed, obj_character);
+  if(inst != noone) {
+    with(inst) {
+      if(bubbled) {
+        bubbled = false;
+      }
+    }
   }
-}
-
-if(isFallable) {
-  Fall();
-}
-
-if(!falling) {
+  var inst = instance_place(x+horizontalSpeed,y+verticalSpeed,obj_collidable);
+  if (inst != noone) {
+      verticalSpeed *= -0.7;  
+      grav *= -0.7;
+      
+      PlaySound(snd_crunch, 10, false);
+  }
+ Collision(rootObject,false,true,true);
+} else {
   verticalSpeed = -5;
 }
 
-if(verticalSpeed == maxVerticalSpeed) {
-  var inst = instance_place(x, y+verticalSpeed, obj_character);
-  if(inst != noone) {
-    with(inst) {
-      KillCharacter();
-    }
-  }
-}
-
-Collision(rootObject,false,true,false);
+ 
 Translate()

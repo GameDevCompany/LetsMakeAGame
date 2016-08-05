@@ -1,27 +1,12 @@
-/*var inst = instance_place(x, y-1, obj_collidable);
-if(inst == noone) {
-  inst =  instance_place(x, y-1, obj_parachute);
-}
-if (inst != noone) { 
-  with(inst) {
-    if(object_get_name(object_index) == "obj_character") {
-      other.stepped = true;
+grav=argument0;
+/*if(falling) {
+  if(verticalSpeed < maxVerticalSpeed) {
+    if(verticalSpeed > 0) {
+      verticalSpeed += (grav*2*global.timeScale);
     } else {
-      if(falling) {
-        other.stepped = true;
-      }
+      verticalSpeed += (grav*global.timeScale);
     }
+  } else {
+    verticalSpeed = maxVerticalSpeed;
   }
-}
-if(stepped) {
-  stepTimer += global.timeScale * delta_time;
-  part_type_colour1(global.crumbleParticles, color);
-  part_particles_create(global.particleSystem, x+random_range(0,32), y+32, global.crumbleParticles,1);
-}
-if(stepTimer > 1000000) {
-  falling = true;
-  stepped = false;
 }*/
-if(falling) {
-  Gravity();
-}

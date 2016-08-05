@@ -1,11 +1,18 @@
+aimV = 0;
+aimH = 0;
+falling = true;
+timeOutside = 3;
 verticalSpeed = 0;
 horizontalSpeed = 0;
-movementSpeed = 3;
+movementSpeed = 1.5;
+attackHeld = 0;
 jumpSpeed = 10;
 lastGroundSpeed = 0;
 animationComplete = true;
 rotationSpeed = 0;
-
+bubbled = false;
+bubbledTime = 0;
+attackPower= 0;
 HP = 4;
 maxHP = HP;
 i = 0;

@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_crunch</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
       <sprites name="pirate">
@@ -65,6 +67,18 @@
       <sprite>sprites\spr_slash</sprite>
       <sprite>sprites\spr_char_display</sprite>
       <sprite>sprites\spr_para_display</sprite>
+      <sprites name="witch">
+        <sprite>sprites\spr_witch_idle</sprite>
+        <sprite>sprites\spr_witch_running</sprite>
+        <sprite>sprites\spr_witch_hover</sprite>
+        <sprite>sprites\spr_witch_falling</sprite>
+        <sprites name="parts">
+          <sprite>sprites\spr_witch_head</sprite>
+          <sprite>sprites\spr_witch_body</sprite>
+          <sprite>sprites\spr_witch_arm</sprite>
+          <sprite>sprites\spr_witch_leg</sprite>
+        </sprites>
+      </sprites>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\spr_grassblock</sprite>
@@ -72,9 +86,12 @@
       <sprite>sprites\spr_metalblock</sprite>
       <sprite>sprites\spr_cloudblock</sprite>
       <sprite>sprites\spr_balloonblock</sprite>
+      <sprite>sprites\spr_mosscobble</sprite>
     </sprites>
     <sprites name="Weapons">
       <sprite>sprites\Shuriken</sprite>
+      <sprite>sprites\spr_spell</sprite>
+      <sprite>sprites\spr_bubble</sprite>
     </sprites>
     <sprites name="UI">
       <sprite>sprites\spr_panel</sprite>
@@ -88,14 +105,27 @@
     <sprites name="Objects">
       <sprite>sprites\spr_parachute</sprite>
       <sprite>sprites\spr_parachute_deployed</sprite>
+      <sprite>sprites\spr_book</sprite>
+      <sprite>sprites\spr_cauldron</sprite>
+      <sprite>sprites\spr_broom</sprite>
+      <sprite>sprites\spr_pillar</sprite>
+      <sprite>sprites\spr_dog</sprite>
+      <sprite>sprites\spr_chair</sprite>
+      <sprite>sprites\spr_chair_alt</sprite>
+      <sprite>sprites\spr_table</sprite>
+      <sprite>sprites\spr_cat</sprite>
+      <sprite>sprites\spr_cat_cling</sprite>
+      <sprite>sprites\spr_fireball</sprite>
+      <sprite>sprites\spr_airplane</sprite>
+      <sprite>sprites\puzzle</sprite>
     </sprites>
-    <sprite>sprites\sprite57</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Sky</background>
     <background>background\SkyTall</background>
     <background>background\test_bg</background>
     <background>background\background3</background>
+    <background>background\background4</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -106,6 +136,7 @@
     <script>scripts\Translate.gml</script>
     <script>scripts\IncreaseScore.gml</script>
     <script>scripts\Damageble.gml</script>
+    <script>scripts\KeepInFrame.gml</script>
     <script>scripts\MoveTowards.gml</script>
     <script>scripts\IsGrounded.gml</script>
     <scripts name="System">
@@ -148,6 +179,8 @@
         <script>scripts\SlowMotion.gml</script>
         <script>scripts\Crouching.gml</script>
         <script>scripts\Smash.gml</script>
+        <script>scripts\CastSpell.gml</script>
+        <script>scripts\timeout.gml</script>
       </scripts>
       <scripts name="Animation">
         <script>scripts\SetState.gml</script>
@@ -173,28 +206,33 @@
     <scripts name="LevelGeneration">
       <script>scripts\InitLevel.gml</script>
       <script>scripts\UpdateLevel.gml</script>
+      <script>scripts\SpawnObjects.gml</script>
     </scripts>
+    <script>scripts\PlaySound.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\uiFont</font>
   </fonts>
   <objects name="objects">
     <object>objects\System</object>
+    <object>objects\rootObject</object>
     <object>objects\obj_collidable</object>
     <object>objects\Camera</object>
     <objects name="Characters">
       <object>objects\obj_character</object>
       <object>objects\obj_bodypart</object>
       <object>objects\obj_slash</object>
+      <object>objects\obj_spell</object>
     </objects>
     <objects name="Blocks">
-      <object>objects\rootObject</object>
       <object>objects\obj_cloudBlock</object>
       <object>objects\obj_metalblock</object>
       <object>objects\obj_balloonblock</object>
       <objects name="eventBlocks">
         <object>objects\obj_metalblock_event</object>
       </objects>
+      <object>objects\obj_airplane</object>
+      <object>objects\obj_puzzle</object>
     </objects>
     <objects name="UI">
       <object>objects\obj_ui_panel</object>
@@ -207,7 +245,9 @@
     </objects>
     <objects name="Objects">
       <object>objects\obj_parachute</object>
+      <object>objects\obj_falling_object</object>
     </objects>
+    <object>objects\Level</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_character_select</room>

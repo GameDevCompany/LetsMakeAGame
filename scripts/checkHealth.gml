@@ -12,4 +12,3 @@ if(!alive && timeOfDeath + 5000000  < get_timer()) {
   }
 }
 
-

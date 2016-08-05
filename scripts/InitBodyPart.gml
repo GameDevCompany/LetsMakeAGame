@@ -12,4 +12,4 @@ sprite = asset_get_index("spr_" + characterType + "_"+part);
 
 created_on = 0;
 particleDelay = irandom_range(3000000,5000000);
-
+falling = false;

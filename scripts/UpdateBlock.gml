@@ -1,14 +1,23 @@
 x = xprevious;
 y = yprevious;
-Collision(rootObject,false,true,false);
-Translate();
+
+
+
+
 
 if(falling) {
-  if(y > view_hview[0] + view_yview[0] + 36) {
-    instance_destroy();
+  Collision(rootObject,false,true,false);
+  if(y > view_hview[0] + view_yview[0] + 300) {
+   instance_destroy();
   }
 }
+Translate();
 
 
+
+
+if(y < view_yview[0]-300) {
+  instance_destroy();
+}
 
 

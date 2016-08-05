@@ -16,14 +16,13 @@ if(global.selectCharacters) {
       }
 
     }
-    
-    
     Jump();
     //Smash();
 
     Pickup();
     //Rotate(horizontalSpeed,grounded);
     Translate();
+    KeepInFrame(true,true);
     HandleAnimation();
     
     if(verticalSpeed > 0) {

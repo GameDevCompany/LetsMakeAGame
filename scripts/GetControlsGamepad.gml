@@ -14,3 +14,4 @@ jumpKeyPressed = gamepad_button_check_pressed(gamepad_index, gp_face1);
 //Attacking
 attackKeyPressed = gamepad_button_check_pressed(gamepad_index, gp_face3);
 attackKeyHold = gamepad_button_check(gamepad_index, gp_face3);
+attackKeyReleased = gamepad_button_check_released(gamepad_index, gp_face3);

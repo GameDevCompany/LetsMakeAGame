@@ -121,6 +121,11 @@ animationComplete = true;
             <string>if(global.inGame &amp;&amp; alive) {
   DrawHealthBar(HP,maxHP);
 }
+
+if(y &lt; view_yview[0]) {
+  draw_set_color(c_white);
+  draw_text_transformed(x-6,view_yview[0]+15,string(round(timeOutside)),0.5,0.5,0);
+}
 </string>
           </argument>
         </arguments>
@@ -159,7 +164,9 @@ if(y &gt; view_yview[0]+view_hview[0]) {
 
 image_blend = make_colour_hsv(0, damageColor, 255);
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, sprite_angle, image_blend, image_alpha);
-//DrawCollider();
+if(bubbled) {
+  draw_sprite_ext(spr_bubble, image_index, x, y, image_xscale, image_yscale, sprite_angle, image_blend, 0.7);
+}
 </string>
           </argument>
         </arguments>

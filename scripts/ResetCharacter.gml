@@ -9,5 +9,6 @@ verticalSpeed = 0;
 visible = true;
 speed = 0;
 lastGroundSpeed = 0;
+bubbled = false;
 alive = true;
 

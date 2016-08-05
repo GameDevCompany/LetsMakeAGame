@@ -1,6 +1,6 @@
 //Gravity();
 
-verticalSpeed -= 1;
+//verticalSpeed -= 1;
 
 Collision(obj_collidable,true,true,true);
 grounded = IsGrounded(obj_collidable);

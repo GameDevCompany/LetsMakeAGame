@@ -87,15 +87,18 @@ part_type_blend(global.trailParticles2, false);
 part_type_life(global.trailParticles2, room_speed*0.5, room_speed*0.8);
 
 
-      //
-
-
-
-
-
-
-
-
+global.spellParticles = part_type_create();
+part_type_shape(global.spellParticles, pt_shape_sphere);
+part_type_size(global.spellParticles, 0.25, 0.25, -0.005, 0);
+part_type_scale(global.spellParticles, 1, 1);
+part_type_colour1(global.spellParticles, c_white);
+part_type_alpha2(global.spellParticles, 0.5, 0);
+part_type_speed(global.spellParticles, 0, 0, 0, 0);
+//part_type_direction(global.trailParticles, 200, 300, 0, 0);
+//part_type_gravity(global.spellParticles, 0, 270);
+part_type_orientation(global.spellParticles, 0, 0, 0, 0, 1);
+part_type_blend(global.spellParticles, true);
+part_type_life(global.spellParticles, room_speed*0.4, room_speed*0.4);
 
 
 
