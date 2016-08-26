@@ -9,7 +9,7 @@ if(attackKeyPressed && attackTimer < global.time) {
   attacked = true;
   attackTimer = global.time;
 
-  SetState("attacking",true);
+  //SetState("attacking",true);
 
   var flipX = 180 * ((image_xscale*0.5)-0.5);
   var dash = MoveTowards(sprite_angle + flipX, 64);

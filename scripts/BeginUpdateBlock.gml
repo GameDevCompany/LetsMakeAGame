@@ -13,11 +13,12 @@ if(falling) {
       verticalSpeed *= -0.7;  
       grav *= -0.7;
       
-      PlaySound(snd_crunch, 10, false);
+      //PlaySound(snd_crunch, 10, false);
   }
  Collision(rootObject,false,true,true);
 } else {
-  verticalSpeed = -5;
+
+  image_angle += rotationSpeed;
 }
 
  

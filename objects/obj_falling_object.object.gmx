@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(falling &amp;&amp; sprite_index != spr_fireball) {
+            <string>//if(falling &amp;&amp; sprite_index != spr_fireball) {
   image_angle += horizontalSpeed * global.timeScale;
-}
+//}
 </string>
           </argument>
         </arguments>
@@ -52,7 +52,7 @@
             <kind>1</kind>
             <string>draw_self();
 if(bubbled) {
-  draw_sprite_ext(spr_bubble, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, 0.7);
+  draw_sprite_ext(spr_bubble, image_index, x, y, image_xscale, image_yscale, 0, image_blend, 0.7);
 }
 </string>
           </argument>

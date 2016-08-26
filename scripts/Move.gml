@@ -4,24 +4,20 @@ if(bubbled) {
 }
 
 horizontalSpeed *= 0.2;
-horizontalSpeed += movementSpeed * horizontalAxis;
+horizontalSpeed += movementSpeedHor * horizontalAxis;
 
 if(!grounded) {
-  movementSpeed = 3;
   lastGroundSpeed *= 0.99;
-  horizontalSpeed = (lastGroundSpeed*0)+(horizontalSpeed *1);
   if(verticalSpeed > 0) {
     verticalSpeed *= 0.2;
   }else {
     verticalSpeed *= 0.5;
   }
-  verticalSpeed += verticalAxis * movementSpeed;
+  verticalSpeed += verticalAxis * movementSpeedVer;
   if(verticalSpeed >= maxVerticalSpeed) {
     verticalSpeed = maxVerticalSpeed;
   }
-} else {
-  movementSpeed = 6;
-}
+} 
 if(attackKeyHold) {
   horizontalSpeed *= 0.1;
   verticalSpeed *= 0.1;

@@ -26,6 +26,45 @@
           <argument>
             <kind>1</kind>
             <string>InitLevel();
+alarm[1] = room_speed * 0.2;
+spawnY = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/*var spawnX = -100; 
+if(spawnY &lt; view_hview[0]) {
+  spawnY += 40;
+  alarm[1] = room_speed * 0.2;
+  var inst = instance_create(spawnX,spawnY,obj_spell);
+  with(inst) {
+    direction = 0;
+    color = c_green;
+    var dir = MoveTowards(direction,48);
+    x += dir[0];
+    y += dir[1]; 
+    attackPower = 0.5;
+    speed = 12;
+  }
+}*/
 </string>
           </argument>
         </arguments>
@@ -95,8 +134,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(uiFont);
-DrawTextOutlined(10,10,string(round(height))+"m",c_white,c_black);
+            <string>LevelDrawCall();
 </string>
           </argument>
         </arguments>

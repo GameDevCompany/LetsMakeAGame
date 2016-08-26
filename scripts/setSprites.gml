@@ -2,8 +2,8 @@ idleSprite = asset_get_index("spr_" + characterType + "_idle");
 runningSprite = asset_get_index("spr_" + characterType + "_running"); 
 hoverSprite = asset_get_index("spr_" + characterType + "_hover"); 
 fallingSprite = asset_get_index("spr_" + characterType + "_falling"); 
-
-
+fallingLeftSprite = asset_get_index("spr_" + characterType + "_falling_left"); 
+fallingRightSprite = asset_get_index("spr_" + characterType + "_falling_right"); 
 //rollSprite = asset_get_index("spr_" + characterType + "_roll"); 
 //punchSprite = asset_get_index("spr_" + characterType + "_punch"); 
 //crouchSprite = asset_get_index("spr_" + characterType + "_crouch"); 

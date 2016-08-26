@@ -1,4 +1,4 @@
-verticalSpeed = 0;
+  verticalSpeed = -5;
 horizontalSpeed = 0;
 maxVerticalSpeed = 10;
 isFallable = true;
@@ -12,3 +12,4 @@ color = c_white;
 bubbled = false;
 grav = 0.5;
 image_speed = 0.5;
+rotationSpeed = 0.1;

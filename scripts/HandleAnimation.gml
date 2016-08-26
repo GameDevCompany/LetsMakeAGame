@@ -12,14 +12,15 @@ if(grounded) {
   }
 }
 
+/*
 if(grounded && (sprite_index == fallingSprite || sprite_index == hoverSprite)) {
   var bbottom = bbox_bottom;
   sprite_index = idleSprite;
   y -=  bbox_bottom - bbottom;
-}
+}*/
 
 switch(state) {
-  case "attacking":
+ /* case "attacking":
     sprite_index = idleSprite;
     break;
   case "idle":
@@ -27,9 +28,15 @@ switch(state) {
     break;
   case "running":
     sprite_index = runningSprite;
-    break;
+    break;*/
   case "hover":
     sprite_index = hoverSprite;
+    break;
+  case "falling_left":
+    sprite_index = fallingLeftSprite;
+    break;
+  case "falling_right":
+    sprite_index = fallingRightSprite;
     break;
   default:
     sprite_index = fallingSprite;

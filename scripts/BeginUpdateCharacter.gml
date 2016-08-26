@@ -1,27 +1,26 @@
 if(global.inGame) {
   ResetState();
   if(alive) {
-    GetControlsGamepad(); //Gets movement input from gamepad
-    //Set here anything that changes position
+    GetControlsGamepad();
     timeout();
     if(bubbled) {
-      if(bubbledTime + 6000000 < global.time) {
+      if(bubbledTime + 2000000 < global.time) {
         bubbled = false;
       }
-      SetState("idle",false);
     }
-
+    CastSpell();
+    Move();
+    
+    if(horizontalAxis < -0.2 ) {
+      SetState("falling_left",false);
+    } else if(horizontalAxis > 0.2 ) {
+      SetState("falling_right",false);
+    }
+    
+    
     if(verticalAxis < -0.1) {
       SetState("hover",false);
     }
-
-    //Gravity(); 
-    //Attack();
-    CastSpell();
-    Move();
-  
-    //Initial movement of object
-    //Collision(obj_collidable,true,true,true); //Checks for Collision
     Translate();
   }
 }

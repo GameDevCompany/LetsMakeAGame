@@ -123,6 +123,7 @@ animationComplete = true;
 }
 
 if(y &lt; view_yview[0]) {
+  draw_set_font(uiFont);
   draw_set_color(c_white);
   draw_text_transformed(x-6,view_yview[0]+15,string(round(timeOutside)),0.5,0.5,0);
 }

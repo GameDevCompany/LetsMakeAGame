@@ -68,10 +68,12 @@
       <sprite>sprites\spr_char_display</sprite>
       <sprite>sprites\spr_para_display</sprite>
       <sprites name="witch">
-        <sprite>sprites\spr_witch_idle</sprite>
-        <sprite>sprites\spr_witch_running</sprite>
         <sprite>sprites\spr_witch_hover</sprite>
         <sprite>sprites\spr_witch_falling</sprite>
+        <sprite>sprites\spr_witch_falling_right</sprite>
+        <sprite>sprites\spr_witch_falling_left</sprite>
+        <sprite>sprites\spr_witch_idle</sprite>
+        <sprite>sprites\spr_witch_running</sprite>
         <sprites name="parts">
           <sprite>sprites\spr_witch_head</sprite>
           <sprite>sprites\spr_witch_body</sprite>
@@ -87,6 +89,17 @@
       <sprite>sprites\spr_cloudblock</sprite>
       <sprite>sprites\spr_balloonblock</sprite>
       <sprite>sprites\spr_mosscobble</sprite>
+      <sprite>sprites\spr_mosscobble_piece</sprite>
+      <sprite>sprites\tower1</sprite>
+      <sprite>sprites\tower2</sprite>
+      <sprite>sprites\tower3</sprite>
+      <sprite>sprites\tower4</sprite>
+      <sprite>sprites\tower5</sprite>
+      <sprite>sprites\col1</sprite>
+      <sprite>sprites\col5</sprite>
+      <sprite>sprites\col2</sprite>
+      <sprite>sprites\col3</sprite>
+      <sprite>sprites\col4</sprite>
     </sprites>
     <sprites name="Weapons">
       <sprite>sprites\Shuriken</sprite>
@@ -202,13 +215,15 @@
     <scripts name="Utils">
       <script>scripts\DrawCollider.gml</script>
       <script>scripts\DrawTextOutlined.gml</script>
+      <script>scripts\Oscillator.gml</script>
+      <script>scripts\PlaySound.gml</script>
     </scripts>
     <scripts name="LevelGeneration">
       <script>scripts\InitLevel.gml</script>
       <script>scripts\UpdateLevel.gml</script>
       <script>scripts\SpawnObjects.gml</script>
+      <script>scripts\LevelDrawCall.gml</script>
     </scripts>
-    <script>scripts\PlaySound.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\uiFont</font>
@@ -248,10 +263,14 @@
       <object>objects\obj_falling_object</object>
     </objects>
     <object>objects\Level</object>
+    <object>objects\level_collider_test</object>
+    <object>objects\object23</object>
+    <object>objects\screen_shake</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_character_select</room>
     <room>rooms\rm_testarea</room>
+    <room>rooms\rm_testarea_planes</room>
     <room>rooms\rm_startgame</room>
     <room>rooms\rm_result</room>
   </rooms>

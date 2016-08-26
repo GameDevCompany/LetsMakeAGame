@@ -94,12 +94,19 @@ part_type_scale(global.spellParticles, 1, 1);
 part_type_colour1(global.spellParticles, c_white);
 part_type_alpha2(global.spellParticles, 0.5, 0);
 part_type_speed(global.spellParticles, 0, 0, 0, 0);
-//part_type_direction(global.trailParticles, 200, 300, 0, 0);
-//part_type_gravity(global.spellParticles, 0, 270);
 part_type_orientation(global.spellParticles, 0, 0, 0, 0, 1);
 part_type_blend(global.spellParticles, true);
 part_type_life(global.spellParticles, room_speed*0.4, room_speed*0.4);
 
+
+global.brokenCobble = part_type_create();
+part_type_sprite(global.brokenCobble, spr_mosscobble_piece,0,0,0);
+part_type_scale(global.brokenCobble, 1, 1);
+part_type_speed(global.brokenCobble, 1, 3, 0, 0);
+part_type_alpha2(global.brokenCobble, 1, 0);
+part_type_direction(global.brokenCobble, 0, 360, 0, 0);
+part_type_orientation(global.brokenCobble, 0, 360, 1, 0, 1);
+part_type_life(global.brokenCobble, room_speed*1, room_speed*1);
 
 
 /* Awesome transition thing?
