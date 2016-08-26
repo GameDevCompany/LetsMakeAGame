@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>visible = true;
+            <string>owner = noone;
+visible = true;
 attackPower = 0.3;
 color = c_white;
 falling = false;
@@ -60,7 +61,7 @@ part_type_colour1(global.spellParticles, color);
 part_particles_create(global.particleSystem, x, y, global.spellParticles, 2);
 
 var inst = instance_place(x, y, obj_collidable);
-if(inst != noone) {
+if(inst != noone &amp;&amp; inst != owner) {
   with(inst) {
     if(falling) {
       bubbled = true;

@@ -7,16 +7,15 @@ if(attackKeyHold) {
 if(attackTimer < global.time && attackKeyReleased) {
   attacked = true;
   attackTimer = global.time + 300000;
-  //SetState("attacking",true);
   if(!bubbled) {
     var inst = instance_create(x,y,obj_spell);
     with(inst) {
       color = c_white;
       direction = point_direction(other.x,other.y,other.x + other.aimH,other.y + other.aimV);
-      var dir = MoveTowards(direction,64);
+      owner = other.id;
+      var dir = MoveTowards(direction,24);
       x += dir[0];
       y += dir[1];
-      show_debug_message(other.attackPower);
       attackPower = other.attackPower;
       speed = 12;
     }

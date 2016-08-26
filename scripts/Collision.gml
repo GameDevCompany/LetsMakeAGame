@@ -38,21 +38,25 @@ if(checkHorizontal) {
 if(checkInside) {
   if(place_meeting(x+horizontalSpeed,y+verticalSpeed,object)) {
     if(checkVertical) {
-      var moveY = 1;
-      while(place_meeting(x+horizontalSpeed,y+verticalSpeed-moveY,object) && moveY < 20) {
-         moveY += 1;
+      var moveY1 = 1;
+      while(place_meeting(x+horizontalSpeed,y+verticalSpeed-moveY1,object) && moveY1 < 20) {
+         moveY1 += 1;
       }
-      if(moveY < maxVerticalSpeed) {
-        verticalSpeed -= moveY;
+      if(moveY1 < maxVerticalSpeed) {
+        verticalSpeed -= moveY1;
       }
       
-      var moveY = 1;
-      while(place_meeting(x+horizontalSpeed,y+verticalSpeed+moveY,object) && moveY < 20) {
-         moveY += 1;
+      var moveY2 = 1;
+      while(place_meeting(x+horizontalSpeed,y+verticalSpeed+moveY2,object) && moveY2 < 20) {
+         moveY2 += 1;
       }
-      if(moveY < maxVerticalSpeed) {
-        verticalSpeed += moveY;
+      if(moveY2 < maxVerticalSpeed) {
+        verticalSpeed += moveY2;
       }
+      
+      if(moveY2 == 20 && moveY1 == 20) {
+        verticalSpeed -= global.lvlspd;
+      } 
     }
     if(checkHorizontal) {
       var moveX = 1;

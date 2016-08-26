@@ -63,10 +63,6 @@
           <sprite>sprites\spr_robot_leg</sprite>
         </sprites>
       </sprites>
-      <sprite>sprites\nocollision</sprite>
-      <sprite>sprites\spr_slash</sprite>
-      <sprite>sprites\spr_char_display</sprite>
-      <sprite>sprites\spr_para_display</sprite>
       <sprites name="witch">
         <sprite>sprites\spr_witch_hover</sprite>
         <sprite>sprites\spr_witch_falling</sprite>
@@ -81,6 +77,10 @@
           <sprite>sprites\spr_witch_leg</sprite>
         </sprites>
       </sprites>
+      <sprite>sprites\nocollision</sprite>
+      <sprite>sprites\spr_slash</sprite>
+      <sprite>sprites\spr_char_display</sprite>
+      <sprite>sprites\spr_para_display</sprite>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\spr_grassblock</sprite>
@@ -158,7 +158,7 @@
       <script>scripts\ShakeCamera.gml</script>
       <script>scripts\GetPlayerIndex.gml</script>
       <script>scripts\GameEnd.gml</script>
-      <script>scripts\particles.gml</script>
+      <script>scripts\Particles.gml</script>
     </scripts>
     <scripts name="GameModes">
       <script>scripts\GameMode_DeathMatch.gml</script>

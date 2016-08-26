@@ -13,7 +13,7 @@ if(bg.y < 0 + room_speed) {
 }
 
 var spacing = 32;
-var spd = 5+(height/500);
+global.lvlspd = 5+(height/500);
 for(var i = 0; i < (view_wview[0]+32)/spacing; i++) {
   var xPos = (i*spacing);
   var inst = instance_create(xPos,view_hview[0]+32,obj_metalblock);
@@ -21,7 +21,7 @@ for(var i = 0; i < (view_wview[0]+32)/spacing; i++) {
     if(place_meeting(x,y,level_collider_test)) {
       instance_destroy();
     }
-    verticalSpeed = -spd;
+    verticalSpeed = -global.lvlspd;
     test = random_range(1,20);
     if(test < 5) {
       verticalSpeed += random_range(-0.5, 0.5);
@@ -58,4 +58,4 @@ if(d20 < 5) {
 
 */
 bg.y -= room_speed;
-alarm[0] = room_speed/spd;
+alarm[0] = room_speed/global.lvlspd;

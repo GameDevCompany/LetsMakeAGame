@@ -21,6 +21,8 @@ if(global.inGame) {
     if(verticalAxis < -0.1) {
       SetState("hover",false);
     }
+    
+    Collision(obj_collidable,true,true,true);
     Translate();
   }
 }

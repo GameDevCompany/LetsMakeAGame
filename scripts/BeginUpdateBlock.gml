@@ -15,11 +15,11 @@ if(falling) {
       
       //PlaySound(snd_crunch, 10, false);
   }
- Collision(rootObject,false,true,true);
+  Collision(obj_collidable,true,true,true);
 } else {
 
   image_angle += rotationSpeed;
 }
 
- 
-Translate()
+
+Translate();
