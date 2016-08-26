@@ -19,7 +19,13 @@ if(global.inGame) {
     
     
     if(verticalAxis < -0.1) {
-      SetState("hover",false);
+        if(horizontalAxis < -0.2 ) {
+          SetState("hover_left",false);
+        } else if(horizontalAxis > 0.2 ) {
+          SetState("hover_right",false);
+        } else {
+          SetState("hover",false);
+        }
     }
     
     Collision(obj_collidable,true,true,true);

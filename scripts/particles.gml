@@ -88,7 +88,8 @@ part_type_life(global.trailParticles2, room_speed*0.5, room_speed*0.8);
 
 
 global.spellParticles = part_type_create();
-part_type_shape(global.spellParticles, pt_shape_sphere);
+//part_type_shape(global.spellParticles, pt_shape_sphere);
+part_type_sprite(global.spellParticles, spr_spell,0,0,0);
 part_type_size(global.spellParticles, 0.25, 0.25, -0.005, 0);
 part_type_scale(global.spellParticles, 1, 1);
 part_type_colour1(global.spellParticles, c_white);

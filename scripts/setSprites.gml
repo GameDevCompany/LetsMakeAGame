@@ -1,6 +1,8 @@
 idleSprite = asset_get_index("spr_" + characterType + "_idle"); 
 runningSprite = asset_get_index("spr_" + characterType + "_running"); 
-hoverSprite = asset_get_index("spr_" + characterType + "_hover"); 
+hoverSprite = asset_get_index("spr_" + characterType + "_hover_left"); 
+hoverLeftSprite = asset_get_index("spr_" + characterType + "_hover_left"); 
+hoverRightSprite = asset_get_index("spr_" + characterType + "_hover_right"); 
 fallingSprite = asset_get_index("spr_" + characterType + "_falling"); 
 fallingLeftSprite = asset_get_index("spr_" + characterType + "_falling_left"); 
 fallingRightSprite = asset_get_index("spr_" + characterType + "_falling_right"); 

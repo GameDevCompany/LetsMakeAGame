@@ -32,6 +32,14 @@ switch(state) {
   case "hover":
     sprite_index = hoverSprite;
     break;
+  case "hover_left":
+    hover = hoverLeftSprite;
+    sprite_index = hoverLeftSprite;
+    break;
+  case "hover_right":
+    hover = hoverRightSprite;
+    sprite_index = hoverRightSprite;
+    break;
   case "falling_left":
     sprite_index = fallingLeftSprite;
     break;

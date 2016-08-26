@@ -64,7 +64,8 @@
         </sprites>
       </sprites>
       <sprites name="witch">
-        <sprite>sprites\spr_witch_hover</sprite>
+        <sprite>sprites\spr_witch_hover_left</sprite>
+        <sprite>sprites\spr_witch_hover_right</sprite>
         <sprite>sprites\spr_witch_falling</sprite>
         <sprite>sprites\spr_witch_falling_right</sprite>
         <sprite>sprites\spr_witch_falling_left</sprite>
