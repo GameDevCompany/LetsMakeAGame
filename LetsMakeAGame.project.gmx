@@ -143,7 +143,7 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="Attributes">
+    <scripts name="Mechanics">
       <scripts name="Collision">
         <script>scripts\InitCollision.gml</script>
         <script>scripts\Collision.gml</script>
@@ -178,16 +178,17 @@
     </scripts>
     <scripts name="System">
       <script>scripts\Setup.gml</script>
-      <script>scripts\StartMatch.gml</script>
-      <script>scripts\ShakeCamera.gml</script>
       <script>scripts\GetPlayerIndex.gml</script>
-      <script>scripts\GameEnd.gml</script>
       <script>scripts\Particles.gml</script>
     </scripts>
     <scripts name="GameModes">
-      <script>scripts\GameMode_DeathMatch.gml</script>
-      <script>scripts\GameMode_Last.gml</script>
+      <script>scripts\StartMatch.gml</script>
+      <script>scripts\GameEnd.gml</script>
       <script>scripts\IncreaseScore.gml</script>
+      <scripts name="Modes">
+        <script>scripts\GameMode_Last.gml</script>
+        <script>scripts\GameMode_DeathMatch.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Screens">
       <script>scripts\ResultScreen.gml</script>
@@ -199,6 +200,7 @@
       <script>scripts\PlaySound.gml</script>
       <script>scripts\MoveTowards.gml</script>
       <script>scripts\KeepInFrame.gml</script>
+      <script>scripts\ShakeCamera.gml</script>
     </scripts>
     <scripts name="LevelGeneration">
       <script>scripts\InitLevel.gml</script>
@@ -326,7 +328,6 @@
     </objects>
     <object>objects\Level</object>
     <object>objects\level_collider_test</object>
-    <object>objects\object23</object>
     <object>objects\screen_shake</object>
   </objects>
   <rooms name="rooms">
