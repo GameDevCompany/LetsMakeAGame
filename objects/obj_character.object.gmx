@@ -149,25 +149,15 @@ if(y &lt; view_yview[0]) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(damageColor &gt; 0) {
-  damageColor -= 10;
-  if(damageColor &lt; 0) {
-    damageColor = 0;
-  }
-}
-
-if(y &lt; view_yview[0]) {
+            <string>if(y &lt; view_yview[0]) {
   draw_sprite(spr_char_display,0,x,view_yview + 26);
 }
 if(y &gt; view_yview[0]+view_hview[0]) {
    draw_sprite(spr_char_display,0,x,view_yview[0]+view_hview[0] - 26);
 }
 
-image_blend = make_colour_hsv(0, damageColor, 255);
-draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, sprite_angle, image_blend, image_alpha);
-if(bubbled) {
-  draw_sprite_ext(spr_bubble, image_index, x, y, image_xscale, image_yscale, sprite_angle, image_blend, 0.7);
-}
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+DrawBubbled();
 </string>
           </argument>
         </arguments>

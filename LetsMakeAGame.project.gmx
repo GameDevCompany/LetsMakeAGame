@@ -143,16 +143,39 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\Rotate.gml</script>
-    <script>scripts\Gravity.gml</script>
-    <script>scripts\Collision.gml</script>
-    <script>scripts\DealDamage.gml</script>
-    <script>scripts\Translate.gml</script>
-    <script>scripts\IncreaseScore.gml</script>
-    <script>scripts\Damageble.gml</script>
-    <script>scripts\KeepInFrame.gml</script>
-    <script>scripts\MoveTowards.gml</script>
-    <script>scripts\IsGrounded.gml</script>
+    <scripts name="Attributes">
+      <scripts name="Collision">
+        <script>scripts\InitCollision.gml</script>
+        <script>scripts\Collision.gml</script>
+        <script>scripts\CollisionExtract.gml</script>
+      </scripts>
+      <scripts name="Bubbled">
+        <script>scripts\InitBubbled.gml</script>
+        <script>scripts\Bubbled.gml</script>
+        <script>scripts\DrawBubble.gml</script>
+        <script>scripts\DrawBubbled.gml</script>
+      </scripts>
+      <scripts name="Gravity">
+        <script>scripts\InitGravity.gml</script>
+        <script>scripts\Gravity.gml</script>
+      </scripts>
+      <scripts name="DealDamage">
+        <script>scripts\InitDealDamage.gml</script>
+        <script>scripts\DealDamage.gml</script>
+      </scripts>
+      <scripts name="TakeDamage">
+        <script>scripts\InitTakeDamage.gml</script>
+        <script>scripts\DrawTakeDamage.gml</script>
+      </scripts>
+      <scripts name="Rotate">
+        <script>scripts\InitRotate.gml</script>
+        <script>scripts\Rotate.gml</script>
+      </scripts>
+      <scripts name="Translate">
+        <script>scripts\Translate.gml</script>
+        <script>scripts\InitTranslate.gml</script>
+      </scripts>
+    </scripts>
     <scripts name="System">
       <script>scripts\Setup.gml</script>
       <script>scripts\StartMatch.gml</script>
@@ -164,51 +187,7 @@
     <scripts name="GameModes">
       <script>scripts\GameMode_DeathMatch.gml</script>
       <script>scripts\GameMode_Last.gml</script>
-    </scripts>
-    <scripts name="BodyParts">
-      <script>scripts\InitBodyPart.gml</script>
-      <script>scripts\UpdateBodyPart.gml</script>
-    </scripts>
-    <scripts name="Character">
-      <script>scripts\InitCharacter.gml</script>
-      <script>scripts\BeginUpdateCharacter.gml</script>
-      <script>scripts\UpdateCharacter.gml</script>
-      <script>scripts\CheckHealth.gml</script>
-      <script>scripts\ResetCharacter.gml</script>
-      <script>scripts\KillCharacter.gml</script>
-      <script>scripts\DrawHealthBar.gml</script>
-      <script>scripts\GetAvailableCharacters.gml</script>
-      <script>scripts\SelectCharacter.gml</script>
-      <script>scripts\SetSprites.gml</script>
-      <scripts name="Controls">
-        <script>scripts\GetGamepad.gml</script>
-        <script>scripts\GetControlsKeyboard.gml</script>
-        <script>scripts\GetControlsGamepad.gml</script>
-      </scripts>
-      <scripts name="Mechanics">
-        <script>scripts\Attack.gml</script>
-        <script>scripts\Move.gml</script>
-        <script>scripts\Pickup.gml</script>
-        <script>scripts\Jump.gml</script>
-        <script>scripts\SlowMotion.gml</script>
-        <script>scripts\Crouching.gml</script>
-        <script>scripts\Smash.gml</script>
-        <script>scripts\CastSpell.gml</script>
-        <script>scripts\timeout.gml</script>
-      </scripts>
-      <scripts name="Animation">
-        <script>scripts\SetState.gml</script>
-        <script>scripts\HandleAnimation.gml</script>
-        <script>scripts\ResetState.gml</script>
-      </scripts>
-    </scripts>
-    <scripts name="Block">
-      <script>scripts\InitBlock.gml</script>
-      <script>scripts\BeginUpdateBlock.gml</script>
-      <script>scripts\UpdateBlock.gml</script>
-      <scripts name="Mechnics">
-        <script>scripts\Fall.gml</script>
-      </scripts>
+      <script>scripts\IncreaseScore.gml</script>
     </scripts>
     <scripts name="Screens">
       <script>scripts\ResultScreen.gml</script>
@@ -218,12 +197,94 @@
       <script>scripts\DrawTextOutlined.gml</script>
       <script>scripts\Oscillator.gml</script>
       <script>scripts\PlaySound.gml</script>
+      <script>scripts\MoveTowards.gml</script>
+      <script>scripts\KeepInFrame.gml</script>
     </scripts>
     <scripts name="LevelGeneration">
       <script>scripts\InitLevel.gml</script>
       <script>scripts\UpdateLevel.gml</script>
       <script>scripts\SpawnObjects.gml</script>
       <script>scripts\LevelDrawCall.gml</script>
+    </scripts>
+    <scripts name="Objects">
+      <scripts name="Block">
+        <script>scripts\InitBlock.gml</script>
+        <script>scripts\BeginUpdateBlock.gml</script>
+        <script>scripts\UpdateBlock.gml</script>
+        <scripts name="Mechnics">
+          <scripts name="Fall">
+            <script>scripts\InitFall.gml</script>
+            <script>scripts\Fall.gml</script>
+          </scripts>
+        </scripts>
+      </scripts>
+      <scripts name="Character">
+        <script>scripts\InitCharacter.gml</script>
+        <script>scripts\BeginUpdateCharacter.gml</script>
+        <script>scripts\UpdateCharacter.gml</script>
+        <script>scripts\ResetCharacter.gml</script>
+        <script>scripts\KillCharacter.gml</script>
+        <script>scripts\GetAvailableCharacters.gml</script>
+        <script>scripts\InitSelectCharacter.gml</script>
+        <script>scripts\SelectCharacter.gml</script>
+        <script>scripts\SetSprites.gml</script>
+        <scripts name="Controls">
+          <script>scripts\GetGamepad.gml</script>
+          <script>scripts\GetControlsKeyboard.gml</script>
+          <script>scripts\GetControlsGamepad.gml</script>
+          <script>scripts\InitControls.gml</script>
+        </scripts>
+        <scripts name="Mechanics">
+          <scripts name="Jump">
+            <script>scripts\InitJump.gml</script>
+            <script>scripts\Jump.gml</script>
+          </scripts>
+          <scripts name="CastSpell">
+            <script>scripts\InitCastSpell.gml</script>
+            <script>scripts\CastSpell.gml</script>
+          </scripts>
+          <scripts name="Timeout">
+            <script>scripts\InitTimeout.gml</script>
+            <script>scripts\Timeout.gml</script>
+          </scripts>
+          <scripts name="Attack">
+            <script>scripts\InitAttack.gml</script>
+            <script>scripts\Attack.gml</script>
+          </scripts>
+          <scripts name="Health">
+            <script>scripts\InitHealth.gml</script>
+            <script>scripts\DrawHealthBar.gml</script>
+            <script>scripts\Damageble.gml</script>
+            <script>scripts\CheckHealth.gml</script>
+          </scripts>
+          <scripts name="Crouch">
+            <script>scripts\InitChrouch.gml</script>
+            <script>scripts\Crouch.gml</script>
+          </scripts>
+          <scripts name="Move">
+            <script>scripts\Move.gml</script>
+            <script>scripts\InitMove.gml</script>
+          </scripts>
+          <scripts name="SlowDownTime">
+            <script>scripts\SlowDownTime.gml</script>
+            <script>scripts\InitSlowDownTime.gml</script>
+          </scripts>
+          <scripts name="Grounded">
+            <script>scripts\InitGrounded.gml</script>
+            <script>scripts\IsGrounded.gml</script>
+          </scripts>
+        </scripts>
+        <scripts name="Animation">
+          <script>scripts\SetState.gml</script>
+          <script>scripts\HandleAnimation.gml</script>
+          <script>scripts\ResetState.gml</script>
+          <script>scripts\InitAnimation.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="BodyParts">
+        <script>scripts\InitBodyPart.gml</script>
+        <script>scripts\UpdateBodyPart.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <fonts name="fonts">

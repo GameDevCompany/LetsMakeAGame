@@ -1,0 +1,1 @@
+damageColor = 0;

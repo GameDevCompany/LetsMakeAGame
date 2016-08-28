@@ -1,5 +1,4 @@
 var gamepads_available = gamepad_get_device_count();
-
 for(var i = 0;i < gamepads_available;i++;) {
   global.gamepadConnected[i] = gamepad_is_connected(i);
   global.gamepadTaken[i] = false;
@@ -17,10 +16,7 @@ global.gameMode = "Last";
 global.hwrap = false;
 global.vwrap = false;
 global.takeDamage = true;
-global.shakeAmount = 2;
-global.shakeTime = 0;
 display_set_gui_size(640 , 480);
-
 Particles();
 randomize();
 

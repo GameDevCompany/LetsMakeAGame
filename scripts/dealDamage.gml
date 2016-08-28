@@ -9,8 +9,6 @@ if (inst != noone) {
         if(global.takeDamage) {
           HP -= dmg;
         }
-        //global.shakeAmount = 4*dmg;
-        //global.shakeTime = 450000*dmg;
         
         if(HP <= 0 && global.gameMode == "DeathMatch") {
           IncreaseScore(playerIndex);

@@ -5,9 +5,8 @@ if(global.selectCharacters) {
   if(alive) {
     x = xprevious;
     y = yprevious;
-    Jump();
-    Collision(obj_collidable,true,true,true);
-    Pickup();
+    Collision(obj_collidable,true,true);
+    CollisionExtract(obj_collidable,true,true);
     Translate();
     HandleAnimation();
     if(verticalSpeed > 0) {

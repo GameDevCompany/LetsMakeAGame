@@ -15,9 +15,9 @@ if(falling) {
       
       //PlaySound(snd_crunch, 10, false);
   }
-  Collision(obj_collidable,true,true,true);
+  Collision(obj_collidable,true,true);
+  CollisionExtract(obj_collidable,true,true);
 } else {
-
   image_angle += rotationSpeed;
 }
 

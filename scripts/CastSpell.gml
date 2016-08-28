@@ -3,6 +3,8 @@ if(attackKeyHold) {
     aimH = horizontalAxis;
     aimV = verticalAxis;
   }
+  horizontalSpeed *= 0.1;
+  verticalSpeed *= 0.1;
 }
 if(attackTimer < global.time && attackKeyReleased) {
   attacked = true;

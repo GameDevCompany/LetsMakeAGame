@@ -2,12 +2,8 @@ if(global.inGame) {
   ResetState();
   if(alive) {
     GetControlsGamepad();
-    timeout();
-    if(bubbled) {
-      if(bubbledTime + 2000000 < global.time) {
-        bubbled = false;
-      }
-    }
+    Timeout();
+    Bubbled();
     CastSpell();
     Move();
     
@@ -16,8 +12,6 @@ if(global.inGame) {
     } else if(horizontalAxis > 0.2 ) {
       SetState("falling_right",false);
     }
-    
-    
     if(verticalAxis < -0.1) {
         if(horizontalAxis < -0.2 ) {
           SetState("hover_left",false);
@@ -28,7 +22,8 @@ if(global.inGame) {
         }
     }
     
-    Collision(obj_collidable,true,true,true);
+    Collision(obj_collidable,true,true);
+    CollisionExtract(obj_collidable,true,true);
     Translate();
   }
 }
