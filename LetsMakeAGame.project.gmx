@@ -9,79 +9,65 @@
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
-      <sprites name="pirate">
-        <sprite>sprites\spr_pirate_idle</sprite>
-        <sprite>sprites\spr_pirate_running</sprite>
-        <sprite>sprites\spr_pirate_punch</sprite>
-        <sprite>sprites\spr_pirate_punch_mask</sprite>
-        <sprite>sprites\spr_pirate_roll</sprite>
-        <sprite>sprites\spr_pirate_crouch</sprite>
-        <sprite>sprites\spr_pirate_crouch_walk</sprite>
+      <sprites name="witch_red">
+        <sprite>sprites\spr_witch_red_hover_left</sprite>
+        <sprite>sprites\spr_witch_red_hover_right</sprite>
+        <sprite>sprites\spr_witch_red_falling</sprite>
+        <sprite>sprites\spr_witch_red_falling_right</sprite>
+        <sprite>sprites\spr_witch_red_falling_left</sprite>
+        <sprite>sprites\spr_witch_red_idle</sprite>
         <sprites name="parts">
-          <sprite>sprites\spr_pirate_head</sprite>
-          <sprite>sprites\spr_pirate_body</sprite>
-          <sprite>sprites\spr_pirate_arm</sprite>
-          <sprite>sprites\spr_pirate_leg</sprite>
+          <sprite>sprites\spr_witch_red_body</sprite>
+          <sprite>sprites\spr_witch_red_head</sprite>
+          <sprite>sprites\spr_witch_red_arm</sprite>
+          <sprite>sprites\spr_witch_red_leg</sprite>
         </sprites>
       </sprites>
-      <sprites name="ninja">
-        <sprite>sprites\spr_ninja_idle</sprite>
-        <sprite>sprites\spr_ninja_running</sprite>
-        <sprite>sprites\spr_ninja_punch</sprite>
-        <sprite>sprites\spr_ninja_punch_mask</sprite>
-        <sprite>sprites\spr_ninja_roll</sprite>
-        <sprite>sprites\spr_ninja_crouch</sprite>
-        <sprite>sprites\spr_ninja_crouch_walk</sprite>
+      <sprites name="witch_purple">
+        <sprite>sprites\spr_witch_purple_hover_left</sprite>
+        <sprite>sprites\spr_witch_purple_hover_right</sprite>
+        <sprite>sprites\spr_witch_purple_falling</sprite>
+        <sprite>sprites\spr_witch_purple_falling_right</sprite>
+        <sprite>sprites\spr_witch_purple_falling_left</sprite>
+        <sprite>sprites\spr_witch_purple_idle</sprite>
         <sprites name="parts">
-          <sprite>sprites\spr_ninja_head</sprite>
-          <sprite>sprites\spr_ninja_body</sprite>
-          <sprite>sprites\spr_ninja_arm</sprite>
-          <sprite>sprites\spr_ninja_leg</sprite>
+          <sprite>sprites\spr_witch_purple_head</sprite>
+          <sprite>sprites\spr_witch_purple_body</sprite>
+          <sprite>sprites\spr_witch_purple_arm</sprite>
+          <sprite>sprites\spr_witch_purple_leg</sprite>
         </sprites>
       </sprites>
-      <sprites name="elemental">
-        <sprite>sprites\spr_elemental_idle</sprite>
-        <sprite>sprites\spr_elemental_punch</sprite>
-        <sprite>sprites\spr_elemental_punch_mask</sprite>
-        <sprite>sprites\spr_elemental_crouch</sprite>
-        <sprite>sprites\spr_elemental_crouch_walk</sprite>
-        <sprite>sprites\spr_elemental_running</sprite>
-        <sprite>sprites\spr_elemental_roll</sprite>
-      </sprites>
-      <sprites name="robot">
-        <sprite>sprites\spr_robot_idle</sprite>
-        <sprite>sprites\spr_robot_roll</sprite>
-        <sprite>sprites\spr_robot_punch</sprite>
-        <sprite>sprites\spr_robot_punch_mask</sprite>
-        <sprite>sprites\spr_robot_running</sprite>
-        <sprite>sprites\spr_robot_crouch</sprite>
-        <sprite>sprites\spr_robot_crouch_walk</sprite>
+      <sprites name="witch_green">
+        <sprite>sprites\spr_witch_green_hover_left</sprite>
+        <sprite>sprites\spr_witch_green_hover_right</sprite>
+        <sprite>sprites\spr_witch_green_falling</sprite>
+        <sprite>sprites\spr_witch_green_falling_right</sprite>
+        <sprite>sprites\spr_witch_green_idle</sprite>
+        <sprite>sprites\spr_witch_green_falling_left</sprite>
         <sprites name="parts">
-          <sprite>sprites\spr_robot_head</sprite>
-          <sprite>sprites\spr_robot_body</sprite>
-          <sprite>sprites\spr_robot_arm</sprite>
-          <sprite>sprites\spr_robot_leg</sprite>
+          <sprite>sprites\spr_witch_green_arm</sprite>
+          <sprite>sprites\spr_witch_green_head</sprite>
+          <sprite>sprites\spr_witch_green_leg</sprite>
+          <sprite>sprites\spr_witch_green_body</sprite>
         </sprites>
       </sprites>
-      <sprites name="witch">
-        <sprite>sprites\spr_witch_hover_left</sprite>
-        <sprite>sprites\spr_witch_hover_right</sprite>
-        <sprite>sprites\spr_witch_falling</sprite>
-        <sprite>sprites\spr_witch_falling_right</sprite>
-        <sprite>sprites\spr_witch_falling_left</sprite>
-        <sprite>sprites\spr_witch_idle</sprite>
-        <sprite>sprites\spr_witch_running</sprite>
+      <sprites name="witch_yellow">
+        <sprite>sprites\spr_witch_yellow_hover_left</sprite>
+        <sprite>sprites\spr_witch_yellow_hover_right</sprite>
+        <sprite>sprites\spr_witch_yellow_falling</sprite>
+        <sprite>sprites\spr_witch_yellow_falling_right</sprite>
+        <sprite>sprites\spr_witch_yellow_falling_left</sprite>
+        <sprite>sprites\spr_witch_yellow_idle</sprite>
         <sprites name="parts">
-          <sprite>sprites\spr_witch_head</sprite>
-          <sprite>sprites\spr_witch_body</sprite>
-          <sprite>sprites\spr_witch_arm</sprite>
-          <sprite>sprites\spr_witch_leg</sprite>
+          <sprite>sprites\spr_witch_yellow_body</sprite>
+          <sprite>sprites\spr_witch_yellow_head</sprite>
+          <sprite>sprites\spr_witch_yellow_arm</sprite>
+          <sprite>sprites\spr_witch_yellow_leg</sprite>
         </sprites>
       </sprites>
-      <sprite>sprites\nocollision</sprite>
       <sprite>sprites\spr_slash</sprite>
+      <sprite>sprites\nocollision</sprite>
       <sprite>sprites\spr_char_display</sprite>
-      <sprite>sprites\spr_para_display</sprite>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\spr_grassblock</sprite>
@@ -90,6 +76,8 @@
       <sprite>sprites\spr_cloudblock</sprite>
       <sprite>sprites\spr_balloonblock</sprite>
       <sprite>sprites\spr_mosscobble</sprite>
+      <sprite>sprites\spr_magicblock</sprite>
+      <sprite>sprites\spr_regularblock</sprite>
       <sprite>sprites\spr_mosscobble_piece</sprite>
       <sprite>sprites\tower1</sprite>
       <sprite>sprites\tower2</sprite>
@@ -143,6 +131,11 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="System">
+      <script>scripts\Setup.gml</script>
+      <script>scripts\GetPlayerIndex.gml</script>
+      <script>scripts\Particles.gml</script>
+    </scripts>
     <scripts name="Mechanics">
       <scripts name="Collision">
         <script>scripts\InitCollision.gml</script>
@@ -172,14 +165,9 @@
         <script>scripts\Rotate.gml</script>
       </scripts>
       <scripts name="Translate">
-        <script>scripts\Translate.gml</script>
         <script>scripts\InitTranslate.gml</script>
+        <script>scripts\Translate.gml</script>
       </scripts>
-    </scripts>
-    <scripts name="System">
-      <script>scripts\Setup.gml</script>
-      <script>scripts\GetPlayerIndex.gml</script>
-      <script>scripts\Particles.gml</script>
     </scripts>
     <scripts name="GameModes">
       <script>scripts\StartMatch.gml</script>
@@ -231,10 +219,10 @@
         <script>scripts\SelectCharacter.gml</script>
         <script>scripts\SetSprites.gml</script>
         <scripts name="Controls">
+          <script>scripts\InitControls.gml</script>
           <script>scripts\GetGamepad.gml</script>
           <script>scripts\GetControlsKeyboard.gml</script>
           <script>scripts\GetControlsGamepad.gml</script>
-          <script>scripts\InitControls.gml</script>
         </scripts>
         <scripts name="Mechanics">
           <scripts name="Jump">
@@ -264,8 +252,8 @@
             <script>scripts\Crouch.gml</script>
           </scripts>
           <scripts name="Move">
-            <script>scripts\Move.gml</script>
             <script>scripts\InitMove.gml</script>
+            <script>scripts\Move.gml</script>
           </scripts>
           <scripts name="SlowDownTime">
             <script>scripts\SlowDownTime.gml</script>
@@ -329,6 +317,7 @@
     <object>objects\Level</object>
     <object>objects\level_collider_test</object>
     <object>objects\screen_shake</object>
+    <object>objects\Cwavs</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_character_select</room>

@@ -1,3 +1,5 @@
+///Initiate character variables
+
 alive = true; 
 winner = false;
 initX = x;

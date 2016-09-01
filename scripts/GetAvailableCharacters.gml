@@ -1,6 +1,6 @@
 var characters;
-characters[0] = "witch";
-//characters[0] = "ninja";
-//characters[1] = "robot";
-//characters[2] = "pirate";
+characters[0] = "witch_purple";
+characters[1] = "witch_red";
+characters[2] = "witch_green";
+characters[3] = "witch_yellow";
 return characters;

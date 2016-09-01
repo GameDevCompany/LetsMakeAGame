@@ -11,4 +11,4 @@ if(verticalSpeed >= maxVerticalSpeed) {
   verticalSpeed = maxVerticalSpeed;
 }
 
-
+horizontalSpeed += Oscillator(0.004,0.2);
