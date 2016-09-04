@@ -70,7 +70,6 @@
     <instance objName="obj_airplane" x="384" y="2288" name="inst_329F27EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_airplane" x="320" y="1344" name="inst_53C2CE96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_airplane" x="-112" y="1808" name="inst_DFA9366D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_puzzle" x="0" y="3440" name="inst_5E5A7967" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
