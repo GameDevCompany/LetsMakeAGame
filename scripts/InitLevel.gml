@@ -6,8 +6,8 @@ height = 0;
 
 
 level = LoadTile();
+show_debug_message(level[2]);
 pos = 0;
-show_debug_message(level[0]);
 
 
 

@@ -22,9 +22,9 @@ for(var i = 0; i < (view_wview[0])/spacing; i++) {
     }
   }     
 }  
-pos ++;
+pos++;
 if(pos >= array_length_1d(level)) {
     pos = 0;
 }
-
+show_debug_message(pos);
 alarm[0] = room_speed/global.lvlspd;
