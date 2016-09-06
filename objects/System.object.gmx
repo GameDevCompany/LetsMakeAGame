@@ -72,7 +72,7 @@ if(global.selectCharacters) {
       numReady--;
     }
   }
-  if(numReady == 3) {
+  if(numReady == 4) {
     global.selectCharacters = false;
     global.inGame = true;
     room_goto(rm_testarea);

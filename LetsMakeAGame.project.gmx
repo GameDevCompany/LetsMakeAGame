@@ -197,6 +197,8 @@
       <script>scripts\UpdateLevel.gml</script>
       <script>scripts\SpawnObjects.gml</script>
       <script>scripts\LevelDrawCall.gml</script>
+      <script>scripts\LoadTile.gml</script>
+      <script>scripts\SaveTile.gml</script>
     </scripts>
     <scripts name="Objects">
       <scripts name="Block">
@@ -278,6 +280,10 @@
         <script>scripts\UpdateBodyPart.gml</script>
       </scripts>
     </scripts>
+    <scripts name="Savegame">
+      <script>scripts\Save.gml</script>
+      <script>scripts\Load.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\uiFont</font>
@@ -294,14 +300,12 @@
       <object>objects\obj_spell</object>
     </objects>
     <objects name="Blocks">
-      <object>objects\obj_cloudBlock</object>
       <object>objects\obj_metalblock</object>
-      <object>objects\obj_balloonblock</object>
+      <object>objects\obj_cobbleblock</object>
       <objects name="eventBlocks">
         <object>objects\obj_metalblock_event</object>
       </objects>
       <object>objects\obj_airplane</object>
-      <object>objects\obj_puzzle</object>
     </objects>
     <objects name="UI">
       <object>objects\obj_ui_panel</object>
