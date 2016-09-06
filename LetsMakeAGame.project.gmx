@@ -129,7 +129,9 @@
     <background>background\background3</background>
     <background>background\background4</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <scripts name="scripts">
     <scripts name="System">
       <script>scripts\Setup.gml</script>
