@@ -1,16 +1,12 @@
-var objects;
-
-objects[0] = noone;
-objects[1] = obj_cobbleblock;
-objects[2] = obj_metalblock;
-
+objects = AvailableBlocks();
 var spacing = 32;
 global.lvlspd = 5+(height/500);
-for(var i = 0; i < (view_wview[0])/spacing; i++) {
+
+for(var i = 0; i < ds_grid_width(currentLevel); i++) {
   var xPos = (i*spacing);
-  var obj = real(string_char_at(level[pos], i+1));
-  if(obj != 0) {
-    var inst = instance_create(xPos+16,view_hview[0]+32,objects[obj]);
+  var objIndex = currentLevel[# i,pos];
+  if(objIndex != 0) {
+    var inst = instance_create(xPos+16,view_hview[0]+32,objects[objIndex]);
     with(inst) {
       verticalSpeed = -global.lvlspd;
       brokeFree = random_range(1,20);
@@ -18,13 +14,17 @@ for(var i = 0; i < (view_wview[0])/spacing; i++) {
         verticalSpeed += random_range(-0.5, 0.5);
         horizontalSpeed = random_range(-0.5, 0.5);
         rotationSpeed = random_range(-1,1);
+      } else {
+        rotationSpeed = 0;
       }
     }
-  }     
+  }       
 }  
-pos++;
-if(pos >= array_length_1d(level)) {
+pos++;  
+if(pos >= ds_grid_height(currentLevel)) {
     pos = 0;
+    ds_list_shuffle(levelData);
+    ds_grid_read(currentLevel,levelData[| 0]);     
 }
-show_debug_message(pos);
+
 alarm[0] = room_speed/global.lvlspd;
