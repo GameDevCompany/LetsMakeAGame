@@ -122,6 +122,22 @@
       <sprite>sprites\puzzle</sprite>
     </sprites>
     <sprite>sprites\sprite85</sprite>
+    <sprite>sprites\EditorMenuBackground</sprite>
+    <sprite>sprites\sprite87</sprite>
+    <sprites name="Buttons">
+      <sprites name="LevelEditor">
+        <sprite>sprites\spr_PreviousLevelButton</sprite>
+        <sprite>sprites\spr_ClearLevelButton</sprite>
+        <sprite>sprites\spr_DeleteLevelButton</sprite>
+        <sprite>sprites\spr_SaveLevelButton</sprite>
+        <sprite>sprites\spr_NextLevelButton</sprite>
+        <sprite>sprites\spr_ExitLevelButton</sprite>
+        <sprite>sprites\spr_NewLevelButton</sprite>
+      </sprites>
+      <sprites name="MainMenu">
+        <sprite>sprites\spr_StartGameButton</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\Sky</background>
@@ -183,6 +199,9 @@
     </scripts>
     <scripts name="Screens">
       <script>scripts\ResultScreen.gml</script>
+      <scripts name="MainMenu">
+        <script>scripts\ExitGame.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Utils">
       <script>scripts\DrawCollider.gml</script>
@@ -192,6 +211,12 @@
       <script>scripts\MoveTowards.gml</script>
       <script>scripts\KeepInFrame.gml</script>
       <script>scripts\ShakeCamera.gml</script>
+      <script>scripts\LoadRoom.gml</script>
+      <scripts name="Buttons">
+        <script>scripts\InitButton.gml</script>
+        <script>scripts\ClickedButton.gml</script>
+        <script>scripts\ReleasedButton.gml</script>
+      </scripts>
     </scripts>
     <scripts name="LevelGeneration">
       <script>scripts\InitLevel.gml</script>
@@ -202,11 +227,21 @@
       <script>scripts\SaveTile.gml</script>
       <scripts name="LevelEditor">
         <script>scripts\InitLevelEditor.gml</script>
+        <scripts name="Blocks">
+          <script>scripts\AddBlock.gml</script>
+          <script>scripts\RemoveBlock.gml</script>
+          <script>scripts\NextBlock.gml</script>
+          <script>scripts\PreviousBlock.gml</script>
+        </scripts>
         <script>scripts\UpdateLevelEditor.gml</script>
         <script>scripts\DrawLevelEditor.gml</script>
         <script>scripts\ClearLevel.gml</script>
         <script>scripts\SelectLevel.gml</script>
         <script>scripts\CreateLevel.gml</script>
+        <script>scripts\SaveLevel.gml</script>
+        <script>scripts\NextLevel.gml</script>
+        <script>scripts\PreviousLevel.gml</script>
+        <script>scripts\DeleteLevel.gml</script>
       </scripts>
     </scripts>
     <scripts name="Objects">
@@ -329,16 +364,35 @@
       <object>objects\obj_parachute</object>
       <object>objects\obj_falling_object</object>
     </objects>
-    <object>objects\Level</object>
-    <object>objects\level_collider_test</object>
     <object>objects\screen_shake</object>
-    <object>objects\LevelEditor</object>
+    <objects name="Buttons">
+      <object>objects\obj_button</object>
+      <objects name="LevelEditor">
+        <object>objects\obj_SaveLevelButton</object>
+        <object>objects\obj_NewLevelButton</object>
+        <object>objects\obj_NextLevelButton</object>
+        <object>objects\obj_ClearLevelButton</object>
+        <object>objects\obj_DeleteLevelButton</object>
+        <object>objects\obj_PreviousLevelButton</object>
+        <object>objects\obj_ExitLevelButton</object>
+      </objects>
+      <objects name="MainMenu">
+        <object>objects\obj_StartGameButton</object>
+        <object>objects\obj_LevelEditorButton</object>
+        <object>objects\obj_ExitGameButton</object>
+        <object>objects\obj_BackButton</object>
+      </objects>
+    </objects>
+    <objects name="LevelEditor">
+      <object>objects\Level</object>
+      <object>objects\LevelEditor</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_level_editor</room>
     <room>rooms\rm_mainmenu</room>
     <room>rooms\rm_character_select</room>
     <room>rooms\rm_testarea</room>
+    <room>rooms\rm_level_editor</room>
     <room>rooms\rm_testarea_planes</room>
     <room>rooms\rm_startgame</room>
     <room>rooms\rm_result</room>

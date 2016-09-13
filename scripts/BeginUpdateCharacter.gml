@@ -1,4 +1,5 @@
 if(global.inGame) {
+
   ResetState();
   if(alive) {
     GetControlsGamepad();

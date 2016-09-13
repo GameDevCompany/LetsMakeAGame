@@ -3,8 +3,8 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
-  <persistent>-1</persistent>
+  <depth>-1</depth>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,16 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Setup();
-
-
-
+            <string>InitButton();
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="2">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -51,28 +48,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.time += global.timeScale * delta_time;
-global.timeScale = 1;
-
-if(keyboard_check_released(ord('R'))) {
-  StartMatch();
-}
-
-scriptToCall = asset_get_index("GameMode_"+string(global.gameMode));
-script_execute(scriptToCall);
-
-
-if(global.selectCharacters) {
-  var numReady = array_length_1d(global.players)-1;
-  for (var i = 1; i &lt; array_length_1d(global.players); i++;) {
-    if(global.players[i].ready) {
-      numReady--;
-    }
-  }
-  if(numReady == 0) {
-    global.selectCharacters = false;
-    global.inGame = true;
-    room_goto(rm_testarea);
+            <string>pressed = ClickedButton(self);
+if(ReleasedButton(buttonKey,self)) {
+  with(onObject) {
+    script_execute(other.script,other.param);
   }
 }
 </string>
@@ -80,7 +59,7 @@ if(global.selectCharacters) {
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="3">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -97,7 +76,20 @@ if(global.selectCharacters) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>GameEnd();
+            <string>if(pressed) {
+  draw_sprite(sprite_index,1,x,y);
+} else {
+  draw_sprite(sprite_index,0,x,y);
+}
+
+if(text != "") {
+  draw_set_color(textColor);
+  var ww = string_width(text);
+  var hh = string_height(text);
+  var bh = bbox_bottom - bbox_top;
+  var bw = bbox_right - bbox_left;
+  draw_text(x+(bw-ww)/2,y+(bh-hh)/2,text);
+}
 </string>
           </argument>
         </arguments>
