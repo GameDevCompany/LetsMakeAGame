@@ -121,9 +121,7 @@
       <sprite>sprites\spr_airplane</sprite>
       <sprite>sprites\puzzle</sprite>
     </sprites>
-    <sprite>sprites\sprite85</sprite>
     <sprite>sprites\EditorMenuBackground</sprite>
-    <sprite>sprites\sprite87</sprite>
     <sprites name="Buttons">
       <sprites name="LevelEditor">
         <sprite>sprites\spr_PreviousLevelButton</sprite>
@@ -323,6 +321,16 @@
         <script>scripts\InitBodyPart.gml</script>
         <script>scripts\UpdateBodyPart.gml</script>
       </scripts>
+      <scripts name="PowerUps">
+        <script>scripts\UpdatePowerUp.gml</script>
+        <script>scripts\CollidePowerUp.gml</script>
+        <script>scripts\InitPowerUp.gml</script>
+        <script>scripts\ApplyPowerUp.gml</script>
+        <scripts name="Mechanics">
+          <script>scripts\PowerUp_Minimize.gml</script>
+          <script>scripts\PowerUp_Maximize.gml</script>
+        </scripts>
+      </scripts>
     </scripts>
     <scripts name="Savegame">
       <script>scripts\Save.gml</script>
@@ -337,6 +345,7 @@
     <object>objects\rootObject</object>
     <object>objects\obj_collidable</object>
     <object>objects\Camera</object>
+    <object>objects\screen_shake</object>
     <objects name="Characters">
       <object>objects\obj_character</object>
       <object>objects\obj_bodypart</object>
@@ -364,7 +373,6 @@
       <object>objects\obj_parachute</object>
       <object>objects\obj_falling_object</object>
     </objects>
-    <object>objects\screen_shake</object>
     <objects name="Buttons">
       <object>objects\obj_button</object>
       <objects name="LevelEditor">
@@ -387,9 +395,14 @@
       <object>objects\Level</object>
       <object>objects\LevelEditor</object>
     </objects>
+    <objects name="PowerUps">
+      <object>objects\obj_powerup_minimize</object>
+      <object>objects\obj_powerup_maximize</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>
+    <room>rooms\rm_credits</room>
     <room>rooms\rm_character_select</room>
     <room>rooms\rm_testarea</room>
     <room>rooms\rm_level_editor</room>

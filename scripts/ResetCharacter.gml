@@ -5,6 +5,8 @@ if(!alive) {
 }
 alive = true;
 visible = true;
+
+ApplyPowerUp(false);
 InitMove();
 InitBubbled();
 

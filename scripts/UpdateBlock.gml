@@ -2,8 +2,8 @@ x = xprevious;
 y = yprevious;
 
 if(falling) {
-    Collision(obj_collidable,true,true);
-    CollisionExtract(obj_collidable,true,true);
+    var thing = Collision(obj_collidable);
+    var thing2 = CollisionExtract(obj_collidable);
   if(y > view_hview[0] + view_yview[0] + 300) {
    instance_destroy();
   }

@@ -23,8 +23,23 @@ for(var i = 0; i < ds_grid_width(currentLevel); i++) {
 pos++;  
 if(pos >= ds_grid_height(currentLevel)) {
     pos = 0;
-    ds_list_shuffle(levelData);
-    ds_grid_read(currentLevel,levelData[| 0]);     
+    
+
+    var checkLevel = ds_grid_create(ds_grid_width(currentLevel),ds_grid_height(currentLevel));
+    var matches = 0;
+    while(matches <= 3) {
+      matches = 0;
+      ds_list_shuffle(levelData);
+      ds_grid_read(checkLevel,levelData[| 0]);
+      for(var i = 0; i < ds_grid_width(currentLevel); i++) {
+        if(currentLevel[# i,14] == 0) {
+          if(currentLevel[# i,14] == checkLevel[# i,0]) {
+            matches++;
+          }
+        }
+      }
+    }
+    currentLevel = checkLevel;
 }
 
 alarm[0] = room_speed/global.lvlspd;

@@ -23,8 +23,8 @@ if(global.inGame) {
         }
     }
     
-    Collision(obj_collidable,true,true);
-    CollisionExtract(obj_collidable,true,true);
+    var thing = Collision(obj_collidable);
+    var thing2 = CollisionExtract(obj_collidable);
     Translate();
   }
 }

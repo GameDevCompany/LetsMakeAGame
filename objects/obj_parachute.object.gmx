@@ -64,8 +64,8 @@ deployed = false;
             <kind>1</kind>
             <string>if(parent == noone) {
   //Gravity();
-  Collision(obj_collidable,true,true);
-  CollisionExtract(obj_collidable,true,true);
+  var thing = Collision(obj_collidable);
+  var thing2 = CollisionExtract(obj_collidable);
   grounded = IsGrounded(obj_collidable);
   if(!grounded) {
     Rotate(horizontalSpeed,false);

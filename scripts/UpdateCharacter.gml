@@ -1,12 +1,13 @@
 if(global.selectCharacters) {
   SelectCharacter();
 } else if(global.inGame) {
+  ApplyPowerUp(true);
   CheckHealth();
   if(alive) {
     x = xprevious;
     y = yprevious;
-    Collision(obj_collidable,true,true);
-    CollisionExtract(obj_collidable,true,true);
+    var thing = Collision(obj_collidable);
+    var thing2 = CollisionExtract(obj_collidable);
     Translate();
     HandleAnimation();
     if(verticalSpeed > 0) {
