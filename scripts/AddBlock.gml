@@ -14,6 +14,8 @@ if(currentLevel[# mx,my] != currentBlock) {
     var inst = instance_create((mx*32)+16,(my*32)+16,blocks[currentBlock]);
     levelObjects[# mx,my] = inst;
     with(inst) {
+      x_index = mx;
+      y_index = my;
       falling = false;
       verticalSpeed = 0;
       rotationSpeed = 0;

@@ -72,7 +72,6 @@
     <sprites name="Blocks">
       <sprite>sprites\spr_grassblock</sprite>
       <sprite>sprites\spr_dirtblock</sprite>
-      <sprite>sprites\spr_metalblock</sprite>
       <sprite>sprites\spr_cloudblock</sprite>
       <sprite>sprites\spr_balloonblock</sprite>
       <sprite>sprites\spr_mosscobble</sprite>
@@ -89,6 +88,9 @@
       <sprite>sprites\col2</sprite>
       <sprite>sprites\col3</sprite>
       <sprite>sprites\col4</sprite>
+      <sprites name="MetalTile">
+        <sprite>sprites\spr_metalblock</sprite>
+      </sprites>
     </sprites>
     <sprites name="Weapons">
       <sprite>sprites\Shuriken</sprite>
@@ -240,6 +242,11 @@
         <script>scripts\NextLevel.gml</script>
         <script>scripts\PreviousLevel.gml</script>
         <script>scripts\DeleteLevel.gml</script>
+        <scripts name="AutoTiling">
+          <script>scripts\AutoTile.gml</script>
+          <script>scripts\IsSolid.gml</script>
+          <script>scripts\SelectAutoTile.gml</script>
+        </scripts>
       </scripts>
     </scripts>
     <scripts name="Objects">
@@ -404,7 +411,7 @@
     <room>rooms\rm_mainmenu</room>
     <room>rooms\rm_credits</room>
     <room>rooms\rm_character_select</room>
-    <room>rooms\rm_testarea</room>
+    <room>rooms\_</room>
     <room>rooms\rm_level_editor</room>
     <room>rooms\rm_testarea_planes</room>
     <room>rooms\rm_startgame</room>

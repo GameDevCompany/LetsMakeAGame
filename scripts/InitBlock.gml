@@ -5,4 +5,6 @@ verticalSpeed = -5;
 maxVerticalSpeed = 10;
 grav = 0.5;
 rotationSpeed = 0.1;
-
+x_index = 0;
+y_index = 0;
+selectedIndex = 0;

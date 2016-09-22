@@ -9,7 +9,12 @@ for(var i = 0; i < ds_grid_width(currentLevel); i++) {
     var inst = instance_create(xPos+16,view_hview[0]+32,objects[objIndex]);
     with(inst) {
       verticalSpeed = -global.lvlspd;
+      x_index = i;
+      y_index = other.pos;
       brokeFree = random_range(1,20);
+
+      selectedIndex = AutoTile(i,other.pos,other.currentLevel);
+
       if(brokeFree < 5) {
         verticalSpeed += random_range(-0.5, 0.5);
         horizontalSpeed = random_range(-0.5, 0.5);

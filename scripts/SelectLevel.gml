@@ -8,6 +8,8 @@ for(var i = 0; i < ds_grid_width(currentLevel);i++) {
       var inst = instance_create((i*32)+16,(j*32)+16,blocks[currentLevel[# i,j]]);
       levelObjects[# i,j] = inst;
       with(inst) {
+        x_index = i;
+        y_index = j;
         falling = false;
         verticalSpeed = 0;
         rotationSpeed = 0;
