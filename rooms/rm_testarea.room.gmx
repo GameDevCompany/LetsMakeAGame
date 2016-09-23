@@ -65,8 +65,6 @@
     <instance objName="obj_bg_cloud" x="2400" y="18224" name="inst_5BB9FD91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Level" x="0" y="0" name="inst_1ACA9F44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plane" x="-64" y="336" name="inst_34A077D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="System" x="1264" y="848" name="inst_AC70560F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="System" x="1328" y="880" name="inst_E62E4CED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

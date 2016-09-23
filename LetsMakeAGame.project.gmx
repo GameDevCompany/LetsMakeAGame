@@ -411,7 +411,7 @@
     <room>rooms\rm_mainmenu</room>
     <room>rooms\rm_credits</room>
     <room>rooms\rm_character_select</room>
-    <room>rooms\_</room>
+    <room>rooms\rm_testarea</room>
     <room>rooms\rm_level_editor</room>
     <room>rooms\rm_testarea_planes</room>
     <room>rooms\rm_startgame</room>

@@ -7,7 +7,7 @@
   <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <colour>4194432</colour>
   <showcolour>-1</showcolour>
   <code></code>
