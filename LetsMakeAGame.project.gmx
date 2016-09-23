@@ -323,6 +323,7 @@
           <script>scripts\ResetState.gml</script>
           <script>scripts\InitAnimation.gml</script>
         </scripts>
+        <script>scripts\DrawCharacter.gml</script>
       </scripts>
       <scripts name="BodyParts">
         <script>scripts\InitBodyPart.gml</script>
@@ -344,6 +345,9 @@
       <script>scripts\Load.gml</script>
     </scripts>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\PRETTY.shader</shader>
+  </shaders>
   <fonts name="fonts">
     <font>fonts\uiFont</font>
   </fonts>
