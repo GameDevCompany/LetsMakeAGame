@@ -10,3 +10,8 @@ ds_list_shuffle(levelData);
 currentLevel = ds_grid_create(level[? "width"],level[? "height"]);
 ds_grid_read(currentLevel,levelData[| 0]);
 pos = 0;
+
+
+//SHADER STUFF
+uheight = shader_get_uniform(SkyGradient,"height");
+

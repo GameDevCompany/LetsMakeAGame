@@ -27,4 +27,5 @@ if(global.inGame) {
     var thing2 = CollisionExtract(obj_collidable);
     Translate();
   }
+} else {
 }

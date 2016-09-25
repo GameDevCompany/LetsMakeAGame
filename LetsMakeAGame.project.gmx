@@ -347,6 +347,7 @@
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\PRETTY.shader</shader>
+    <shader type="GLSLES">shaders\SkyGradient.shader</shader>
   </shaders>
   <fonts name="fonts">
     <font>fonts\uiFont</font>
@@ -413,9 +414,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>
-    <room>rooms\rm_credits</room>
     <room>rooms\rm_character_select</room>
     <room>rooms\rm_testarea</room>
+    <room>rooms\rm_credits</room>
     <room>rooms\rm_level_editor</room>
     <room>rooms\rm_testarea_planes</room>
     <room>rooms\rm_startgame</room>
