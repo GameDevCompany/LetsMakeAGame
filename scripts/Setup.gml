@@ -9,7 +9,7 @@ global.timeScale = 1;
 global.lastIndex = 0;
 global.grav = 1.981;
 global.particleSystem = part_system_create();
-part_system_depth(global.particleSystem, 100000 );
+part_system_depth(global.particleSystem, 999 );
 global.lvlspd = 0;
 global.inGame = false;
 global.selectCharacters = true;

@@ -26,6 +26,7 @@ varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 varying vec3 v_vPosition;
 
+uniform vec4 tex;
 uniform float height;
 
 float norm(float val) {
@@ -45,21 +46,32 @@ vec3 hsv2rgb(vec3 c)
     return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
 }
 
-float stagger(float val) {
-    val *= 200.0;
+float stagger(float val, float amount) {
+    val *= amount;
     val = floor(val);
-    val /= 200.0;
+    val /= amount;
     return val;
 }
 
 void main()
 {
-    float value = stagger(norm(sin(((1.0-norm(v_vPosition.y)) + (height/100.0))*0.5)));
-    vec4 texture = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
-    vec3 col = hsv2rgb(vec3(value,0.7,0.9));
-    col.b *= 1.2;
-    col.r, col.g *= 0.9;
-    gl_FragColor.rgb = col * texture.rgb;
+
+    float value = stagger(norm(sin(((1.0-norm(v_vPosition.y)) + (height/100.0))*0.5)),200.0);
+    value = clamp(norm(v_vPosition.y),0.5,1.0);
+    
+    float pos = v_vTexcoord.y - tex.y;
+    float total = tex.y + mod(pos+(height/1000.0),tex.w);
+    total += tex.y;
+   
+    vec2 textureCoord = vec2(v_vTexcoord.x,total);
+    
+    vec4 texture = v_vColour * texture2D( gm_BaseTexture, textureCoord );
+    vec3 col = hsv2rgb(vec3(value,1,1));
+    col.b *= 1.1;
+    //col.r, col.g *= 0.9;
+    
+    
+    gl_FragColor.rgb = col;// * texture.rgb;
     gl_FragColor.a = 1.0;
 }
 

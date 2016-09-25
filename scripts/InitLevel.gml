@@ -14,4 +14,5 @@ pos = 0;
 
 //SHADER STUFF
 uheight = shader_get_uniform(SkyGradient,"height");
+utex = shader_get_uniform(SkyGradient,"tex");
 

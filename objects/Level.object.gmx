@@ -158,12 +158,11 @@ if(spawnY &lt; view_hview[0]) {
           <argument>
             <kind>1</kind>
             <string>depth = 1000;
-spr = sprite_get_texture(Sky, 0);
+var tex = background_get_uvs(Sky);
 shader_set(SkyGradient);
 shader_set_uniform_f(uheight,height);
+shader_set_uniform_f(utex,tex[0],tex[1],tex[2],tex[3]-0.003);
 draw_background(Sky,0,0);
-
-
 shader_reset();
 </string>
           </argument>
