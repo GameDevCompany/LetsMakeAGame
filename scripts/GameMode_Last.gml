@@ -13,7 +13,7 @@ if(global.inGame) {
       }
     }
   }
-  if(numAlive <= 0) {
+  if(numAlive <= -1) {
     global.inGame = false;
     room_goto( rm_result );
   }

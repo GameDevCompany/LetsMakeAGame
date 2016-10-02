@@ -101,6 +101,20 @@
       <sprite>sprites\spr_panel</sprite>
       <sprite>sprites\spr_winner</sprite>
       <sprite>sprites\spr_dot</sprite>
+      <sprites name="Buttons">
+        <sprites name="LevelEditor">
+          <sprite>sprites\spr_PreviousLevelButton</sprite>
+          <sprite>sprites\spr_ClearLevelButton</sprite>
+          <sprite>sprites\spr_DeleteLevelButton</sprite>
+          <sprite>sprites\spr_SaveLevelButton</sprite>
+          <sprite>sprites\spr_NextLevelButton</sprite>
+          <sprite>sprites\spr_ExitLevelButton</sprite>
+          <sprite>sprites\spr_NewLevelButton</sprite>
+        </sprites>
+        <sprites name="MainMenu">
+          <sprite>sprites\spr_StartGameButton</sprite>
+        </sprites>
+      </sprites>
     </sprites>
     <sprites name="Background">
       <sprite>sprites\spr_plane</sprite>
@@ -124,20 +138,8 @@
       <sprite>sprites\puzzle</sprite>
     </sprites>
     <sprite>sprites\EditorMenuBackground</sprite>
-    <sprites name="Buttons">
-      <sprites name="LevelEditor">
-        <sprite>sprites\spr_PreviousLevelButton</sprite>
-        <sprite>sprites\spr_ClearLevelButton</sprite>
-        <sprite>sprites\spr_DeleteLevelButton</sprite>
-        <sprite>sprites\spr_SaveLevelButton</sprite>
-        <sprite>sprites\spr_NextLevelButton</sprite>
-        <sprite>sprites\spr_ExitLevelButton</sprite>
-        <sprite>sprites\spr_NewLevelButton</sprite>
-      </sprites>
-      <sprites name="MainMenu">
-        <sprite>sprites\spr_StartGameButton</sprite>
-      </sprites>
-    </sprites>
+    <sprite>sprites\sprite94</sprite>
+    <sprite>sprites\sprite95</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Sky</background>
@@ -145,11 +147,76 @@
     <background>background\test_bg</background>
     <background>background\background3</background>
     <background>background\background4</background>
+    <background>background\Tower</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
   </paths>
   <scripts name="scripts">
+    <scripts name="Character">
+      <script>scripts\InitCharacter.gml</script>
+      <script>scripts\BeginUpdateCharacter.gml</script>
+      <script>scripts\UpdateCharacter.gml</script>
+      <script>scripts\ResetCharacter.gml</script>
+      <script>scripts\KillCharacter.gml</script>
+      <script>scripts\GetAvailableCharacters.gml</script>
+      <script>scripts\InitSelectCharacter.gml</script>
+      <script>scripts\SelectCharacter.gml</script>
+      <script>scripts\SetSprites.gml</script>
+      <scripts name="Controls">
+        <script>scripts\InitControls.gml</script>
+        <script>scripts\GetGamepad.gml</script>
+        <script>scripts\GetControlsKeyboard.gml</script>
+        <script>scripts\GetControlsGamepad.gml</script>
+      </scripts>
+      <scripts name="Mechanics">
+        <scripts name="Jump">
+          <script>scripts\InitJump.gml</script>
+          <script>scripts\Jump.gml</script>
+        </scripts>
+        <scripts name="CastSpell">
+          <script>scripts\InitCastSpell.gml</script>
+          <script>scripts\CastSpell.gml</script>
+        </scripts>
+        <scripts name="Timeout">
+          <script>scripts\InitTimeout.gml</script>
+          <script>scripts\Timeout.gml</script>
+        </scripts>
+        <scripts name="Attack">
+          <script>scripts\InitAttack.gml</script>
+          <script>scripts\Attack.gml</script>
+        </scripts>
+        <scripts name="Health">
+          <script>scripts\InitHealth.gml</script>
+          <script>scripts\DrawHealthBar.gml</script>
+          <script>scripts\Damageble.gml</script>
+          <script>scripts\CheckHealth.gml</script>
+        </scripts>
+        <scripts name="Crouch">
+          <script>scripts\InitChrouch.gml</script>
+          <script>scripts\Crouch.gml</script>
+        </scripts>
+        <scripts name="Move">
+          <script>scripts\InitMove.gml</script>
+          <script>scripts\Move.gml</script>
+        </scripts>
+        <scripts name="SlowDownTime">
+          <script>scripts\SlowDownTime.gml</script>
+          <script>scripts\InitSlowDownTime.gml</script>
+        </scripts>
+        <scripts name="Grounded">
+          <script>scripts\InitGrounded.gml</script>
+          <script>scripts\IsGrounded.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="Animation">
+        <script>scripts\SetState.gml</script>
+        <script>scripts\HandleAnimation.gml</script>
+        <script>scripts\ResetState.gml</script>
+        <script>scripts\InitAnimation.gml</script>
+      </scripts>
+      <script>scripts\DrawCharacter.gml</script>
+    </scripts>
     <scripts name="System">
       <script>scripts\Setup.gml</script>
       <script>scripts\GetPlayerIndex.gml</script>
@@ -186,6 +253,7 @@
       <scripts name="Translate">
         <script>scripts\InitTranslate.gml</script>
         <script>scripts\Translate.gml</script>
+        <script>scripts\PhysicsTranslate.gml</script>
       </scripts>
     </scripts>
     <scripts name="GameModes">
@@ -212,11 +280,6 @@
       <script>scripts\KeepInFrame.gml</script>
       <script>scripts\ShakeCamera.gml</script>
       <script>scripts\LoadRoom.gml</script>
-      <scripts name="Buttons">
-        <script>scripts\InitButton.gml</script>
-        <script>scripts\ClickedButton.gml</script>
-        <script>scripts\ReleasedButton.gml</script>
-      </scripts>
     </scripts>
     <scripts name="LevelGeneration">
       <script>scripts\InitLevel.gml</script>
@@ -261,70 +324,6 @@
           </scripts>
         </scripts>
       </scripts>
-      <scripts name="Character">
-        <script>scripts\InitCharacter.gml</script>
-        <script>scripts\BeginUpdateCharacter.gml</script>
-        <script>scripts\UpdateCharacter.gml</script>
-        <script>scripts\ResetCharacter.gml</script>
-        <script>scripts\KillCharacter.gml</script>
-        <script>scripts\GetAvailableCharacters.gml</script>
-        <script>scripts\InitSelectCharacter.gml</script>
-        <script>scripts\SelectCharacter.gml</script>
-        <script>scripts\SetSprites.gml</script>
-        <scripts name="Controls">
-          <script>scripts\InitControls.gml</script>
-          <script>scripts\GetGamepad.gml</script>
-          <script>scripts\GetControlsKeyboard.gml</script>
-          <script>scripts\GetControlsGamepad.gml</script>
-        </scripts>
-        <scripts name="Mechanics">
-          <scripts name="Jump">
-            <script>scripts\InitJump.gml</script>
-            <script>scripts\Jump.gml</script>
-          </scripts>
-          <scripts name="CastSpell">
-            <script>scripts\InitCastSpell.gml</script>
-            <script>scripts\CastSpell.gml</script>
-          </scripts>
-          <scripts name="Timeout">
-            <script>scripts\InitTimeout.gml</script>
-            <script>scripts\Timeout.gml</script>
-          </scripts>
-          <scripts name="Attack">
-            <script>scripts\InitAttack.gml</script>
-            <script>scripts\Attack.gml</script>
-          </scripts>
-          <scripts name="Health">
-            <script>scripts\InitHealth.gml</script>
-            <script>scripts\DrawHealthBar.gml</script>
-            <script>scripts\Damageble.gml</script>
-            <script>scripts\CheckHealth.gml</script>
-          </scripts>
-          <scripts name="Crouch">
-            <script>scripts\InitChrouch.gml</script>
-            <script>scripts\Crouch.gml</script>
-          </scripts>
-          <scripts name="Move">
-            <script>scripts\InitMove.gml</script>
-            <script>scripts\Move.gml</script>
-          </scripts>
-          <scripts name="SlowDownTime">
-            <script>scripts\SlowDownTime.gml</script>
-            <script>scripts\InitSlowDownTime.gml</script>
-          </scripts>
-          <scripts name="Grounded">
-            <script>scripts\InitGrounded.gml</script>
-            <script>scripts\IsGrounded.gml</script>
-          </scripts>
-        </scripts>
-        <scripts name="Animation">
-          <script>scripts\SetState.gml</script>
-          <script>scripts\HandleAnimation.gml</script>
-          <script>scripts\ResetState.gml</script>
-          <script>scripts\InitAnimation.gml</script>
-        </scripts>
-        <script>scripts\DrawCharacter.gml</script>
-      </scripts>
       <scripts name="BodyParts">
         <script>scripts\InitBodyPart.gml</script>
         <script>scripts\UpdateBodyPart.gml</script>
@@ -344,6 +343,15 @@
       <script>scripts\Save.gml</script>
       <script>scripts\Load.gml</script>
     </scripts>
+    <scripts name="GUI">
+      <scripts name="Buttons">
+        <script>scripts\InitButton.gml</script>
+        <script>scripts\ClickedButton.gml</script>
+        <script>scripts\ReleasedButton.gml</script>
+      </scripts>
+      <script>scripts\AdjustViews.gml</script>
+      <script>scripts\InitAdjustViews.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\PRETTY.shader</shader>
@@ -356,6 +364,7 @@
     <object>objects\System</object>
     <object>objects\rootObject</object>
     <object>objects\obj_collidable</object>
+    <object>objects\SurfaceManager</object>
     <object>objects\Camera</object>
     <object>objects\screen_shake</object>
     <objects name="Characters">
@@ -411,6 +420,7 @@
       <object>objects\obj_powerup_minimize</object>
       <object>objects\obj_powerup_maximize</object>
     </objects>
+    <object>objects\object37</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>

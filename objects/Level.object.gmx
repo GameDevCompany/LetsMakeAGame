@@ -50,8 +50,8 @@ spawnY = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*var spawnX = -100; 
-if(spawnY &lt; view_hview[0]) {
+            <string>/*var spawnX = -100;
+if(spawnY &lt; view_hview[global.gameview]) {
   spawnY += 40;
   alarm[1] = room_speed * 0.2;
   var inst = instance_create(spawnX,spawnY,obj_spell);
@@ -60,7 +60,7 @@ if(spawnY &lt; view_hview[0]) {
     color = c_green;
     var dir = MoveTowards(direction,48);
     x += dir[0];
-    y += dir[1]; 
+    y += dir[1];
     attackPower = 0.5;
     speed = 12;
   }
@@ -157,13 +157,13 @@ if(spawnY &lt; view_hview[0]) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = 1000;
-var tex = background_get_uvs(Sky);
-shader_set(SkyGradient);
-shader_set_uniform_f(uheight,height);
-shader_set_uniform_f(utex,tex[0],tex[1],tex[2],tex[3]-0.003);
-draw_background(Sky,0,0);
-shader_reset();
+            <string>//depth = 1000;
+//var tex = background_get_uvs(Sky);
+//shader_set(SkyGradient);
+//shader_set_uniform_f(uheight,height);
+//shader_set_uniform_f(utex,tex[0],tex[1],tex[2],tex[3]-0.003);
+//draw_background(Sky,0,0);
+//shader_reset();
 </string>
           </argument>
         </arguments>

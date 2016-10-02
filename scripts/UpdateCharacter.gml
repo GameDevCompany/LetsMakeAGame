@@ -13,7 +13,6 @@ if(global.selectCharacters) {
     if(verticalSpeed > 0) {
       part_particles_create(global.particleSystem, bbox_right-5, y, global.trailParticles, 1);
       part_particles_create(global.particleSystem, bbox_left+5, y, global.trailParticles, 1);
-
     }
   }
 }

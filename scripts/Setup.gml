@@ -17,7 +17,6 @@ global.gameMode = "Last";
 global.hwrap = false;
 global.vwrap = false;
 global.takeDamage = true;
-display_set_gui_size(640 , 480);
 Particles();
 randomize();
 
