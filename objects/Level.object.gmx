@@ -157,13 +157,16 @@ if(spawnY &lt; view_hview[global.gameview]) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//depth = 1000;
-//var tex = background_get_uvs(Sky);
-//shader_set(SkyGradient);
-//shader_set_uniform_f(uheight,height);
-//shader_set_uniform_f(utex,tex[0],tex[1],tex[2],tex[3]-0.003);
-//draw_background(Sky,0,0);
-//shader_reset();
+            <string>depth = 1000;
+//show_debug_message("top"+string(tex[1]) + " bottom" + string(tex[3]));
+
+
+shader_set(SkyGradient);
+shader_set_uniform_f(uheight,height);
+draw_set_colour(c_white);
+
+draw_background(TextureTest, 1024, 1024);
+shader_reset();
 </string>
           </argument>
         </arguments>

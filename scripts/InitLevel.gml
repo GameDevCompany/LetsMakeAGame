@@ -14,5 +14,5 @@ pos = 0;
 
 //SHADER STUFF
 uheight = shader_get_uniform(SkyGradient,"height");
-utex = shader_get_uniform(SkyGradient,"tex");
-
+shader_sample = shader_get_sampler_index(SkyGradient, "gm_BaseTexture");
+texture_set_repeat_ext(shader_sample, true);

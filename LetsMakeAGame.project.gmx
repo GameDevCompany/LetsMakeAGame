@@ -148,6 +148,7 @@
     <background>background\background3</background>
     <background>background\background4</background>
     <background>background\Tower</background>
+    <background>background\TextureTest</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -365,7 +366,6 @@
     <object>objects\rootObject</object>
     <object>objects\obj_collidable</object>
     <object>objects\SurfaceManager</object>
-    <object>objects\Camera</object>
     <object>objects\screen_shake</object>
     <objects name="Characters">
       <object>objects\obj_character</object>
