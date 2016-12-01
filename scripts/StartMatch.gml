@@ -1,6 +1,4 @@
 global.inGame = true;
-
-
 for(var i = 1; i < array_length_1d(global.players); i++) {
   playerId = global.players[i];
   global.scores[i] = 0;

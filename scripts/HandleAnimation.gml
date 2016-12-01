@@ -2,15 +2,22 @@
 image_speed = global.timeScale * 0.2;
 
 switch(state) {
- /* case "attacking":
-    sprite_index = idleSprite;
+  case "grounded":
+    if(horizontalSpeed < 0) {
+      //☺
+      sprite_index = walkLeftSprite;
+    } else if (horizontalSpeed > 0) {
+      sprite_index = walkRightSprite;
+    } else {
+      sprite_index = idleSprite;
+    }
     break;
-  case "idle":
-    sprite_index = idleSprite;
+  case "slide_left":
+    sprite_index = slideLeftSprite;
     break;
-  case "running":
-    sprite_index = runningSprite;
-    break;*/
+  case "slide_right":
+    sprite_index = slideRightSprite;
+    break;
   case "hover":
     sprite_index = hoverSprite;
     break;

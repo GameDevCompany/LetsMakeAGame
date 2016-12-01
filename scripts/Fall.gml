@@ -1,4 +1,4 @@
-grav=argument0;
+//grav=argument0;
 /*if(falling) {
   if(verticalSpeed < maxVerticalSpeed) {
     if(verticalSpeed > 0) {

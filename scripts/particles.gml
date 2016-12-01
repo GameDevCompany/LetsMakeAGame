@@ -1,3 +1,57 @@
+
+
+var masks_local;
+masks_local[0] = spr_mask1;
+masks_local[1] = spr_mask2;
+masks_local[2] = spr_mask3;
+masks_local[3] = spr_mask4;
+masks_local[4] = spr_mask5;
+masks_local[5] = spr_mask6;
+masks_local[6] = spr_mask7;
+masks_local[7] = spr_mask8;
+
+for(var i = 0;i < array_length_1d(masks_local);i++) {
+  global.masks[i] = sprite_duplicate(masks_local[i]);
+  
+  global.particles[i] = part_type_create();
+  part_type_sprite(global.particles[i], spr_mosscobble_piece,0,0,0);
+  part_type_scale(global.particles[i], 1, 1);
+  part_type_speed(global.particles[i], 1, 3, 0, 0);
+  part_type_alpha2(global.particles[i], 1, 0);
+  part_type_direction(global.particles[i], 0, 360, 0, 0);
+  part_type_orientation(global.particles[i], 0, 360, 1, 0, 1);
+  part_type_life(global.particles[i], room_speed*1, room_speed*1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 global.bloodParticles = part_type_create();
 part_type_shape(global.bloodParticles, pt_shape_square);
 part_type_size(global.bloodParticles, 0.02, 0.04, 0, 0);

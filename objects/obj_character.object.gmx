@@ -95,8 +95,8 @@ InitCharacter();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>attacked = false;
-animationComplete = true;
+            <string>AnimationEnd();
+
 </string>
           </argument>
         </arguments>
@@ -119,15 +119,7 @@ animationComplete = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.inGame &amp;&amp; alive) {
-  DrawHealthBar(HP,maxHP);
-}
-
-if(y &lt; view_yview[global.gameview]) {
-  draw_set_font(uiFont);
-  draw_set_color(c_white);
-  draw_text_transformed(x-6,view_yview[global.gameview]+15,string(round(timeOutside)),0.5,0.5,0);
-}
+            <string>DrawCharacterGUI();
 </string>
           </argument>
         </arguments>

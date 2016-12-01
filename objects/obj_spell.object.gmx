@@ -25,11 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>owner = noone;
-visible = true;
-attackPower = 0.3;
-color = c_white;
-falling = false;
+            <string>InitSpell();
 </string>
           </argument>
         </arguments>
@@ -52,48 +48,7 @@ falling = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_xscale = attackPower*4;
-image_yscale = attackPower*4;
-
-part_type_alpha2(global.spellParticles, 0.5, 0);
-part_type_size(global.spellParticles,attackPower,attackPower, 0, 0.2);
-part_type_colour1(global.spellParticles, color);
-part_particles_create(global.particleSystem, x, y, global.spellParticles, 2);
-
-var inst = instance_place(x, y, obj_collidable);
-if(inst != noone &amp;&amp; inst != owner) {
-  with(inst) {
-    if(falling) {
-      bubbled = true;
-      verticalSpeed *= 0.5;
-      horizontalSpeed *= 0.5;
-      bubbledTime = global.time;
-    } else {
-      var objects;
-      objects[0] = spr_cauldron;
-      objects[1] = spr_broom;
-      objects[2] = spr_chair;
-      objects[3] = spr_cat;
-      var inst2 = instance_create(x,y,obj_falling_object);
-      with(inst2) {
-        falling = true;
-        grav = -0.1;
-        sprite_index = objects[random_range(0,array_length_1d(objects))];
-        horizontalSpeed = random_range(-1,1);
-        verticalSpeed = random_range(-4,-10);
-      }
-      
-      instance_create(x,y,screen_shake);
-      
-      part_particles_create(global.particleSystem,x,y,global.brokenCobble,random_range(2,6));
-      instance_destroy();
-    }
-  }
-  attackPower -= 0.5;
-  if(attackPower &lt;= 0) {
-    instance_destroy();
-  }
-}
+            <string>UpdateSpell();
 </string>
           </argument>
         </arguments>
@@ -116,7 +71,7 @@ if(inst != noone &amp;&amp; inst != owner) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, 0);
+            <string>DrawSpell();
 </string>
           </argument>
         </arguments>

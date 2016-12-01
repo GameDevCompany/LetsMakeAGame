@@ -1,3 +1,4 @@
 //Apply movement to x and y
-x += horizontalSpeed * global.timeScale;
-y += verticalSpeed * global.timeScale;
+x += round(horizontalSpeed * global.timeScale);
+y += round(verticalSpeed * global.timeScale);
+

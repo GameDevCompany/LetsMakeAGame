@@ -2,7 +2,9 @@ var object = argument0;
 hit = false;
 var objectCollided = noone;
 //Vertical collision
-objectCollided = instance_place(x,y + verticalSpeed,object);
+
+
+objectCollided = instance_place(x,y+verticalSpeed,object);
 if(objectCollided != noone) {
   var moveVer = 0;
   while(!place_meeting(x ,y+sign(verticalSpeed)+moveVer,object)) {
@@ -14,7 +16,9 @@ if(objectCollided != noone) {
   hit = true;
   verticalSpeed = moveVer;
 }
- 
+
+
+
 objectCollided = instance_place(x + horizontalSpeed,y + verticalSpeed,object);
 if(objectCollided != noone) {
   var moveHor = 0; 

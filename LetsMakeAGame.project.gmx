@@ -3,7 +3,10 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\Multi-Object Collisions</extension>
+    <extension index="1">extensions\Buttons</extension>
+  </NewExtensions>
   <sounds name="sound">
     <sound>sound\snd_crunch</sound>
   </sounds>
@@ -30,6 +33,10 @@
         <sprite>sprites\spr_witch_purple_falling_right</sprite>
         <sprite>sprites\spr_witch_purple_falling_left</sprite>
         <sprite>sprites\spr_witch_purple_idle</sprite>
+        <sprite>sprites\spr_witch_purple_slide_right</sprite>
+        <sprite>sprites\spr_witch_purple_slide_left</sprite>
+        <sprite>sprites\spr_witch_purple_walk_left</sprite>
+        <sprite>sprites\spr_witch_purple_walk_right</sprite>
         <sprites name="parts">
           <sprite>sprites\spr_witch_purple_head</sprite>
           <sprite>sprites\spr_witch_purple_body</sprite>
@@ -77,6 +84,7 @@
       <sprite>sprites\spr_mosscobble</sprite>
       <sprite>sprites\spr_magicblock</sprite>
       <sprite>sprites\spr_regularblock</sprite>
+      <sprite>sprites\spr_boxblock</sprite>
       <sprite>sprites\spr_mosscobble_piece</sprite>
       <sprite>sprites\tower1</sprite>
       <sprite>sprites\tower2</sprite>
@@ -90,6 +98,16 @@
       <sprite>sprites\col4</sprite>
       <sprites name="MetalTile">
         <sprite>sprites\spr_metalblock</sprite>
+      </sprites>
+      <sprites name="mask">
+        <sprite>sprites\spr_mask1</sprite>
+        <sprite>sprites\spr_mask2</sprite>
+        <sprite>sprites\spr_mask3</sprite>
+        <sprite>sprites\spr_mask4</sprite>
+        <sprite>sprites\spr_mask5</sprite>
+        <sprite>sprites\spr_mask6</sprite>
+        <sprite>sprites\spr_mask7</sprite>
+        <sprite>sprites\spr_mask8</sprite>
       </sprites>
     </sprites>
     <sprites name="Weapons">
@@ -140,6 +158,17 @@
     <sprite>sprites\EditorMenuBackground</sprite>
     <sprite>sprites\sprite94</sprite>
     <sprite>sprites\sprite95</sprite>
+    <sprites name="Dragon">
+      <sprite>sprites\spr_dragon</sprite>
+      <sprite>sprites\spr_dragonback</sprite>
+      <sprite>sprites\spr_dragon_foot</sprite>
+    </sprites>
+    <sprites name="puzzles">
+      <sprite>sprites\spr_mill</sprite>
+      <sprite>sprites\spr_single</sprite>
+      <sprite>sprites\spr_fireball2</sprite>
+      <sprite>sprites\spr_cannon</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\Sky</background>
@@ -149,10 +178,9 @@
     <background>background\background4</background>
     <background>background\Tower</background>
     <background>background\TextureTest</background>
+    <background>background\sky_gradient</background>
   </backgrounds>
-  <paths name="paths">
-    <path>paths\path0</path>
-  </paths>
+  <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Character">
       <script>scripts\InitCharacter.gml</script>
@@ -160,9 +188,8 @@
       <script>scripts\UpdateCharacter.gml</script>
       <script>scripts\ResetCharacter.gml</script>
       <script>scripts\KillCharacter.gml</script>
-      <script>scripts\GetAvailableCharacters.gml</script>
-      <script>scripts\InitSelectCharacter.gml</script>
-      <script>scripts\SelectCharacter.gml</script>
+      <script>scripts\DrawCharacter.gml</script>
+      <script>scripts\DrawCharacterGUI.gml</script>
       <script>scripts\SetSprites.gml</script>
       <scripts name="Controls">
         <script>scripts\InitControls.gml</script>
@@ -171,10 +198,6 @@
         <script>scripts\GetControlsGamepad.gml</script>
       </scripts>
       <scripts name="Mechanics">
-        <scripts name="Jump">
-          <script>scripts\InitJump.gml</script>
-          <script>scripts\Jump.gml</script>
-        </scripts>
         <scripts name="CastSpell">
           <script>scripts\InitCastSpell.gml</script>
           <script>scripts\CastSpell.gml</script>
@@ -183,31 +206,15 @@
           <script>scripts\InitTimeout.gml</script>
           <script>scripts\Timeout.gml</script>
         </scripts>
-        <scripts name="Attack">
-          <script>scripts\InitAttack.gml</script>
-          <script>scripts\Attack.gml</script>
-        </scripts>
-        <scripts name="Health">
-          <script>scripts\InitHealth.gml</script>
-          <script>scripts\DrawHealthBar.gml</script>
-          <script>scripts\Damageble.gml</script>
-          <script>scripts\CheckHealth.gml</script>
-        </scripts>
-        <scripts name="Crouch">
-          <script>scripts\InitChrouch.gml</script>
-          <script>scripts\Crouch.gml</script>
-        </scripts>
         <scripts name="Move">
           <script>scripts\InitMove.gml</script>
           <script>scripts\Move.gml</script>
         </scripts>
-        <scripts name="SlowDownTime">
-          <script>scripts\SlowDownTime.gml</script>
-          <script>scripts\InitSlowDownTime.gml</script>
-        </scripts>
-        <scripts name="Grounded">
-          <script>scripts\InitGrounded.gml</script>
-          <script>scripts\IsGrounded.gml</script>
+        <scripts name="Bounce">
+          <script>scripts\drawBounce.gml</script>
+          <script>scripts\CheckBounce.gml</script>
+          <script>scripts\AddBounceSpeed.gml</script>
+          <script>scripts\InitBounce.gml</script>
         </scripts>
       </scripts>
       <scripts name="Animation">
@@ -215,37 +222,31 @@
         <script>scripts\HandleAnimation.gml</script>
         <script>scripts\ResetState.gml</script>
         <script>scripts\InitAnimation.gml</script>
+        <script>scripts\AnimationEnd.gml</script>
       </scripts>
-      <script>scripts\DrawCharacter.gml</script>
+      <scripts name="CharacterSelection">
+        <script>scripts\InitSelectCharacter.gml</script>
+        <script>scripts\SelectCharacter.gml</script>
+        <script>scripts\GetAvailableCharacters.gml</script>
+      </scripts>
     </scripts>
     <scripts name="System">
-      <script>scripts\Setup.gml</script>
+      <script>scripts\InitSystem.gml</script>
+      <script>scripts\SystemLateUpdate.gml</script>
       <script>scripts\GetPlayerIndex.gml</script>
       <script>scripts\Particles.gml</script>
     </scripts>
-    <scripts name="Mechanics">
+    <scripts name="SystemMechanics">
       <scripts name="Collision">
         <script>scripts\InitCollision.gml</script>
         <script>scripts\Collision.gml</script>
         <script>scripts\CollisionExtract.gml</script>
+        <script>scripts\CheckCollisionDirection.gml</script>
       </scripts>
       <scripts name="Bubbled">
         <script>scripts\InitBubbled.gml</script>
         <script>scripts\Bubbled.gml</script>
-        <script>scripts\DrawBubble.gml</script>
         <script>scripts\DrawBubbled.gml</script>
-      </scripts>
-      <scripts name="Gravity">
-        <script>scripts\InitGravity.gml</script>
-        <script>scripts\Gravity.gml</script>
-      </scripts>
-      <scripts name="DealDamage">
-        <script>scripts\InitDealDamage.gml</script>
-        <script>scripts\DealDamage.gml</script>
-      </scripts>
-      <scripts name="TakeDamage">
-        <script>scripts\InitTakeDamage.gml</script>
-        <script>scripts\DrawTakeDamage.gml</script>
       </scripts>
       <scripts name="Rotate">
         <script>scripts\InitRotate.gml</script>
@@ -254,7 +255,6 @@
       <scripts name="Translate">
         <script>scripts\InitTranslate.gml</script>
         <script>scripts\Translate.gml</script>
-        <script>scripts\PhysicsTranslate.gml</script>
       </scripts>
     </scripts>
     <scripts name="GameModes">
@@ -280,6 +280,18 @@
       <script>scripts\MoveTowards.gml</script>
       <script>scripts\KeepInFrame.gml</script>
       <script>scripts\ShakeCamera.gml</script>
+      <scripts name="Multiple Collisions">
+        <script>scripts\collision_multiple.gml</script>
+        <script>scripts\collision_rectangle_multiple.gml</script>
+        <script>scripts\collision_circle_multiple.gml</script>
+        <script>scripts\collision_line_multiple.gml</script>
+        <script>scripts\collision_ellipse_multiple.gml</script>
+        <script>scripts\collision_point_multiple.gml</script>
+      </scripts>
+      <scripts name="Savegame">
+        <script>scripts\Save.gml</script>
+        <script>scripts\Load.gml</script>
+      </scripts>
       <script>scripts\LoadRoom.gml</script>
     </scripts>
     <scripts name="LevelGeneration">
@@ -291,12 +303,6 @@
       <script>scripts\SaveTile.gml</script>
       <scripts name="LevelEditor">
         <script>scripts\InitLevelEditor.gml</script>
-        <scripts name="Blocks">
-          <script>scripts\AddBlock.gml</script>
-          <script>scripts\RemoveBlock.gml</script>
-          <script>scripts\NextBlock.gml</script>
-          <script>scripts\PreviousBlock.gml</script>
-        </scripts>
         <script>scripts\UpdateLevelEditor.gml</script>
         <script>scripts\DrawLevelEditor.gml</script>
         <script>scripts\ClearLevel.gml</script>
@@ -306,6 +312,12 @@
         <script>scripts\NextLevel.gml</script>
         <script>scripts\PreviousLevel.gml</script>
         <script>scripts\DeleteLevel.gml</script>
+        <scripts name="Blocks">
+          <script>scripts\AddBlock.gml</script>
+          <script>scripts\RemoveBlock.gml</script>
+          <script>scripts\NextBlock.gml</script>
+          <script>scripts\PreviousBlock.gml</script>
+        </scripts>
         <scripts name="AutoTiling">
           <script>scripts\AutoTile.gml</script>
           <script>scripts\IsSolid.gml</script>
@@ -318,40 +330,88 @@
         <script>scripts\InitBlock.gml</script>
         <script>scripts\BeginUpdateBlock.gml</script>
         <script>scripts\UpdateBlock.gml</script>
-        <scripts name="Mechnics">
-          <scripts name="Fall">
-            <script>scripts\InitFall.gml</script>
-            <script>scripts\Fall.gml</script>
-          </scripts>
-        </scripts>
+        <script>scripts\CheckBlockBreak.gml</script>
+        <script>scripts\BreakBlock.gml</script>
       </scripts>
       <scripts name="BodyParts">
         <script>scripts\InitBodyPart.gml</script>
         <script>scripts\UpdateBodyPart.gml</script>
       </scripts>
       <scripts name="PowerUps">
+        <script>scripts\InitPowerUp.gml</script>
         <script>scripts\UpdatePowerUp.gml</script>
         <script>scripts\CollidePowerUp.gml</script>
-        <script>scripts\InitPowerUp.gml</script>
         <script>scripts\ApplyPowerUp.gml</script>
-        <scripts name="Mechanics">
+        <script>scripts\InitPlayerPowerUp.gml</script>
+        <scripts name="PowerUpTypes">
           <script>scripts\PowerUp_Minimize.gml</script>
           <script>scripts\PowerUp_Maximize.gml</script>
         </scripts>
       </scripts>
+      <scripts name="Spell">
+        <script>scripts\InitSpell.gml</script>
+        <script>scripts\UpdateSpell.gml</script>
+        <script>scripts\DrawSpell.gml</script>
+      </scripts>
     </scripts>
-    <scripts name="Savegame">
-      <script>scripts\Save.gml</script>
-      <script>scripts\Load.gml</script>
-    </scripts>
-    <scripts name="GUI">
+    <scripts name="Gui">
       <scripts name="Buttons">
         <script>scripts\InitButton.gml</script>
         <script>scripts\ClickedButton.gml</script>
         <script>scripts\ReleasedButton.gml</script>
+        <script>scripts\ButtonDrawGUI.gml</script>
       </scripts>
       <script>scripts\AdjustViews.gml</script>
       <script>scripts\InitAdjustViews.gml</script>
+    </scripts>
+    <scripts name="Archive">
+      <scripts name="Health">
+        <script>scripts\InitHealth.gml</script>
+        <script>scripts\DrawHealthBar.gml</script>
+        <script>scripts\Damageble.gml</script>
+        <script>scripts\CheckHealth.gml</script>
+      </scripts>
+      <scripts name="Crouch">
+        <script>scripts\InitChrouch.gml</script>
+        <script>scripts\Crouch.gml</script>
+      </scripts>
+      <scripts name="Jump">
+        <script>scripts\InitJump.gml</script>
+        <script>scripts\Jump.gml</script>
+      </scripts>
+      <scripts name="Attack">
+        <script>scripts\InitAttack.gml</script>
+        <script>scripts\Attack.gml</script>
+      </scripts>
+      <scripts name="SlowDownTime">
+        <script>scripts\InitSlowDownTime.gml</script>
+        <script>scripts\SlowDownTime.gml</script>
+      </scripts>
+      <scripts name="Grounded">
+        <script>scripts\InitGrounded.gml</script>
+        <script>scripts\IsGrounded.gml</script>
+      </scripts>
+      <scripts name="Gravity">
+        <script>scripts\InitGravity.gml</script>
+        <script>scripts\Gravity.gml</script>
+      </scripts>
+      <scripts name="DealDamage">
+        <script>scripts\InitDealDamage.gml</script>
+        <script>scripts\DealDamage.gml</script>
+      </scripts>
+      <scripts name="TakeDamage">
+        <script>scripts\InitTakeDamage.gml</script>
+        <script>scripts\DrawTakeDamage.gml</script>
+      </scripts>
+      <scripts name="Fall">
+        <script>scripts\InitFall.gml</script>
+        <script>scripts\Fall.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="Dragon">
+      <script>scripts\InitDragon.gml</script>
+      <script>scripts\UpdateDragon.gml</script>
+      <script>scripts\DrawDragon.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -362,36 +422,31 @@
     <font>fonts\uiFont</font>
   </fonts>
   <objects name="objects">
+    <object>objects\PLZDELETEME_</object>
     <object>objects\System</object>
-    <object>objects\rootObject</object>
-    <object>objects\obj_collidable</object>
     <object>objects\SurfaceManager</object>
-    <object>objects\screen_shake</object>
+    <object>objects\obj_collidable</object>
     <objects name="Characters">
       <object>objects\obj_character</object>
       <object>objects\obj_bodypart</object>
       <object>objects\obj_slash</object>
       <object>objects\obj_spell</object>
+      <object>objects\obj_dragon</object>
     </objects>
     <objects name="Blocks">
+      <object>objects\rootBlock</object>
       <object>objects\obj_metalblock</object>
       <object>objects\obj_cobbleblock</object>
-      <objects name="eventBlocks">
-        <object>objects\obj_metalblock_event</object>
-      </objects>
-      <object>objects\obj_airplane</object>
+      <object>objects\obj_boxblock</object>
     </objects>
     <objects name="UI">
       <object>objects\obj_ui_panel</object>
       <object>objects\obj_ui_winner</object>
-      <object>objects\obj_char_select</object>
     </objects>
     <objects name="Background">
       <object>objects\obj_plane</object>
-      <object>objects\obj_bg_cloud</object>
     </objects>
     <objects name="Objects">
-      <object>objects\obj_parachute</object>
       <object>objects\obj_falling_object</object>
     </objects>
     <objects name="Buttons">
@@ -420,15 +475,21 @@
       <object>objects\obj_powerup_minimize</object>
       <object>objects\obj_powerup_maximize</object>
     </objects>
-    <object>objects\object37</object>
+    <object>objects\test</object>
+    <objects name="puzzles">
+      <object>objects\obj_mill</object>
+      <object>objects\obj_mill_single</object>
+      <object>objects\obj_cannon</object>
+      <object>objects\obj_fireball</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>
     <room>rooms\rm_character_select</room>
     <room>rooms\rm_testarea</room>
     <room>rooms\rm_credits</room>
+    <room>rooms\Rubber_test</room>
     <room>rooms\rm_level_editor</room>
-    <room>rooms\rm_testarea_planes</room>
     <room>rooms\rm_startgame</room>
     <room>rooms\rm_result</room>
   </rooms>

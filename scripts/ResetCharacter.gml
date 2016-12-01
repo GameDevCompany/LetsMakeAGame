@@ -9,6 +9,7 @@ visible = true;
 ApplyPowerUp(false);
 InitMove();
 InitBubbled();
-
+InitBounce();
+bubbled = false;
 
 

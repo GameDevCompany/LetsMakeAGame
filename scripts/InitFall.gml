@@ -1,3 +1,3 @@
-verticalSpeed = 0;
+/*verticalSpeed = 0;
 maxVerticalSpeed = 20;
-falling = false;
+falling = false;*/
