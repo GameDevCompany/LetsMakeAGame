@@ -169,6 +169,9 @@
       <sprite>sprites\spr_fireball2</sprite>
       <sprite>sprites\spr_cannon</sprite>
     </sprites>
+    <sprites name="Kitty">
+      <sprite>sprites\Kitty</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\Sky</background>
@@ -215,6 +218,18 @@
           <script>scripts\CheckBounce.gml</script>
           <script>scripts\AddBounceSpeed.gml</script>
           <script>scripts\InitBounce.gml</script>
+        </scripts>
+        <scripts name="Jump">
+          <script>scripts\InitJump.gml</script>
+          <script>scripts\Jump.gml</script>
+        </scripts>
+        <scripts name="Grounded">
+          <script>scripts\InitGrounded.gml</script>
+          <script>scripts\IsGrounded.gml</script>
+        </scripts>
+        <scripts name="Gravity">
+          <script>scripts\InitGravity.gml</script>
+          <script>scripts\Gravity.gml</script>
         </scripts>
       </scripts>
       <scripts name="Animation">
@@ -375,10 +390,6 @@
         <script>scripts\InitChrouch.gml</script>
         <script>scripts\Crouch.gml</script>
       </scripts>
-      <scripts name="Jump">
-        <script>scripts\InitJump.gml</script>
-        <script>scripts\Jump.gml</script>
-      </scripts>
       <scripts name="Attack">
         <script>scripts\InitAttack.gml</script>
         <script>scripts\Attack.gml</script>
@@ -386,14 +397,6 @@
       <scripts name="SlowDownTime">
         <script>scripts\InitSlowDownTime.gml</script>
         <script>scripts\SlowDownTime.gml</script>
-      </scripts>
-      <scripts name="Grounded">
-        <script>scripts\InitGrounded.gml</script>
-        <script>scripts\IsGrounded.gml</script>
-      </scripts>
-      <scripts name="Gravity">
-        <script>scripts\InitGravity.gml</script>
-        <script>scripts\Gravity.gml</script>
       </scripts>
       <scripts name="DealDamage">
         <script>scripts\InitDealDamage.gml</script>

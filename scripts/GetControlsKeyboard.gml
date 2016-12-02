@@ -6,7 +6,7 @@ horizontalAxis -= keyboard_check(vk_left);
 horizontalAxis += keyboard_check(vk_right);
 
 horizontalSpeed *= 0.5;
-horizontalSpeed += horizontalAxis * movementSpeed;
+horizontalSpeed += horizontalAxis;
 
 verticalAxis = 0;
 verticalAxis -= keyboard_check(vk_up);
@@ -22,4 +22,5 @@ jumpKeyPressed = keyboard_check_pressed(vk_space);
 //Attacking
 attackKeyPressed = keyboard_check_pressed(ord('Z'));
 attackKeyHold = keyboard_check(ord('Z'));
+attackKeyReleased = keyboard_check_released(ord('Z'));
 

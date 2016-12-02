@@ -1,5 +1,8 @@
 horizontalSpeed *= 0.2;
 horizontalSpeed += movementSpeedHor * horizontalAxis;
+if(grounded) {
+  horizontalSpeed += movementSpeedHor * horizontalAxis * 0.5;
+}
 if(verticalSpeed > 0) {
   verticalSpeed *= 0.2;
 }else {

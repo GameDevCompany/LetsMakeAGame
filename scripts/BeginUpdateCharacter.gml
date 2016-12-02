@@ -1,7 +1,7 @@
 if(global.inGame) {
   ResetState();
   if(alive) {
-    GetControlsGamepad();
+    GetControlsKeyboard();
     Timeout();
     Bubbled();
     CastSpell();

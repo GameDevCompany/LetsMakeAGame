@@ -17,7 +17,7 @@ if(attackPattern == "fot") {
       state = "up";
     }
   } else {
-    if(y > -100) {
+    if(y > -300) {
       y -= 7;
     } else {
       state = "init";
@@ -83,11 +83,11 @@ if(depth > -20 && depth < 20) {
     }
   }
 }
-if(pat > 3) {
+/*if(pat > 3) {
   if(attackPattern == "fot") {
     attackPattern = "flyattack"
   } else {
     attackPattern = "fot"
   }
   pat = 0;
-}
+}*/
