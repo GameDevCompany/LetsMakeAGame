@@ -44,7 +44,7 @@ if(global.selectCharacters) {
       lastGround = y;
       verticalSpeed = 0;
       SetState("grounded",false);
-      global.lvlspd = 1;
+      global.lvlspd = 0;
     } else {
     
      if(y > lastGround) {
@@ -52,7 +52,7 @@ if(global.selectCharacters) {
         lastGround = 0;
      } else {
         verticalSpeed += 40;
-        global.lvlspd = 1;
+        global.lvlspd = 0;
      }
 
     }

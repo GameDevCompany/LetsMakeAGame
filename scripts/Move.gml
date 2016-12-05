@@ -13,7 +13,7 @@ if(y < view_hview[global.gameview]*0.1) {
   verticalSpeed += 1;
 }
 
-verticalSpeed += verticalAxis * movementSpeedVer;
+//verticalSpeed += verticalAxis * movementSpeedVer;
 if(verticalSpeed >= maxVerticalSpeed) {
   verticalSpeed = maxVerticalSpeed;
 }

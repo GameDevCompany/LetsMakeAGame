@@ -10,6 +10,7 @@ currentLevel = ds_grid_create(level[? "width"],level[? "height"]);
 ds_grid_read(currentLevel,levelData[| 0]);
 pos = 0;
 global.lvlspd = 5;
+
 //SHADER STUFF
 uheight = shader_get_uniform(SkyGradient,"height");
 shader_sample = shader_get_sampler_index(SkyGradient, "gm_BaseTexture");
