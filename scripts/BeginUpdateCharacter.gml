@@ -1,15 +1,19 @@
 if(global.inGame) {
   ResetState();
   if(alive) {
+    y -= GetLevelSpeed();
     GetControlsGamepad();
     Timeout();
     Bubbled();
     CastSpell();
     Move();
+    EnterDoor();
 
     if(grounded) {
       verticalSpeed = 0;
-    } 
+    }  else {
+      Gravity();
+    }
     Jump();
 
     //Animation state

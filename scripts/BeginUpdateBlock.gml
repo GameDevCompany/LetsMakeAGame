@@ -1,3 +1,3 @@
 image_angle += rotationSpeed;
-verticalSpeed = -global.lvlspd;
+verticalSpeed = -GetLevelSpeed();
 Translate();

@@ -8,4 +8,5 @@ objects[5] = obj_boxblock;
 objects[6] = obj_mill;
 objects[7] = obj_mill_single;
 objects[8] = obj_cannon;
+objects[9] = obj_door;
 return objects;

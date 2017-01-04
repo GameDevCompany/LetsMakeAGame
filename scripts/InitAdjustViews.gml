@@ -1,10 +1,10 @@
 game = 1;
 background = 0;
-
+global.backgroundview = background;
 global.gameview = game;
 global.gamePortX = 0;
-targetWidth = 640;
-targetHeight = 480;
+targetWidth = 1440;
+targetHeight = 1080;
 
 global.guiScaleX = 1;
 global.guiScaleY = 1;

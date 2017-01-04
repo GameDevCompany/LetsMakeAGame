@@ -1,8 +1,9 @@
 //image_xscale = attackPower*4;
 //image_yscale = attackPower*4;
+CleanObjects();
 
 image_angle += 4;
-//attackPower -= 0.08;
+attackPower -= 0.08;
 //particleSize = clamp(attackPower,0,1);
 part_type_alpha2(global.spellParticles, 0.5, 0);
 part_type_size(global.spellParticles,particleSize,attackPower, 0, 0.2);

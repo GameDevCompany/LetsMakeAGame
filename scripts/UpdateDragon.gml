@@ -62,7 +62,7 @@ if(attackPattern == "fot") {
 }
 
 if(depth > -20 && depth < 20) {
-  var list = collision_multiple(x,y,rootBlock);
+  var list = collision_multiple(x,y,root_block);
   for (var i = 0; i < ds_list_size(list); i++)
   {
     var obj = list[|i];
@@ -83,11 +83,11 @@ if(depth > -20 && depth < 20) {
     }
   }
 }
-/*if(pat > 3) {
+if(pat > 3) {
   if(attackPattern == "fot") {
     attackPattern = "flyattack"
   } else {
     attackPattern = "fot"
   }
   pat = 0;
-}*/
+}

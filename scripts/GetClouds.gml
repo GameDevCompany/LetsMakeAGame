@@ -1,0 +1,14 @@
+var objects;
+objects[0] = spr_cloud1;
+objects[1] = spr_cloud2;
+objects[2] = spr_cloud3;
+objects[3] = spr_cloud4;
+objects[4] = spr_cloud5;
+objects[5] = spr_cloud6;
+objects[6] = spr_cloud8;
+objects[7] = spr_small_cloud1;
+objects[8] = spr_small_cloud2;
+objects[9] = spr_small_cloud3;
+objects[10] = spr_small_cloud4;
+objects[11] = spr_small_cloud5;
+return objects;

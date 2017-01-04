@@ -17,8 +17,8 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>32</width>
-  <height>480</height>
+  <width>72</width>
+  <height>1080</height>
   <frames>
     <frame index="0">images\EditorMenuBackground_0.png</frame>
   </frames>
