@@ -1,5 +1,5 @@
-var x_mouse = clamp(mouse_x,0,1440);
-var y_mouse = clamp(mouse_y,0,1080);
-if(object_exists(blocks[currentBlock]) && mouse_x < 1440) {
-  draw_sprite(blocks[currentBlock].sprite_index,0,floor(x_mouse/72)*72+36,floor(y_mouse/72)*72+36);
+var x_mouse = clamp(mouse_x,0,level_width);
+var y_mouse = clamp(mouse_y,0,level_height);
+if(object_exists(blocks[currentBlock]) && mouse_x < level_width) {
+  draw_sprite(blocks[currentBlock].sprite_index,0,floor(x_mouse/grid_block_size)*grid_block_size+(grid_block_size/2),floor(y_mouse/grid_block_size)*grid_block_size+(grid_block_size/2));
 }

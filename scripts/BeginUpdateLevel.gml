@@ -1,6 +1,6 @@
 GenerateBackground();
 
-if(pos < floor(height/72)) {
+if(pos < floor(height/grid_block_size)) {
   SpawnObjects();
   pos++;
 }

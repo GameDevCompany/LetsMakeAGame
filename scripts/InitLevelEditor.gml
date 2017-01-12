@@ -6,6 +6,10 @@ for(var i = 1; i < array_length_1d(blocks);i++) {
     falling = false;
     verticalSpeed = 0;
     rotationSpeed = 0;
+    neighbours[0] = 0;
+    neighbours[1] = 0;
+    neighbours[2] = 0;
+    neighbours[3] = 0;
   }
 }
 

@@ -71,22 +71,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x += 6;
+            <string>x += 30;
 
-var list = collision_multiple(x,y,obj_character);
-for (var i = 0; i &lt; ds_list_size(list); i++)
-{
-  var obj = list[|i];
-  with (obj) {
-     KillCharacter(); 
-  }
+var isHit = HitCharacter();
+if(isHit) {
   instance_destroy();
 }
+
 
 var list = collision_multiple(x,y,root_block);
 if(ds_list_size(list) &gt; 0) {
   instance_destroy();
 }
+
 CleanObjects();
 </string>
           </argument>

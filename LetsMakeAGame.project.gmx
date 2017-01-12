@@ -28,6 +28,7 @@
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\snd_crunch</sound>
+    <sound>sound\snd_currency_pickup</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
@@ -56,12 +57,7 @@
         <sprite>sprites\spr_witch_purple_slide_left</sprite>
         <sprite>sprites\spr_witch_purple_walk_left</sprite>
         <sprite>sprites\spr_witch_purple_walk_right</sprite>
-        <sprites name="parts">
-          <sprite>sprites\spr_witch_purple_head</sprite>
-          <sprite>sprites\spr_witch_purple_body</sprite>
-          <sprite>sprites\spr_witch_purple_arm</sprite>
-          <sprite>sprites\spr_witch_purple_leg</sprite>
-        </sprites>
+        <sprite>sprites\spr_witch_purple_jump</sprite>
       </sprites>
       <sprites name="witch_green">
         <sprite>sprites\spr_witch_green_hover_left</sprite>
@@ -70,12 +66,6 @@
         <sprite>sprites\spr_witch_green_falling_right</sprite>
         <sprite>sprites\spr_witch_green_idle</sprite>
         <sprite>sprites\spr_witch_green_falling_left</sprite>
-        <sprites name="parts">
-          <sprite>sprites\spr_witch_green_arm</sprite>
-          <sprite>sprites\spr_witch_green_head</sprite>
-          <sprite>sprites\spr_witch_green_leg</sprite>
-          <sprite>sprites\spr_witch_green_body</sprite>
-        </sprites>
       </sprites>
       <sprites name="witch_yellow">
         <sprite>sprites\spr_witch_yellow_hover_left</sprite>
@@ -84,20 +74,14 @@
         <sprite>sprites\spr_witch_yellow_falling_right</sprite>
         <sprite>sprites\spr_witch_yellow_falling_left</sprite>
         <sprite>sprites\spr_witch_yellow_idle</sprite>
-        <sprites name="parts">
-          <sprite>sprites\spr_witch_yellow_body</sprite>
-          <sprite>sprites\spr_witch_yellow_head</sprite>
-          <sprite>sprites\spr_witch_yellow_arm</sprite>
-          <sprite>sprites\spr_witch_yellow_leg</sprite>
-        </sprites>
       </sprites>
       <sprite>sprites\spr_slash</sprite>
       <sprite>sprites\nocollision</sprite>
       <sprite>sprites\spr_char_display</sprite>
+      <sprite>sprites\spr_enemy</sprite>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\spr_regularblock</sprite>
-      <sprite>sprites\sprite131</sprite>
       <sprite>sprites\spr_boxblock</sprite>
       <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_metalblock</sprite>
@@ -148,9 +132,22 @@
       <sprite>sprites\spr_small_cloud3</sprite>
       <sprite>sprites\spr_small_cloud4</sprite>
       <sprite>sprites\spr_small_cloud5</sprite>
+      <sprites name="streak">
+        <sprite>sprites\spr_cloud_soft1</sprite>
+        <sprite>sprites\spr_cloud_soft2</sprite>
+        <sprite>sprites\spr_cloud_soft3</sprite>
+        <sprite>sprites\spr_cloud_soft4</sprite>
+        <sprite>sprites\spr_cloud_soft5</sprite>
+        <sprite>sprites\spr_cloud_soft6</sprite>
+        <sprite>sprites\spr_cloud_streak1</sprite>
+        <sprite>sprites\spr_cloud_streak2</sprite>
+        <sprite>sprites\spr_cloud_streak3</sprite>
+        <sprite>sprites\spr_cloud_streak4</sprite>
+      </sprites>
     </sprites>
     <sprites name="Objects">
       <sprite>sprites\spr_cauldron</sprite>
+      <sprite>sprites\spr_crystal</sprite>
       <sprite>sprites\spr_broom</sprite>
       <sprite>sprites\spr_dog</sprite>
       <sprite>sprites\spr_cat</sprite>
@@ -166,6 +163,16 @@
       <sprite>sprites\spr_single</sprite>
       <sprite>sprites\spr_fireball2</sprite>
       <sprite>sprites\spr_cannon</sprite>
+    </sprites>
+    <sprites name="Enemy">
+      <sprites name="Slime">
+        <sprite>sprites\spr_slime_walk</sprite>
+        <sprite>sprites\spr_slime_air</sprite>
+        <sprite>sprites\spr_slime_jump</sprite>
+      </sprites>
+      <sprites name="Ghost">
+        <sprite>sprites\spr_ghost_hover</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -186,6 +193,13 @@
       <script>scripts\GetLevelSpeed.gml</script>
       <script>scripts\GenerateBackground.gml</script>
       <script>scripts\BeginUpdateLevel.gml</script>
+      <script>scripts\GetNeighbours.gml</script>
+      <script>scripts\GetTile.gml</script>
+      <scripts name="AutoTiling">
+        <script>scripts\AutoTile.gml</script>
+        <script>scripts\IsSolid.gml</script>
+        <script>scripts\SelectAutoTile.gml</script>
+      </scripts>
     </scripts>
     <scripts name="LevelEditor">
       <script>scripts\InitLevelEditor.gml</script>
@@ -204,14 +218,11 @@
         <script>scripts\NextBlock.gml</script>
         <script>scripts\PreviousBlock.gml</script>
       </scripts>
-      <scripts name="AutoTiling">
-        <script>scripts\AutoTile.gml</script>
-        <script>scripts\IsSolid.gml</script>
-        <script>scripts\SelectAutoTile.gml</script>
-      </scripts>
     </scripts>
     <scripts name="Game">
       <script>scripts\Particles.gml</script>
+      <script>scripts\FindClosestCharacter.gml</script>
+      <script>scripts\HitCharacter.gml</script>
       <scripts name="Bubbled">
         <script>scripts\InitBubbled.gml</script>
         <script>scripts\Bubbled.gml</script>
@@ -240,6 +251,7 @@
           <script>scripts\Collision.gml</script>
           <script>scripts\CollisionExtract.gml</script>
           <script>scripts\CheckCollisionDirection.gml</script>
+          <script>scripts\CheckGridCollisionDirection.gml</script>
           <script>scripts\ExtractChecker.gml</script>
         </scripts>
         <scripts name="Rotate">
@@ -266,6 +278,7 @@
       <scripts name="Gravity">
         <script>scripts\InitGravity.gml</script>
         <script>scripts\Gravity.gml</script>
+        <script>scripts\StaticGravity.gml</script>
       </scripts>
       <scripts name="Character">
         <script>scripts\InitCharacter.gml</script>
@@ -327,15 +340,11 @@
           <script>scripts\AnimationEnd.gml</script>
         </scripts>
       </scripts>
-      <scripts name="Dragon">
-        <script>scripts\InitDragon.gml</script>
-        <script>scripts\UpdateDragon.gml</script>
-        <script>scripts\DrawDragon.gml</script>
-      </scripts>
       <scripts name="Spell">
         <script>scripts\InitSpell.gml</script>
         <script>scripts\UpdateSpell.gml</script>
         <script>scripts\DrawSpell.gml</script>
+        <script>scripts\DestroySpell.gml</script>
       </scripts>
       <scripts name="BodyParts">
         <script>scripts\InitBodyPart.gml</script>
@@ -367,8 +376,48 @@
       <scripts name="Cloud">
         <script>scripts\InitCloud.gml</script>
         <script>scripts\GetClouds.gml</script>
-        <script>scripts\GetRandomCloud.gml</script>
+        <script>scripts\GetStreaks.gml</script>
+        <script>scripts\GetRandomObject.gml</script>
         <script>scripts\BeginUpdateCloud.gml</script>
+        <script>scripts\UpdateCloud.gml</script>
+      </scripts>
+      <scripts name="Enemy">
+        <script>scripts\InitEnemy.gml</script>
+        <script>scripts\BeginUpdateEnemy.gml</script>
+        <script>scripts\MoveToClosest.gml</script>
+        <script>scripts\DrawEnemy.gml</script>
+        <script>scripts\FlipObject.gml</script>
+        <script>scripts\HitEnemy.gml</script>
+        <script>scripts\KillEnemy.gml</script>
+        <scripts name="JackO">
+          <script>scripts\JackoBehaviour.gml</script>
+        </scripts>
+        <scripts name="Slime">
+          <script>scripts\InitSlime.gml</script>
+          <script>scripts\SlimeBehaviour.gml</script>
+        </scripts>
+        <scripts name="Ghost">
+          <script>scripts\InitGhost.gml</script>
+          <script>scripts\GhostBehavour.gml</script>
+        </scripts>
+        <scripts name="Dragon">
+          <script>scripts\InitDragon.gml</script>
+          <script>scripts\UpdateDragon.gml</script>
+          <script>scripts\DrawDragon.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="Currency">
+        <script>scripts\InitCurrency.gml</script>
+        <script>scripts\UpdateCurrency.gml</script>
+      </scripts>
+      <scripts name="Audio">
+        <script>scripts\InitAudio.gml</script>
+        <script>scripts\PlaySoundEffect.gml</script>
+      </scripts>
+      <scripts name="Crystal">
+        <script>scripts\InitCrystal.gml</script>
+        <script>scripts\UpdateCrystal.gml</script>
+        <script>scripts\BeginUpdateCrystal.gml</script>
       </scripts>
     </scripts>
     <scripts name="GameModes">
@@ -429,6 +478,7 @@
   <objects name="objects">
     <object>objects\_please_delete_me_</object>
     <object>objects\obj_collidable</object>
+    <object>objects\obj_enemy</object>
     <objects name="Blocks">
       <object>objects\root_block</object>
       <object>objects\obj_metalblock</object>
@@ -441,7 +491,7 @@
       <object>objects\SurfaceManager</object>
       <object>objects\Level</object>
     </objects>
-    <objects name="Objects">
+    <objects name="Game">
       <object>objects\obj_character</object>
       <object>objects\obj_bodypart</object>
       <object>objects\obj_spell</object>
@@ -453,8 +503,11 @@
       <object>objects\obj_powerup_minimize</object>
       <object>objects\obj_powerup_maximize</object>
       <object>objects\obj_door</object>
-      <object>objects\obj_enemy</object>
       <object>objects\obj_cloud</object>
+      <object>objects\obj_jackolantern</object>
+      <object>objects\obj_crystal</object>
+      <object>objects\obj_slime</object>
+      <object>objects\obj_ghost</object>
     </objects>
     <objects name="UI">
       <objects name="Buttons">
@@ -479,11 +532,13 @@
     <objects name="Background">
       <object>objects\obj_moon</object>
     </objects>
+    <object>objects\particle_tester</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>
+    <room>rooms\rm_particle_test</room>
     <room>rooms\rm_character_select</room>
-    <room>rooms\rm_testarea</room>
+    <room>rooms\rm_play_area</room>
     <room>rooms\rm_credits</room>
     <room>rooms\rm_level_editor</room>
     <room>rooms\rm_startgame</room>

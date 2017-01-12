@@ -4,14 +4,13 @@ if(global.inGame) {
     y -= GetLevelSpeed();
     GetControlsGamepad();
     Timeout();
-    Bubbled();
     CastSpell();
     Move();
     EnterDoor();
 
     if(grounded) {
       verticalSpeed = 0;
-    }  else {
+    } else {
       Gravity();
     }
     Jump();

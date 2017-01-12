@@ -1,0 +1,10 @@
+InitEnemy();
+InitCollision();
+slime_angle = 0;
+image_speed = 0.5;
+image_alpha = 0.9;
+slime_angle = 45;
+init_slime = false;
+enemySpeed = 5;
+timer = 0;
+//show_debug_message(slime_angle);

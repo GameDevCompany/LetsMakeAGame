@@ -19,6 +19,6 @@ if(global.selectCharacters) {
   if(numReady == 1) {
     global.selectCharacters = false;
     global.inGame = true;
-    room_goto(rm_testarea);
+    room_goto(rm_play_area);
   }
 }

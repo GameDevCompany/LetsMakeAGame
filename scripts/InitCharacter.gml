@@ -1,4 +1,5 @@
 ///Initiate character variables
+currency = 0;
 prevHorizontalSpeed = 0;
 prevVerticalSpeed = 0;
 alive = true; 

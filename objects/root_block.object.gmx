@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>7</depth>
   <persistent>0</persistent>
   <parentName>obj_collidable</parentName>
   <maskName>nocollision</maskName>

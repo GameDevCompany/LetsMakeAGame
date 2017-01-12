@@ -18,8 +18,8 @@ adj_y[8]= 1;
 
 var sum = 0;
 for(var i = 1; i <= 8; i+=i) {
-  var selected_x = clamp(x_index + adj_x[i],0,19);
-  var selected_y = clamp(y_index + adj_y[i],0,14);
+  var selected_x = clamp(x_index + adj_x[i],0,grid_width-1);
+  var selected_y = clamp(y_index + adj_y[i],0,grid_height-1);
   var value = 0;
   if(grid[# selected_x,selected_y] == grid[# x_index,y_index]) {
     value = 1;

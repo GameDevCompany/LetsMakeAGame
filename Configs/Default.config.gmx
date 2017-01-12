@@ -660,5 +660,13 @@
     <option_xbone_texture_page>1024</option_xbone_texture_page>
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
-  <ConfigConstants/>
+  <ConfigConstants>
+    <constants number="5">
+      <constant name="grid_block_size">72</constant>
+      <constant name="level_width">1440</constant>
+      <constant name="level_height">1080</constant>
+      <constant name="grid_width">20</constant>
+      <constant name="grid_height">15</constant>
+    </constants>
+  </ConfigConstants>
 </Config>

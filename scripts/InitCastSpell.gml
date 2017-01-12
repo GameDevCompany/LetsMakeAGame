@@ -1,5 +1,6 @@
 aimV = 1;
 aimH = 0;
+
 attackPower = 0;
 attackTimer = 0;
 attacked = false;

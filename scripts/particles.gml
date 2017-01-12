@@ -22,27 +22,58 @@ for(var i = 0;i < array_length_1d(masks_local);i++) {
 }
 
 
-global.bloodParticles = part_type_create();
-part_type_shape(global.bloodParticles, pt_shape_square);
-part_type_size(global.bloodParticles, 0.02, 0.04, 0, 0);
-part_type_colour1(global.bloodParticles, c_red);
-part_type_alpha2(global.bloodParticles, 1, 0);
-part_type_speed(global.bloodParticles, 3, 9, 0, 0);
-part_type_direction(global.bloodParticles, 60, 120, 0, 0);
-part_type_gravity(global.bloodParticles, 0.50, 270);
-part_type_orientation(global.bloodParticles, 0, 0, 0, 0, 1);
-part_type_life(global.bloodParticles, room_speed*1, room_speed*1.2);
+global.spellfill = part_type_create();
+part_type_shape(global.spellfill, pt_shape_sphere);
+part_type_size(global.spellfill, 2, 2, -0.005, 0.1);
+part_type_scale(global.spellfill, 1, 1);
+part_type_colour1(global.spellfill,c_aqua);
+part_type_alpha2(global.spellfill, 0.2, 0);
+part_type_speed(global.spellfill, 0, 0, 0, 0);
+//part_type_gravity(global.spellfill,0.5,90);
+part_type_direction(global.spellfill,0,1,0,10);
+part_type_orientation(global.spellfill, 0, 0, 0, 0, 1);
+part_type_blend(global.spellfill, false);
+part_type_life(global.spellfill, room_speed, room_speed);
+
+global.spellinner = part_type_create();
+part_type_shape(global.spellinner, pt_shape_sphere);
+part_type_size(global.spellinner, 1.5, 1.8, -0.005, 0);
+part_type_scale(global.spellinner, 1, 1);
+part_type_colour1(global.spellinner,c_white);
+part_type_alpha2(global.spellinner, 0.2, 0);
+part_type_speed(global.spellinner, 0, 0, 0, 0);
+//part_type_gravity(global.spellinner,0.5,90);
+part_type_direction(global.spellinner,0,1,0,10);
+part_type_orientation(global.spellinner, 0, 0, 0, 0, 1);
+part_type_blend(global.spellinner, true);
+part_type_life(global.spellinner, room_speed, room_speed);
+
+global.sprinkle = part_type_create();
+part_type_shape(global.sprinkle, pt_shape_flare);
+part_type_size(global.sprinkle, 0.25, 0.25, -0.005, 0);
+part_type_scale(global.sprinkle, 1, 1);
+part_type_colour1(global.sprinkle, c_white);
+part_type_alpha2(global.sprinkle, 1, 0);
+part_type_speed(global.sprinkle, 2, 4, 0, 0);
+//part_type_gravity(global.sprinkle,0.1,270);
+part_type_direction(global.sprinkle,0,359,0,0);
+part_type_orientation(global.sprinkle, 0, 360, 0, 360, 1);
+part_type_blend(global.sprinkle, false);
+part_type_life(global.sprinkle, room_speed*4, room_speed*4);
 
 
-//smoke particle that has no use yet
-global.smokeParticles = part_type_create();
-part_type_shape(global.smokeParticles, pt_shape_square);
-part_type_size(global.smokeParticles, 0.05, 0.08, 0.01, 0);
-part_type_scale(global.bloodParticles, 1, 1);
-part_type_colour1(global.smokeParticles, c_gray);
-part_type_alpha2(global.smokeParticles, 0.4, 0);
-part_type_speed(global.smokeParticles, 0.1, 1, 0, 0);
-part_type_life(global.smokeParticles, room_speed*0.5, room_speed*1);
+global.spelldark = part_type_create();
+part_type_shape(global.spelldark, pt_shape_ring);
+part_type_size(global.spelldark, 1.8, 1.8, 0, 0);
+part_type_scale(global.spelldark, 1, 1);
+part_type_colour1(global.spelldark,c_purple);
+part_type_alpha2(global.spelldark, 1, 0);
+part_type_speed(global.spelldark, 0, 0, 0, 0);
+part_type_gravity(global.spelldark,0.5,90);
+part_type_direction(global.spelldark,0,1,0,10);
+part_type_orientation(global.spelldark, 0, 0, 0, 0, 1);
+part_type_blend(global.spelldark, true);
+part_type_life(global.spelldark, 2, 2);
 
 
 //Dirt particle for when something hits the ground.
@@ -81,6 +112,18 @@ part_type_orientation(global.trailParticles, 0, 0, 0, 0, 1);
 part_type_blend(global.trailParticles, false);
 part_type_life(global.trailParticles, room_speed*0.5, room_speed*0.8);
 
+global.starburst = part_type_create();
+part_type_shape(global.starburst, pt_shape_star);
+part_type_size(global.starburst, 0.04, 0.4, -0.005, 0);
+part_type_scale(global.starburst, 1, 1);
+part_type_colour1(global.starburst,c_yellow);
+part_type_alpha2(global.starburst, 0.7, 0);
+part_type_speed(global.starburst, 0, 10, 0, 0);
+part_type_gravity(global.starburst,0.5,270);
+part_type_direction(global.starburst,0,359,0,0);
+part_type_orientation(global.starburst, 0, 359, 0, 0, 1);
+part_type_blend(global.starburst, true);
+part_type_life(global.starburst, room_speed*0.4, room_speed*0.4);
 
 global.trailParticles2 = part_type_create();
 part_type_shape(global.trailParticles2, pt_shape_sphere);
@@ -103,7 +146,7 @@ part_type_colour1(global.spellParticles, c_white);
 part_type_alpha2(global.spellParticles, 0.5, 0);
 part_type_speed(global.spellParticles, 0, 0, 0, 0);
 part_type_orientation(global.spellParticles, 0, 0, 0, 0, 1);
-part_type_blend(global.spellParticles, true);
+part_type_blend(global.spellParticles, false);
 part_type_life(global.spellParticles, room_speed*0.4, room_speed*0.4);
 
 
@@ -120,16 +163,6 @@ part_type_orientation(global.cloudParticles, 0, 0, 0, 0, 0);
 part_type_blend(global.cloudParticles, false);
 part_type_life(global.cloudParticles, room_speed*1, room_speed*2);
 
-/*
-global.brokenCobble = part_type_create();
-part_type_sprite(global.brokenCobble, spr_mosscobble_piece,0,0,0);
-part_type_scale(global.brokenCobble, 1, 1);
-part_type_speed(global.brokenCobble, 1, 3, 0, 0);
-part_type_alpha2(global.brokenCobble, 1, 0);
-part_type_direction(global.brokenCobble, 0, 360, 0, 0);
-part_type_orientation(global.brokenCobble, 0, 360, 1, 0, 1);
-part_type_life(global.brokenCobble, room_speed*1, room_speed*1);
-*/
 
 /* Awesome transition thing?
 global.bloodParticles = part_type_create();

@@ -31,5 +31,7 @@ if(global.selectCharacters) {
     }
     
     KeepInFrame(true, false);
+  } else {
+    SetLevelSpeed(0);
   }
 }

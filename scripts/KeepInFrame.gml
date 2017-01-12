@@ -10,7 +10,8 @@ if(venable) {
   if(y < view_yview[global.gameview]) {
     y = view_yview[global.gameview];
   }
-  if(y > view_yview[global.gameview]+view_hview[global.gameview]) {
-    y = view_yview[global.gameview]+view_hview[global.gameview]
-  }
+
 }
+  if(bbox_bottom > view_yview[global.gameview]+view_hview[global.gameview]) {
+    y = view_yview[global.gameview]+view_hview[global.gameview] - (bbox_bottom-y)
+  }

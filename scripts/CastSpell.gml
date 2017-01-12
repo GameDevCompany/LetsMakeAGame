@@ -3,9 +3,10 @@ if(attackKeyHold) {
     aimH = horizontalAxis;
     aimV = verticalAxis;
   }
-  horizontalSpeed *= 0.1;
-  verticalSpeed *= 0.1;
+  //horizontalSpeed *= 0.1;
+  //verticalSpeed *= 0.1;
 }
+
 if(attackTimer < global.time && attackKeyReleased) {
   attacked = true;
   attackTimer = global.time + 300000;
@@ -15,21 +16,31 @@ if(attackTimer < global.time && attackKeyReleased) {
     color = c_white;
     direction = point_direction(other.x,other.y,other.x + other.aimH,other.y + other.aimV);
     owner = other.id;
-    var dir = MoveTowards(direction,24);
+    var dir = MoveTowards(direction,84);
     x += dir[0];
     y += dir[1];
     attackPower = other.attackPower;
     particleSize = other.attackPower;
-    speed = 12;
+    speed = 30-(6*attackPower);
+    
+    image_xscale = attackPower;
+    image_yscale = attackPower;
+    //speed = 50;
   }
-  
 }
+
 if(attackKeyHold && attackTimer < global.time ) {
   attackHeld += global.timeScale * delta_time;
-  attackPower = clamp(attackHeld/1000000, 0.5, 1);
-  part_type_size(global.spellParticles,attackPower,attackPower, 0, 0.2);
-  var dir = MoveTowards(point_direction(x,y,x + aimH,y + aimV),24);
-  part_particles_create(global.particleSystem, x+dir[0], y+dir[1], global.spellParticles, 2);
+  attackPower = clamp(attackHeld/1000000, 1, 5);
+
+  var dir = MoveTowards(point_direction(x,y,x + aimH,y + aimV),84);
+  particleReduction = -attackPower*0.0025;
+  part_type_size(global.spellfill,attackPower,attackPower, particleReduction, 0.1);
+  part_type_size(global.spellinner,attackPower*0.75,attackPower*0.9, particleReduction, 0);
+  part_type_size(global.spelldark,attackPower*0.9,attackPower*0.9, 0, 0);
+  part_particles_create(global.particleSystem, x+dir[0], y+dir[1], global.spellfill, 1);
+  part_particles_create(global.particleSystem, x+dir[0], y+dir[1], global.spellinner, 1);
+ part_particles_create(global.particleSystem, x+dir[0], y+dir[1], global.spelldark, 1);
 } else {
   attackHeld = 0;
 }
