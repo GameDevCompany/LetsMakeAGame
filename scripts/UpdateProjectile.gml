@@ -1,5 +1,9 @@
+var move = MoveTowards(direction,spd);
+horizontalSpeed = move[0];
+verticalSpeed = move[1];
+
 CleanObjects();
-y -= GetLevelSpeed();
+verticalSpeed -= GetLevelSpeed();
 if(hitEnemies) {
   var isHit = HitEnemy();
   if(isHit) {
@@ -19,3 +23,6 @@ if(hitBlocks) {
     instance_destroy();
   }
 }
+
+
+Translate();

@@ -95,9 +95,7 @@
           <sprite>sprites\spr_ExitLevelButton</sprite>
           <sprite>sprites\spr_NewLevelButton</sprite>
         </sprites>
-        <sprites name="MainMenu">
-          <sprite>sprites\spr_StartGameButton</sprite>
-        </sprites>
+        <sprite>sprites\spr_StartGameButton</sprite>
       </sprites>
       <sprite>sprites\EditorMenuBackground</sprite>
     </sprites>
@@ -160,6 +158,7 @@
       <sprites name="Plant">
         <sprite>sprites\spr_plant_enemy</sprite>
       </sprites>
+      <sprite>sprites\spr_guardian</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -334,10 +333,6 @@
         <script>scripts\UpdateBlock.gml</script>
         <script>scripts\CheckBlockBreak.gml</script>
         <script>scripts\BreakBlock.gml</script>
-        <scripts name="PowerUpTypes">
-          <script>scripts\PowerUp_Minimize.gml</script>
-          <script>scripts\PowerUp_Maximize.gml</script>
-        </scripts>
       </scripts>
       <scripts name="Animation">
         <script>scripts\SetState.gml</script>
@@ -351,11 +346,16 @@
         <script>scripts\UpdatePowerUp.gml</script>
         <script>scripts\CollidePowerUp.gml</script>
         <script>scripts\ApplyPowerUp.gml</script>
+        <scripts name="PowerUpTypes">
+          <script>scripts\PowerUp_Minimize.gml</script>
+          <script>scripts\PowerUp_Maximize.gml</script>
+        </scripts>
       </scripts>
       <scripts name="System">
         <script>scripts\InitSystem.gml</script>
         <script>scripts\SystemLateUpdate.gml</script>
         <script>scripts\GetPlayerIndex.gml</script>
+        <script>scripts\DrawPaused.gml</script>
       </scripts>
       <scripts name="Cloud">
         <script>scripts\InitCloud.gml</script>
@@ -395,6 +395,10 @@
           <script>scripts\InitPlant.gml</script>
           <script>scripts\PlantBehaviour.gml</script>
         </scripts>
+        <scripts name="Guardian">
+          <script>scripts\InitGuardian.gml</script>
+          <script>scripts\GuardianBehaviour.gml</script>
+        </scripts>
       </scripts>
       <scripts name="Currency">
         <script>scripts\InitCurrency.gml</script>
@@ -418,6 +422,7 @@
         <script>scripts\HitCharacter.gml</script>
         <script>scripts\HitBlock.gml</script>
       </scripts>
+      <script>scripts\Paused.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -426,6 +431,8 @@
   </shaders>
   <fonts name="fonts">
     <font>fonts\uiFont</font>
+    <font>fonts\buttonFont</font>
+    <font>fonts\guiFont</font>
   </fonts>
   <objects name="objects">
     <object>objects\_please_delete_me_</object>
@@ -460,6 +467,7 @@
       <object>objects\obj_slime</object>
       <object>objects\obj_ghost</object>
       <object>objects\obj_plant_enemy</object>
+      <object>objects\obj_guardian</object>
     </objects>
     <objects name="UI">
       <object>objects\obj_button</object>
@@ -477,6 +485,10 @@
         <object>objects\obj_LevelEditorButton</object>
         <object>objects\obj_ExitGameButton</object>
         <object>objects\obj_BackButton</object>
+      </objects>
+      <objects name="Paused">
+        <object>objects\obj_MainMenuButton</object>
+        <object>objects\obj_RestartMenuButton</object>
       </objects>
     </objects>
     <objects name="Background">

@@ -1,7 +1,4 @@
-visible = true;
-attackPower = 0.3;
-particleSize = attackPower;
-color = c_white;
+InitTranslate();
 spell_direction = 270;
 spd = 0;
 hitEnemies = true;

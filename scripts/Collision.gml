@@ -11,7 +11,10 @@ if(objectCollided != noone) {
   }
   hit = true;
   verticalSpeed = moveVer;
+}
 
+objectCollided = instance_place(x + horizontalSpeed,y+verticalSpeed,object);
+if(objectCollided != noone) {
   var moveHor = 0; 
   for(var i = 0; i < horizontalSpeed && !place_meeting(x+sign(horizontalSpeed)+moveHor,y + verticalSpeed,object); i++) {
      moveHor += sign(horizontalSpeed);

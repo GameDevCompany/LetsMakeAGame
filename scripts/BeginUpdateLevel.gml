@@ -1,3 +1,4 @@
+if(global.paused) exit;
 GenerateBackground();
 
 if(pos < floor(height/grid_block_size)) {

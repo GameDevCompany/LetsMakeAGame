@@ -1,3 +1,5 @@
+if(global.paused) exit;
+
 //Take left joystick from gamepad and apply it to horizontal speed.
 
 //Left Stick

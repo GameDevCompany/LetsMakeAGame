@@ -1,4 +1,3 @@
-
 ApplyPowerUp(true);
 if(alive) {
   CheckBlockBreak(obj_collidable);

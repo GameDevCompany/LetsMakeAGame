@@ -1,4 +1,5 @@
 InitAudio();
+global.paused = false;
 global.players = noone;
 var gamepads_available = gamepad_get_device_count();
 for(var i = 0;i < gamepads_available;i++;) {

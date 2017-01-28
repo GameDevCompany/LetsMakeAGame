@@ -18,13 +18,13 @@ if(attackTimer < global.time && attackKeyReleased) {
     var dir = MoveTowards(direction,84);
     x += dir[0];
     y += dir[1];
-    speed = 30;
+    spd = 30;
   }
 }
 
 if(attackKeyHold && attackTimer < global.time ) {
   attackHeld += global.timeScale * delta_time;
-  attackPower = clamp(attackHeld/1000000, 1, 5);
+  attackPower = clamp(attackHeld/1000000, 1, 1);
 
   var dir = MoveTowards(point_direction(x,y,x + aimH,y + aimV),84);
   particleReduction = -attackPower*0.0025;

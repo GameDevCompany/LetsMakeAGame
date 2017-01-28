@@ -13,4 +13,5 @@ objects[10] = obj_plant_enemy;
 objects[11] = obj_crystal;
 objects[12] = obj_slime;
 objects[13] = obj_ghost;
+objects[14] = obj_guardian;
 return objects;

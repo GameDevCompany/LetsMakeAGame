@@ -1,3 +1,4 @@
+if(global.paused) exit;
 CleanObjects();
 
 var character = FindClosestCharacter();
@@ -17,7 +18,7 @@ if(character != noone) {
         destroyBlocks = false;
         x += dir[0];
         y += dir[1];
-        speed = 15;
+        spd = 15;
       }
     }
   }
