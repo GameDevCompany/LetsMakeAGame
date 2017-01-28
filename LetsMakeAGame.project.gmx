@@ -78,9 +78,11 @@
         <sprite>sprites\spr_mask8</sprite>
       </sprites>
     </sprites>
-    <sprites name="Weapons">
+    <sprites name="Projectiles">
       <sprite>sprites\spr_spell</sprite>
       <sprite>sprites\spr_bubble</sprite>
+      <sprite>sprites\spr_seed</sprite>
+      <sprite>sprites\spr_spell_explosion</sprite>
     </sprites>
     <sprites name="UI">
       <sprites name="Buttons">
@@ -155,6 +157,9 @@
       <sprites name="Ghost">
         <sprite>sprites\spr_ghost_hover</sprite>
       </sprites>
+      <sprites name="Plant">
+        <sprite>sprites\spr_plant_enemy</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -163,58 +168,54 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\ResultScreen.gml</script>
-    <scripts name="MainMenu">
-      <script>scripts\ExitGame.gml</script>
-    </scripts>
-    <scripts name="Level">
-      <script>scripts\InitLevel.gml</script>
-      <script>scripts\CreateSpawn.gml</script>
-      <script>scripts\ResetLevel.gml</script>
-      <script>scripts\UpdateLevel.gml</script>
-      <script>scripts\SpawnObjects.gml</script>
-      <script>scripts\LevelDrawCall.gml</script>
-      <script>scripts\AvailableBlocks.gml</script>
-      <script>scripts\SaveTile.gml</script>
-      <script>scripts\SetLevelSpeed.gml</script>
-      <script>scripts\GetLevelSpeed.gml</script>
-      <script>scripts\GenerateBackground.gml</script>
-      <script>scripts\BeginUpdateLevel.gml</script>
-      <script>scripts\GetNeighbours.gml</script>
-      <script>scripts\GetTile.gml</script>
-      <scripts name="AutoTiling">
-        <script>scripts\AutoTile.gml</script>
-        <script>scripts\IsSolid.gml</script>
-        <script>scripts\SelectAutoTile.gml</script>
-      </scripts>
-    </scripts>
-    <scripts name="LevelEditor">
-      <script>scripts\InitLevelEditor.gml</script>
-      <script>scripts\UpdateLevelEditor.gml</script>
-      <script>scripts\DrawLevelEditor.gml</script>
-      <script>scripts\ClearLevel.gml</script>
-      <script>scripts\SelectLevel.gml</script>
-      <script>scripts\CreateLevel.gml</script>
-      <script>scripts\SaveLevel.gml</script>
-      <script>scripts\NextLevel.gml</script>
-      <script>scripts\PreviousLevel.gml</script>
-      <script>scripts\DeleteLevel.gml</script>
-      <scripts name="Blocks">
-        <script>scripts\AddBlock.gml</script>
-        <script>scripts\RemoveBlock.gml</script>
-        <script>scripts\NextBlock.gml</script>
-        <script>scripts\PreviousBlock.gml</script>
-      </scripts>
-      <script>scripts\Scaffolding.gml</script>
-    </scripts>
     <scripts name="Game">
       <script>scripts\Particles.gml</script>
+      <script>scripts\AvailableBlocks.gml</script>
+      <script>scripts\ResultScreen.gml</script>
+      <script>scripts\RestartGame.gml</script>
+      <script>scripts\GameEnd.gml</script>
       <script>scripts\FindClosestCharacter.gml</script>
-      <script>scripts\HitCharacter.gml</script>
-      <scripts name="Bubbled">
-        <script>scripts\InitBubbled.gml</script>
-        <script>scripts\Bubbled.gml</script>
-        <script>scripts\DrawBubbled.gml</script>
+      <scripts name="MainMenu">
+        <script>scripts\ExitGame.gml</script>
+      </scripts>
+      <scripts name="Level">
+        <script>scripts\InitLevel.gml</script>
+        <script>scripts\CreateSpawn.gml</script>
+        <script>scripts\ResetLevel.gml</script>
+        <script>scripts\UpdateLevel.gml</script>
+        <script>scripts\SpawnObjects.gml</script>
+        <script>scripts\LevelDrawCall.gml</script>
+        <script>scripts\SaveTile.gml</script>
+        <script>scripts\SetLevelSpeed.gml</script>
+        <script>scripts\GetLevelSpeed.gml</script>
+        <script>scripts\GenerateBackground.gml</script>
+        <script>scripts\BeginUpdateLevel.gml</script>
+        <script>scripts\GetNeighbours.gml</script>
+        <script>scripts\GetTile.gml</script>
+        <scripts name="AutoTiling">
+          <script>scripts\AutoTile.gml</script>
+          <script>scripts\IsSolid.gml</script>
+          <script>scripts\SelectAutoTile.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="LevelEditor">
+        <script>scripts\InitLevelEditor.gml</script>
+        <script>scripts\UpdateLevelEditor.gml</script>
+        <script>scripts\DrawLevelEditor.gml</script>
+        <script>scripts\ClearLevel.gml</script>
+        <script>scripts\SelectLevel.gml</script>
+        <script>scripts\CreateLevel.gml</script>
+        <script>scripts\SaveLevel.gml</script>
+        <script>scripts\NextLevel.gml</script>
+        <script>scripts\PreviousLevel.gml</script>
+        <script>scripts\DeleteLevel.gml</script>
+        <scripts name="Blocks">
+          <script>scripts\AddBlock.gml</script>
+          <script>scripts\RemoveBlock.gml</script>
+          <script>scripts\NextBlock.gml</script>
+          <script>scripts\PreviousBlock.gml</script>
+        </scripts>
+        <script>scripts\Scaffolding.gml</script>
       </scripts>
       <scripts name="Utils">
         <script>scripts\DrawCollider.gml</script>
@@ -262,6 +263,11 @@
           <script>scripts\Save.gml</script>
           <script>scripts\Load.gml</script>
         </scripts>
+      </scripts>
+      <scripts name="Bubbled">
+        <script>scripts\InitBubbled.gml</script>
+        <script>scripts\Bubbled.gml</script>
+        <script>scripts\DrawBubbled.gml</script>
       </scripts>
       <scripts name="Gravity">
         <script>scripts\InitGravity.gml</script>
@@ -321,13 +327,6 @@
           <script>scripts\GetControlsKeyboard.gml</script>
           <script>scripts\GetControlsGamepad.gml</script>
         </scripts>
-        <script>scripts\Character.gml</script>
-      </scripts>
-      <scripts name="Spell">
-        <script>scripts\InitSpell.gml</script>
-        <script>scripts\UpdateSpell.gml</script>
-        <script>scripts\DrawSpell.gml</script>
-        <script>scripts\DestroySpell.gml</script>
       </scripts>
       <scripts name="Blocks">
         <script>scripts\InitBlock.gml</script>
@@ -347,11 +346,11 @@
         <script>scripts\AnimationEnd.gml</script>
       </scripts>
       <scripts name="PowerUps">
+        <script>scripts\InitPlayerPowerUp.gml</script>
         <script>scripts\InitPowerUp.gml</script>
         <script>scripts\UpdatePowerUp.gml</script>
         <script>scripts\CollidePowerUp.gml</script>
         <script>scripts\ApplyPowerUp.gml</script>
-        <script>scripts\InitPlayerPowerUp.gml</script>
       </scripts>
       <scripts name="System">
         <script>scripts\InitSystem.gml</script>
@@ -372,7 +371,6 @@
         <script>scripts\MoveToClosest.gml</script>
         <script>scripts\DrawEnemy.gml</script>
         <script>scripts\FlipObject.gml</script>
-        <script>scripts\HitEnemy.gml</script>
         <script>scripts\KillEnemy.gml</script>
         <scripts name="JackO">
           <script>scripts\JackoBehaviour.gml</script>
@@ -393,6 +391,10 @@
           <script>scripts\DrawDragon.gml</script>
         </scripts>
         <script>scripts\EnemyDash.gml</script>
+        <scripts name="Plant">
+          <script>scripts\InitPlant.gml</script>
+          <script>scripts\PlantBehaviour.gml</script>
+        </scripts>
       </scripts>
       <scripts name="Currency">
         <script>scripts\InitCurrency.gml</script>
@@ -407,46 +409,14 @@
         <script>scripts\UpdateCrystal.gml</script>
         <script>scripts\BeginUpdateCrystal.gml</script>
       </scripts>
-    </scripts>
-    <scripts name="GameModes">
-      <script>scripts\StartMatch.gml</script>
-      <script>scripts\GameEnd.gml</script>
-      <script>scripts\IncreaseScore.gml</script>
-      <scripts name="Modes">
-        <script>scripts\GameMode_Last.gml</script>
-        <script>scripts\GameMode_DeathMatch.gml</script>
-      </scripts>
-    </scripts>
-    <scripts name="Archive">
-      <scripts name="Health">
-        <script>scripts\InitHealth.gml</script>
-        <script>scripts\DrawHealthBar.gml</script>
-        <script>scripts\Damageble.gml</script>
-        <script>scripts\CheckHealth.gml</script>
-      </scripts>
-      <scripts name="Crouch">
-        <script>scripts\InitChrouch.gml</script>
-        <script>scripts\Crouch.gml</script>
-      </scripts>
-      <scripts name="Attack">
-        <script>scripts\InitAttack.gml</script>
-        <script>scripts\Attack.gml</script>
-      </scripts>
-      <scripts name="SlowDownTime">
-        <script>scripts\InitSlowDownTime.gml</script>
-        <script>scripts\SlowDownTime.gml</script>
-      </scripts>
-      <scripts name="DealDamage">
-        <script>scripts\InitDealDamage.gml</script>
-        <script>scripts\DealDamage.gml</script>
-      </scripts>
-      <scripts name="TakeDamage">
-        <script>scripts\InitTakeDamage.gml</script>
-        <script>scripts\DrawTakeDamage.gml</script>
-      </scripts>
-      <scripts name="Fall">
-        <script>scripts\InitFall.gml</script>
-        <script>scripts\Fall.gml</script>
+      <scripts name="Projectile">
+        <script>scripts\InitProjectile.gml</script>
+        <script>scripts\UpdateProjectile.gml</script>
+        <script>scripts\DrawProjectile.gml</script>
+        <script>scripts\DestroyProjectile.gml</script>
+        <script>scripts\HitEnemy.gml</script>
+        <script>scripts\HitCharacter.gml</script>
+        <script>scripts\HitBlock.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -460,22 +430,23 @@
   <objects name="objects">
     <object>objects\_please_delete_me_</object>
     <object>objects\obj_collidable</object>
+    <object>objects\tempObject</object>
+    <object>objects\root_block</object>
     <object>objects\obj_enemy</object>
-    <objects name="Blocks">
-      <object>objects\root_block</object>
-      <object>objects\obj_metalblock</object>
-      <object>objects\obj_cobbleblock</object>
-      <object>objects\obj_boxblock</object>
-    </objects>
     <objects name="System">
       <object>objects\LevelEditor</object>
       <object>objects\System</object>
       <object>objects\SurfaceManager</object>
       <object>objects\Level</object>
     </objects>
+    <objects name="Blocks">
+      <object>objects\obj_metalblock</object>
+      <object>objects\obj_cobbleblock</object>
+      <object>objects\obj_boxblock</object>
+    </objects>
     <objects name="Game">
       <object>objects\obj_character</object>
-      <object>objects\obj_spell</object>
+      <object>objects\obj_projectile</object>
       <object>objects\obj_mill_single</object>
       <object>objects\obj_fireball</object>
       <object>objects\obj_mill</object>
@@ -485,10 +456,10 @@
       <object>objects\obj_powerup_maximize</object>
       <object>objects\obj_door</object>
       <object>objects\obj_cloud</object>
-      <object>objects\obj_jackolantern</object>
       <object>objects\obj_crystal</object>
       <object>objects\obj_slime</object>
       <object>objects\obj_ghost</object>
+      <object>objects\obj_plant_enemy</object>
     </objects>
     <objects name="UI">
       <object>objects\obj_button</object>
@@ -512,6 +483,7 @@
       <object>objects\obj_moon</object>
     </objects>
     <object>objects\particle_tester</object>
+    <object>objects\screen_shake</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>

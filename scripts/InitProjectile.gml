@@ -1,10 +1,10 @@
-InitTranslate();
-owner = noone;
 visible = true;
 attackPower = 0.3;
 particleSize = attackPower;
 color = c_white;
 spell_direction = 270;
 spd = 0;
-falling = false;
-emitter = part_emitter_create(global.particleSystem);
+hitEnemies = true;
+hitCharacters = true;
+hitBlocks = true;
+destroyBlocks = true;

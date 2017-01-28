@@ -6,7 +6,6 @@ if(y > view_yview[global.gameview]+view_hview[global.gameview]) {
 }
 
 draw_self();
-//drawBounce((bounceX/8), (bounceY/8),sprite_index, 1);
 if(bubbled) {
   drawBounce((bounceX/8), (bounceY/8),spr_bubble, 0.7);
 }

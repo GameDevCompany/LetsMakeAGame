@@ -7,9 +7,9 @@ if(!ready) {
       characterTypeIndex = 0;
     }
     if(characterTypeIndex < 0) {
-        characterTypeIndex = array_length_1d(chars)-1;
-      }
+      characterTypeIndex = array_length_1d(chars)-1;
     }
+  }
   characterType = chars[characterTypeIndex];
   SetSprites();
   sprite_index = idleSprite;

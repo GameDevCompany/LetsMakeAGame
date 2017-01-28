@@ -3,29 +3,22 @@ if(attackKeyHold) {
     aimH = horizontalAxis;
     aimV = verticalAxis;
   }
-  //horizontalSpeed *= 0.1;
-  //verticalSpeed *= 0.1;
 }
 
 if(attackTimer < global.time && attackKeyReleased) {
   attacked = true;
   attackTimer = global.time + 300000;
 
-  var inst = instance_create(x,y,obj_spell);
+  var inst = instance_create(x,y,obj_projectile);
   with(inst) {
     color = c_white;
     direction = point_direction(other.x,other.y,other.x + other.aimH,other.y + other.aimV);
     owner = other.id;
+    hitCharacters = false;
     var dir = MoveTowards(direction,84);
     x += dir[0];
     y += dir[1];
-    attackPower = other.attackPower;
-    particleSize = other.attackPower;
-    speed = 30-(6*attackPower);
-    
-    image_xscale = attackPower;
-    image_yscale = attackPower;
-    //speed = 50;
+    speed = 30;
   }
 }
 

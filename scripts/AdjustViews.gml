@@ -1,3 +1,6 @@
+
+
+
 width = argument0;
 height = argument1;
 prevWidth = width;
@@ -16,7 +19,9 @@ prevPortX = global.gamePortX;
 global.gamePortX = gamePortX;
 
 with(all) {
-  x +=  global.gamePortX-other.prevPortX;
+  if(room_get_name(room) == "rm_play_area") { 
+    x +=  global.gamePortX-other.prevPortX;
+  }
 }
 
 

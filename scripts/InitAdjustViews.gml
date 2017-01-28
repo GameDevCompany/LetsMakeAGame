@@ -1,3 +1,4 @@
+
 game = 1;
 background = 0;
 global.backgroundview = background;

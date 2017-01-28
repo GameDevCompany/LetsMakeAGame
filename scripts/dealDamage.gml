@@ -11,7 +11,7 @@ if (inst != noone) {
         }
         
         if(HP <= 0 && global.gameMode == "DeathMatch") {
-          IncreaseScore(playerIndex);
+          //IncreaseScore(playerIndex);
         }
      
         damageColor = 255;

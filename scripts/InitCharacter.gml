@@ -11,6 +11,7 @@ powerUpCoolDown = 0;
 isFalling = true;
 powerUpName = '';
 scale = 1;
+
 index = GetPlayerIndex();
 InitSelectCharacter();
 InitControls();
@@ -25,6 +26,12 @@ InitJump();
 InitGrounded();
 InitBounce();
 
+  var chars = GetAvailableCharacters();
+  characterTypeIndex = 0;
+  characterType = chars[characterTypeIndex];
+  SetSprites();
+  sprite_index = idleSprite;
+  alive = true;
 
 bubbled = false;
 movementSpeedVer = 4*2.25;

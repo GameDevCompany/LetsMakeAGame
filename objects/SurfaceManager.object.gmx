@@ -55,13 +55,6 @@ if(prevWidth != width || prevHeight != height) {
   AdjustViews(width,height);
 }
 
-if(time &gt; 0) {
-  ShakeCamera(amplitude);
-  time--;
-} else {
-  view_angle[global.gameview] = 0;
-}
-
 </string>
           </argument>
         </arguments>
@@ -85,6 +78,8 @@ if(time &gt; 0) {
           <argument>
             <kind>1</kind>
             <string>//Get width and height from the game window
+prevWidth = 0;
+prevHeight = 0;
 width = window_get_width();
 height = window_get_height();
 AdjustViews(width,height);

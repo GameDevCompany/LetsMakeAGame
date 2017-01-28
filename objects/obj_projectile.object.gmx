@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>InitSpell();
+            <string>InitProjectile();
 </string>
           </argument>
         </arguments>
@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>DestroySpell();
+            <string>DestroyProjectile();
 </string>
           </argument>
         </arguments>
@@ -71,7 +71,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>UpdateSpell();
+            <string>UpdateProjectile();
 </string>
           </argument>
         </arguments>
@@ -94,7 +94,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>DrawSpell();
+            <string>DrawProjectile();
 </string>
           </argument>
         </arguments>
