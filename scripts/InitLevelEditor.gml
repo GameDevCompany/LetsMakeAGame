@@ -13,7 +13,8 @@ for(var i = 1; i < array_length_1d(blocks);i++) {
   }
 }
 
-
+background_xscale[0] = view_wview[0] / background_width[0];
+  
 level = Load("Level2");
 levelData = level[? "levels"];
 currentLevel = ds_grid_create(level[? "width"],level[? "height"]);

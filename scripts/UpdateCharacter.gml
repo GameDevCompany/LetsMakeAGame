@@ -23,7 +23,7 @@ if(global.selectCharacters) {
 
     Translate();
     HandleGrounding();
-    HandleAnimation();
+    HandleCharacterAnimation();
     
     if(verticalSpeed > 0.2 && lastGround == 0) {
       part_particles_create(global.particleSystem, bbox_right-5, y, global.trailParticles, 1);

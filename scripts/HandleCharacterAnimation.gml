@@ -1,10 +1,8 @@
-//SetSprites();
 image_speed = global.timeScale * 0.2;
 if(!isFalling) {
   switch(state) {
     case "grounded":
       if(horizontalSpeed < -0.2) {
-        //☺
         sprite_index = walkLeftSprite;
       } else if (horizontalSpeed > 0.2) {
         sprite_index = walkRightSprite;

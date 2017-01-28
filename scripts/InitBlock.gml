@@ -1,5 +1,7 @@
 InitCollision();
 InitTranslate();
+
+
 verticalSpeed = -GetLevelSpeed();
 maxVerticalSpeed = 10;
 grav = 0.5;

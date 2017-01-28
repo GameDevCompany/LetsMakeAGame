@@ -94,7 +94,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>depth = y/100;
+draw_self();
 </string>
           </argument>
         </arguments>

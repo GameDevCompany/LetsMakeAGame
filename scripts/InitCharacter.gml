@@ -24,6 +24,8 @@ InitBubbled();
 InitJump();
 InitGrounded();
 InitBounce();
+
+
 bubbled = false;
 movementSpeedVer = 4*2.25;
 movementSpeedHor = 5*2.25;

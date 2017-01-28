@@ -3,25 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="1" name="datafiles">
-    <datafile>
-      <name>Level2.txt</name>
-      <exists>-1</exists>
-      <size>65109</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>Level2.txt</filename>
-    </datafile>
-  </datafiles>
+  <datafiles number="1" name="datafiles"/>
   <NewExtensions>
     <extension index="0">extensions\Multi-Object Collisions</extension>
     <extension index="1">extensions\Buttons</extension>
@@ -181,8 +163,13 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\ResultScreen.gml</script>
+    <scripts name="MainMenu">
+      <script>scripts\ExitGame.gml</script>
+    </scripts>
     <scripts name="Level">
       <script>scripts\InitLevel.gml</script>
+      <script>scripts\CreateSpawn.gml</script>
       <script>scripts\ResetLevel.gml</script>
       <script>scripts\UpdateLevel.gml</script>
       <script>scripts\SpawnObjects.gml</script>
@@ -218,6 +205,7 @@
         <script>scripts\NextBlock.gml</script>
         <script>scripts\PreviousBlock.gml</script>
       </scripts>
+      <script>scripts\Scaffolding.gml</script>
     </scripts>
     <scripts name="Game">
       <script>scripts\Particles.gml</script>
@@ -287,6 +275,7 @@
         <script>scripts\ResetCharacter.gml</script>
         <script>scripts\KillCharacter.gml</script>
         <script>scripts\DrawCharacter.gml</script>
+        <script>scripts\HandleCharacterAnimation.gml</script>
         <script>scripts\DrawCharacterGUI.gml</script>
         <script>scripts\SetSprites.gml</script>
         <scripts name="Mechanics">
@@ -332,23 +321,13 @@
           <script>scripts\GetControlsKeyboard.gml</script>
           <script>scripts\GetControlsGamepad.gml</script>
         </scripts>
-        <scripts name="Animation">
-          <script>scripts\SetState.gml</script>
-          <script>scripts\HandleAnimation.gml</script>
-          <script>scripts\ResetState.gml</script>
-          <script>scripts\InitAnimation.gml</script>
-          <script>scripts\AnimationEnd.gml</script>
-        </scripts>
+        <script>scripts\Character.gml</script>
       </scripts>
       <scripts name="Spell">
         <script>scripts\InitSpell.gml</script>
         <script>scripts\UpdateSpell.gml</script>
         <script>scripts\DrawSpell.gml</script>
         <script>scripts\DestroySpell.gml</script>
-      </scripts>
-      <scripts name="BodyParts">
-        <script>scripts\InitBodyPart.gml</script>
-        <script>scripts\UpdateBodyPart.gml</script>
       </scripts>
       <scripts name="Blocks">
         <script>scripts\InitBlock.gml</script>
@@ -360,6 +339,12 @@
           <script>scripts\PowerUp_Minimize.gml</script>
           <script>scripts\PowerUp_Maximize.gml</script>
         </scripts>
+      </scripts>
+      <scripts name="Animation">
+        <script>scripts\SetState.gml</script>
+        <script>scripts\ResetState.gml</script>
+        <script>scripts\InitAnimation.gml</script>
+        <script>scripts\AnimationEnd.gml</script>
       </scripts>
       <scripts name="PowerUps">
         <script>scripts\InitPowerUp.gml</script>
@@ -395,16 +380,19 @@
         <scripts name="Slime">
           <script>scripts\InitSlime.gml</script>
           <script>scripts\SlimeBehaviour.gml</script>
+          <script>scripts\SetSlimeAngle.gml</script>
+          <script>scripts\HandleSlimeAnimation.gml</script>
         </scripts>
         <scripts name="Ghost">
           <script>scripts\InitGhost.gml</script>
-          <script>scripts\GhostBehavour.gml</script>
+          <script>scripts\GhostBehaviour.gml</script>
         </scripts>
         <scripts name="Dragon">
           <script>scripts\InitDragon.gml</script>
           <script>scripts\UpdateDragon.gml</script>
           <script>scripts\DrawDragon.gml</script>
         </scripts>
+        <script>scripts\EnemyDash.gml</script>
       </scripts>
       <scripts name="Currency">
         <script>scripts\InitCurrency.gml</script>
@@ -427,12 +415,6 @@
       <scripts name="Modes">
         <script>scripts\GameMode_Last.gml</script>
         <script>scripts\GameMode_DeathMatch.gml</script>
-      </scripts>
-    </scripts>
-    <scripts name="Screens">
-      <script>scripts\ResultScreen.gml</script>
-      <scripts name="MainMenu">
-        <script>scripts\ExitGame.gml</script>
       </scripts>
     </scripts>
     <scripts name="Archive">
@@ -493,7 +475,6 @@
     </objects>
     <objects name="Game">
       <object>objects\obj_character</object>
-      <object>objects\obj_bodypart</object>
       <object>objects\obj_spell</object>
       <object>objects\obj_mill_single</object>
       <object>objects\obj_fireball</object>
@@ -510,23 +491,21 @@
       <object>objects\obj_ghost</object>
     </objects>
     <objects name="UI">
-      <objects name="Buttons">
-        <object>objects\obj_button</object>
-        <objects name="LevelEditor">
-          <object>objects\obj_SaveLevelButton</object>
-          <object>objects\obj_NewLevelButton</object>
-          <object>objects\obj_NextLevelButton</object>
-          <object>objects\obj_ClearLevelButton</object>
-          <object>objects\obj_DeleteLevelButton</object>
-          <object>objects\obj_PreviousLevelButton</object>
-          <object>objects\obj_ExitLevelButton</object>
-        </objects>
-        <objects name="MainMenu">
-          <object>objects\obj_StartGameButton</object>
-          <object>objects\obj_LevelEditorButton</object>
-          <object>objects\obj_ExitGameButton</object>
-          <object>objects\obj_BackButton</object>
-        </objects>
+      <object>objects\obj_button</object>
+      <objects name="LevelEditor">
+        <object>objects\obj_SaveLevelButton</object>
+        <object>objects\obj_NewLevelButton</object>
+        <object>objects\obj_NextLevelButton</object>
+        <object>objects\obj_ClearLevelButton</object>
+        <object>objects\obj_DeleteLevelButton</object>
+        <object>objects\obj_PreviousLevelButton</object>
+        <object>objects\obj_ExitLevelButton</object>
+      </objects>
+      <objects name="MainMenu">
+        <object>objects\obj_StartGameButton</object>
+        <object>objects\obj_LevelEditorButton</object>
+        <object>objects\obj_ExitGameButton</object>
+        <object>objects\obj_BackButton</object>
       </objects>
     </objects>
     <objects name="Background">
@@ -536,9 +515,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>
-    <room>rooms\rm_particle_test</room>
-    <room>rooms\rm_character_select</room>
     <room>rooms\rm_play_area</room>
+    <room>rooms\rm_particle_test</room>
     <room>rooms\rm_credits</room>
     <room>rooms\rm_level_editor</room>
     <room>rooms\rm_startgame</room>

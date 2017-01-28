@@ -2,7 +2,7 @@
 CleanObjects();
 
 //image_angle += 4;
-attackPower -= 0.08;
+/*attackPower -= 0.08;
 
 particleReduction = -particleSize*0.0025;
 
@@ -16,7 +16,7 @@ part_particles_create(global.particleSystem, x, y, global.spellfill, 1);
 part_particles_create(global.particleSystem, x, y, global.spellinner, 2);
 part_particles_create(global.particleSystem, x, y, global.spelldark, 1);
 part_emitter_burst(global.particleSystem,emitter,global.sprinkle,-3);
-
+*/
 
 
 
@@ -28,13 +28,14 @@ if(isHit) {
 
 var inst = instance_place(x, y, obj_collidable);
 if(inst != noone && inst != owner) {
-  if(attackPower <= 0) {
-    instance_destroy();
-  } else {
+  //if(attackPower <= 0) {
+    //instance_destroy();
+  //} else {
     with(inst) {
       BreakBlock();
     }
-  }
+  //}
+  instance_destroy();
 }
 
 Translate();

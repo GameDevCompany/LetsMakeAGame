@@ -3,7 +3,7 @@ if(grounded) {
   lastGround = y;
   verticalSpeed = 0;
   SetState("grounded",false);
-  SetLevelSpeed(2);
+  SetLevelSpeed(0);
   isFalling = false;
 } else {
  if(y >= lastGround && lastGround != 0) {
@@ -12,7 +12,7 @@ if(grounded) {
     isFalling = true;
  } else if (y < lastGround && lastGround != 0) {
     verticalSpeed += 90;
-    SetLevelSpeed(2);
+    SetLevelSpeed(0);
     isFalling = false;
  }
 }

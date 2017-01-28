@@ -1,9 +1,10 @@
+  background_xscale[0] = view_wview[global.gameview] / background_width[0];
 if(internal_height != floor(height/10)) {
   internal_height = floor(height/10);
   
   //Background gradient scrolling up, adjust for falling speed
   background_vspeed[0] = -level_speed * 0.05;
-  background_xscale[0] = view_wview[global.gameview] / background_width[0];
+
   
   //Fade out stars
   background_vspeed[1] = 0;

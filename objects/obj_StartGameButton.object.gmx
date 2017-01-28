@@ -29,7 +29,7 @@
 script = asset_get_index("LoadRoom");
 buttonKey = ord('S');
 onObject = self;
-param = rm_character_select;
+param = rm_play_area;
 text = "Start game";
 textColor = c_white;
 </string>
