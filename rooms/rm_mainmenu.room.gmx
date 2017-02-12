@@ -8,7 +8,7 @@
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
-  <colour>4194432</colour>
+  <colour>0</colour>
   <showcolour>-1</showcolour>
   <code></code>
   <enableViews>-1</enableViews>
@@ -52,9 +52,12 @@
   </views>
   <instances>
     <instance objName="SurfaceManager" x="-16" y="-8" name="inst_4BA0DB6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_StartGameButton" x="808" y="408" name="inst_98715E75" locked="0" code="buttonColor = c_purple;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_LevelEditorButton" x="808" y="512" name="inst_FA5B4711" locked="0" code="buttonColor = c_purple;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ExitGameButton" x="808" y="608" name="inst_4BFCDCA4" locked="0" code="buttonColor = c_purple;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_StartGameButton" x="800" y="544" name="inst_98715E75" locked="0" code="buttonColor = c_purple;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_LevelEditorButton" x="800" y="704" name="inst_FA5B4711" locked="0" code="buttonColor = c_purple;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ExitGameButton" x="800" y="784" name="inst_4BFCDCA4" locked="0" code="buttonColor = c_purple;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="bg" x="0" y="0" name="inst_8AEDE009" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_SettingButton" x="800" y="624" name="inst_D57CBE27" locked="0" code="buttonColor = c_purple;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_settings" x="16" y="-8" name="inst_7821AC3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

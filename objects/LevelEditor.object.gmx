@@ -72,7 +72,7 @@
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_white);
-var text ="Tile " + string(selectedLevel+1) + "/" + string(ds_list_size(levelData)); 
+var text ="Tile " + string(selectedLevel+1) + "/" + string(ds_list_size(levelData)) + " Depth: "+ string(selectedDepth); 
 draw_text_transformed((10)*global.toGuiX,(room_height-113)*global.toGuiY,text,0.4,0.4,0);
 </string>
           </argument>

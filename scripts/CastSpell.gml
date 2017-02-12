@@ -16,8 +16,16 @@ if(attackTimer < global.time && attackKeyReleased) {
     owner = other.id;
     hitCharacters = false;
     var dir = MoveTowards(direction,84);
-    x += dir[0];
-    y += dir[1];
+    var xx = x+dir[0];
+    var yy = y+dir[1];
+    var hit = Raycast(x,y,xx,yy,root_block);
+    if(is_array(hit)) {
+      x = hit[0];
+      y = hit[1];
+    } else {
+      x = xx;
+      y = yy;
+    }
     spd = 30;
   }
 }

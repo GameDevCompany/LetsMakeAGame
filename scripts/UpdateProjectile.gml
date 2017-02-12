@@ -1,3 +1,4 @@
+var destroy = false;
 var move = MoveTowards(direction,spd);
 horizontalSpeed = move[0];
 verticalSpeed = move[1];
@@ -7,22 +8,25 @@ verticalSpeed -= GetLevelSpeed();
 if(hitEnemies) {
   var isHit = HitEnemy();
   if(isHit) {
-    instance_destroy();
+    destroy = true;
   }
 }
 if(hitCharacters) {
   var isHit = HitCharacter();
   if(isHit) {
-    instance_destroy();
+    destroy = true;
   }
 }
 
 if(hitBlocks) {
   var isHit = HitBlock(destroyBlocks);
   if(isHit) {
-    instance_destroy();
+    destroy = true;
   }
 }
 
+if(destroy) {
+  instance_destroy();
+}
 
 Translate();

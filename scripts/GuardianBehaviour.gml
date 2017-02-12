@@ -1,4 +1,3 @@
-
 var character = FindClosestCharacter();
 if(character != noone) {
   if(IsGrounded(root_block)) {
@@ -22,9 +21,7 @@ if(character != noone) {
 
 }
 StaticGravity();
-
 Collision(root_block);
-
 FlipObject();
 Translate();
 

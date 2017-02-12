@@ -6,6 +6,6 @@ if(file_exists(working_directory + "\"+name+".txt")) {
   var map_data = json_decode( loadData );
   return map_data;  
 } else {
-  var map_data = Scaffolding();
+  var map_data = ds_map_create();//Scaffolding();
   return map_data;
 }

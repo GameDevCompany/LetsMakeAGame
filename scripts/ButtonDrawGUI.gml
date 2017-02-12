@@ -11,5 +11,6 @@ if(text != "") {
   if(pressed) {
     posY = (y+(bh-hh)/2)*global.toGuiY;
   }
+   
   draw_text_transformed(posX,posY,text,0.2*global.toGuiX,0.2*global.toGuiY,0);
 }

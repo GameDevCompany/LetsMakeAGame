@@ -85,18 +85,18 @@
       <sprite>sprites\spr_spell_explosion</sprite>
     </sprites>
     <sprites name="UI">
-      <sprites name="Buttons">
-        <sprites name="LevelEditor">
-          <sprite>sprites\spr_PreviousLevelButton</sprite>
-          <sprite>sprites\spr_ClearLevelButton</sprite>
-          <sprite>sprites\spr_DeleteLevelButton</sprite>
-          <sprite>sprites\spr_SaveLevelButton</sprite>
-          <sprite>sprites\spr_NextLevelButton</sprite>
-          <sprite>sprites\spr_ExitLevelButton</sprite>
-          <sprite>sprites\spr_NewLevelButton</sprite>
-        </sprites>
-        <sprite>sprites\spr_StartGameButton</sprite>
+      <sprites name="LevelEditor">
+        <sprite>sprites\spr_PreviousLevelButton</sprite>
+        <sprite>sprites\spr_PreviousDepth</sprite>
+        <sprite>sprites\spr_ClearLevelButton</sprite>
+        <sprite>sprites\spr_DeleteLevelButton</sprite>
+        <sprite>sprites\spr_SaveLevelButton</sprite>
+        <sprite>sprites\spr_NextLevelButton</sprite>
+        <sprite>sprites\spr_NextDepth</sprite>
+        <sprite>sprites\spr_ExitLevelButton</sprite>
+        <sprite>sprites\spr_NewLevelButton</sprite>
       </sprites>
+      <sprite>sprites\spr_StartGameButton</sprite>
       <sprite>sprites\EditorMenuBackground</sprite>
     </sprites>
     <sprites name="Background">
@@ -108,6 +108,7 @@
       <sprite>sprites\spr_cloud5</sprite>
       <sprite>sprites\spr_cloud6</sprite>
       <sprite>sprites\spr_cloud8</sprite>
+      <sprite>sprites\sprite107_blank2et_clouds</sprite>
       <sprite>sprites\spr_small_cloud1</sprite>
       <sprite>sprites\spr_poof</sprite>
       <sprite>sprites\spr_small_cloud2</sprite>
@@ -160,6 +161,9 @@
       </sprites>
       <sprite>sprites\spr_guardian</sprite>
     </sprites>
+    <sprite>sprites\sprite105_testscreen</sprite>
+    <sprite>sprites\spr_slider</sprite>
+    <sprite>sprites\spr_checkbox</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\sky_background</background>
@@ -174,6 +178,7 @@
       <script>scripts\RestartGame.gml</script>
       <script>scripts\GameEnd.gml</script>
       <script>scripts\FindClosestCharacter.gml</script>
+      <script>scripts\Paused.gml</script>
       <scripts name="MainMenu">
         <script>scripts\ExitGame.gml</script>
       </scripts>
@@ -184,7 +189,6 @@
         <script>scripts\UpdateLevel.gml</script>
         <script>scripts\SpawnObjects.gml</script>
         <script>scripts\LevelDrawCall.gml</script>
-        <script>scripts\SaveTile.gml</script>
         <script>scripts\SetLevelSpeed.gml</script>
         <script>scripts\GetLevelSpeed.gml</script>
         <script>scripts\GenerateBackground.gml</script>
@@ -201,6 +205,7 @@
         <script>scripts\InitLevelEditor.gml</script>
         <script>scripts\UpdateLevelEditor.gml</script>
         <script>scripts\DrawLevelEditor.gml</script>
+        <script>scripts\SaveAll.gml</script>
         <script>scripts\ClearLevel.gml</script>
         <script>scripts\SelectLevel.gml</script>
         <script>scripts\CreateLevel.gml</script>
@@ -208,13 +213,16 @@
         <script>scripts\NextLevel.gml</script>
         <script>scripts\PreviousLevel.gml</script>
         <script>scripts\DeleteLevel.gml</script>
+        <script>scripts\Scaffolding.gml</script>
         <scripts name="Blocks">
           <script>scripts\AddBlock.gml</script>
           <script>scripts\RemoveBlock.gml</script>
           <script>scripts\NextBlock.gml</script>
           <script>scripts\PreviousBlock.gml</script>
         </scripts>
-        <script>scripts\Scaffolding.gml</script>
+        <script>scripts\EncodeSegment.gml</script>
+        <script>scripts\NextDepth.gml</script>
+        <script>scripts\PreviousDepth.gml</script>
       </scripts>
       <scripts name="Utils">
         <script>scripts\DrawCollider.gml</script>
@@ -222,6 +230,7 @@
         <script>scripts\Oscillator.gml</script>
         <script>scripts\LoadRoom.gml</script>
         <script>scripts\PlaySound.gml</script>
+        <script>scripts\Raycast.gml</script>
         <script>scripts\CleanObjects.gml</script>
         <script>scripts\KeepInFrame.gml</script>
         <script>scripts\InitAdjustViews.gml</script>
@@ -233,6 +242,7 @@
           <script>scripts\ClickedButton.gml</script>
           <script>scripts\ReleasedButton.gml</script>
           <script>scripts\ButtonDrawGUI.gml</script>
+          <script>scripts\LabelDrawGUI.gml</script>
         </scripts>
         <scripts name="Collision">
           <script>scripts\InitCollision.gml</script>
@@ -371,6 +381,7 @@
         <script>scripts\MoveToClosest.gml</script>
         <script>scripts\DrawEnemy.gml</script>
         <script>scripts\FlipObject.gml</script>
+        <script>scripts\EnemyDash.gml</script>
         <script>scripts\KillEnemy.gml</script>
         <scripts name="JackO">
           <script>scripts\JackoBehaviour.gml</script>
@@ -390,7 +401,6 @@
           <script>scripts\UpdateDragon.gml</script>
           <script>scripts\DrawDragon.gml</script>
         </scripts>
-        <script>scripts\EnemyDash.gml</script>
         <scripts name="Plant">
           <script>scripts\InitPlant.gml</script>
           <script>scripts\PlantBehaviour.gml</script>
@@ -422,7 +432,13 @@
         <script>scripts\HitCharacter.gml</script>
         <script>scripts\HitBlock.gml</script>
       </scripts>
-      <script>scripts\Paused.gml</script>
+      <scripts name="Settings">
+        <script>scripts\SetSetting.gml</script>
+        <script>scripts\GetSetting.gml</script>
+        <script>scripts\LoadSettings.gml</script>
+        <script>scripts\SaveSettings.gml</script>
+        <script>scripts\ApplySettings.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -475,6 +491,8 @@
         <object>objects\obj_SaveLevelButton</object>
         <object>objects\obj_NewLevelButton</object>
         <object>objects\obj_NextLevelButton</object>
+        <object>objects\obj_NextDepth</object>
+        <object>objects\obj_PreviousDepthButton</object>
         <object>objects\obj_ClearLevelButton</object>
         <object>objects\obj_DeleteLevelButton</object>
         <object>objects\obj_PreviousLevelButton</object>
@@ -482,20 +500,28 @@
       </objects>
       <objects name="MainMenu">
         <object>objects\obj_StartGameButton</object>
+        <object>objects\obj_SettingButton</object>
         <object>objects\obj_LevelEditorButton</object>
         <object>objects\obj_ExitGameButton</object>
         <object>objects\obj_BackButton</object>
+        <object>objects\obj_SaveButton</object>
       </objects>
       <objects name="Paused">
         <object>objects\obj_MainMenuButton</object>
         <object>objects\obj_RestartMenuButton</object>
       </objects>
+      <object>objects\obj_label</object>
+      <object>objects\obj_slider</object>
+      <object>objects\obj_checkbox</object>
+      <object>objects\obj_settings</object>
     </objects>
     <objects name="Background">
       <object>objects\obj_moon</object>
+      <object>objects\cloud_transition</object>
     </objects>
     <object>objects\particle_tester</object>
     <object>objects\screen_shake</object>
+    <object>objects\bg</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>
@@ -505,6 +531,7 @@
     <room>rooms\rm_level_editor</room>
     <room>rooms\rm_startgame</room>
     <room>rooms\rm_result</room>
+    <room>rooms\rm_settings</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

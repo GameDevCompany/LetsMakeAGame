@@ -13,6 +13,7 @@ if(currentLevel[# mx,my] != currentBlock) {
   if(object_exists(blocks[currentBlock])) {
     var inst = instance_create((mx*grid_block_size)+(grid_block_size/2),(my*grid_block_size)+(grid_block_size/2),blocks[currentBlock]);
     levelObjects[# mx,my] = inst;
+    ds_list_add(allObjects,inst);
     with(inst) {
       x_index = mx;
       y_index = my;

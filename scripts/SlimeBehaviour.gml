@@ -6,6 +6,7 @@ if(jump) {
   SetState("flying",false);
 }
 
+//Detect intial wall
 if(!init_slime) {
   if(neighbours[0] != 0) {
     SetSlimeAngle(90);
@@ -19,8 +20,6 @@ if(!init_slime) {
   direction = slime_angle;
   init_slime = true;
 }
-
-
 
 if(character != noone) {
   if(timer < global.time) {
@@ -39,10 +38,6 @@ if(character != noone) {
     }
     movement_direction = options[irandom_range(0,array_length_1d(options)-1)];
   }
-  
-
-
-
   
   if(jump_timer < global.time && !jump) {
     jump_timer = global.time + random_range(1000000,5000000);
