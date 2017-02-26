@@ -1,4 +1,5 @@
 var flip = 1;
+attackPattern = "flyattack";
 if(attackPattern == "fot") {
   sprite = spr_dragon_foot;
   sprite_index = spr_dragon_foot;
@@ -29,7 +30,7 @@ if(attackPattern == "fot") {
 } else if(attackPattern == "flyattack") {
   prevDepth = depth;
   sprite_index = sprite;
-  depth = Oscillator(0.001,100);
+  depth = 100 + Oscillator(0.001,1000);
   if(depth > prevDepth) {
     if(sprite != spr_dragonback) {
       pat++;

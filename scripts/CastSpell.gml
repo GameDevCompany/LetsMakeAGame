@@ -1,7 +1,12 @@
 if(attackKeyHold) {
-  if(point_distance(0, 0, horizontalAxis, verticalAxis) > 0.7) {
-    aimH = horizontalAxis;
-    aimV = verticalAxis;
+  if(point_distance(0, 0, rightHorizontalAxis, rightVerticalAxis) > 0.7) {
+    aimH = rightHorizontalAxis;
+    aimV = rightVerticalAxis;
+  } else {
+    if(point_distance(0, 0, horizontalAxis, verticalAxis) > 0.7) {
+      aimH = horizontalAxis;
+      aimV = verticalAxis;
+    }
   }
 }
 
@@ -18,6 +23,7 @@ if(attackTimer < global.time && attackKeyReleased) {
     var dir = MoveTowards(direction,84);
     var xx = x+dir[0];
     var yy = y+dir[1];
+    hasLight = true;
     var hit = Raycast(x,y,xx,yy,root_block);
     if(is_array(hit)) {
       x = hit[0];

@@ -2,7 +2,7 @@
 <sprite>
   <type>0</type>
   <xorig>36</xorig>
-  <yorigin>36</yorigin>
+  <yorigin>73</yorigin>
   <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
@@ -18,7 +18,7 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>72</width>
-  <height>72</height>
+  <height>144</height>
   <frames>
     <frame index="0">images\spr_cannon_0.png</frame>
   </frames>

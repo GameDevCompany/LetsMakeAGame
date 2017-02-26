@@ -3,6 +3,6 @@ with(inst) {
   sprite_index = spr_spell_explosion;
   image_angle = other.direction + 90;
   image_speed = 0.5;
-  image_alpha = 0.5;
+  image_alpha = 1;
 }
 instance_create(x,y,screen_shake);

@@ -16,9 +16,10 @@ for(var i = 0;i < array_length_1d(masks_local);i++) {
   part_type_scale(global.particles[i], 1, 1);
   part_type_speed(global.particles[i], 1, 3, 0, 0);
   part_type_alpha2(global.particles[i], 1, 0);
+  part_type_gravity(global.particles[i],0.5,270);
   part_type_direction(global.particles[i], 0, 360, 0, 0);
   part_type_orientation(global.particles[i], 0, 360, 1, 0, 1);
-  part_type_life(global.particles[i], room_speed*1, room_speed*1);
+  part_type_life(global.particles[i], room_speed*0.7, room_speed*0.7);
 }
 
 

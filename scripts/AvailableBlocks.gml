@@ -14,4 +14,13 @@ objects[11] = obj_crystal;
 objects[12] = obj_slime;
 objects[13] = obj_ghost;
 objects[14] = obj_guardian;
+objects[15] = obj_bg_window;
+objects[16] = obj_bg_wall;
+
+objects[17] = obj_table;
+objects[18] = obj_chair_left;
+objects[19] = obj_chair_right;
+objects[20] = obj_torch;
+objects[21] = obj_painting;
+
 return objects;

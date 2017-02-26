@@ -11,7 +11,7 @@ powerUpCoolDown = 0;
 isFalling = true;
 powerUpName = '';
 scale = 1;
-
+lifeCount = 3;
 index = GetPlayerIndex();
 InitSelectCharacter();
 InitControls();

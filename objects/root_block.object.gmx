@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>InitBlock();
+
 </string>
           </argument>
         </arguments>
@@ -94,7 +95,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = y/100;
+            <string>depth = layer + (y/100);
 draw_self();
 </string>
           </argument>

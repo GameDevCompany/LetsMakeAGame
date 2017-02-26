@@ -23,9 +23,11 @@ for(var d = 0; d < 3; d++) {
             y_index = j;
             falling = false;
             if(d != dIndex) {
-              image_alpha = 0.5;
+              image_alpha = 0.5;        
             }
-            depth = d;
+            
+            layer = 300 - (d * 100);
+            depth = layer;
             neighbours = GetNeighbours(x_index,y_index,loadLevel);
             verticalSpeed = 0;
             rotationSpeed = 0;

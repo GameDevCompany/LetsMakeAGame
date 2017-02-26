@@ -65,6 +65,10 @@
     <sprites name="Blocks">
       <sprite>sprites\spr_regularblock</sprite>
       <sprite>sprites\spr_boxblock</sprite>
+      <sprite>sprites\spr_single</sprite>
+      <sprite>sprites\spr_cannon</sprite>
+      <sprite>sprites\spr_fireball2</sprite>
+      <sprite>sprites\spr_mill</sprite>
       <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_metalblock</sprite>
       <sprites name="Mask">
@@ -77,12 +81,18 @@
         <sprite>sprites\spr_mask7</sprite>
         <sprite>sprites\spr_mask8</sprite>
       </sprites>
+      <sprite>sprites\spr_torch</sprite>
+      <sprite>sprites\spr_chair_right</sprite>
+      <sprite>sprites\spr_chair_left</sprite>
+      <sprite>sprites\spr_table</sprite>
+      <sprite>sprites\spr_painting</sprite>
     </sprites>
     <sprites name="Projectiles">
       <sprite>sprites\spr_spell</sprite>
       <sprite>sprites\spr_bubble</sprite>
       <sprite>sprites\spr_seed</sprite>
       <sprite>sprites\spr_spell_explosion</sprite>
+      <sprite>sprites\light</sprite>
     </sprites>
     <sprites name="UI">
       <sprites name="LevelEditor">
@@ -127,6 +137,8 @@
         <sprite>sprites\spr_cloud_streak3</sprite>
         <sprite>sprites\spr_cloud_streak4</sprite>
       </sprites>
+      <sprite>sprites\spr_bg_window</sprite>
+      <sprite>sprites\spr_bg_wall</sprite>
     </sprites>
     <sprites name="Objects">
       <sprite>sprites\spr_cauldron</sprite>
@@ -140,12 +152,6 @@
       <sprite>sprites\spr_dragon</sprite>
       <sprite>sprites\spr_dragonback</sprite>
       <sprite>sprites\spr_dragon_foot</sprite>
-    </sprites>
-    <sprites name="Puzzles">
-      <sprite>sprites\spr_mill</sprite>
-      <sprite>sprites\spr_single</sprite>
-      <sprite>sprites\spr_fireball2</sprite>
-      <sprite>sprites\spr_cannon</sprite>
     </sprites>
     <sprites name="Enemy">
       <sprites name="Slime">
@@ -184,6 +190,7 @@
       </scripts>
       <scripts name="Level">
         <script>scripts\InitLevel.gml</script>
+        <script>scripts\BeginUpdateLevel.gml</script>
         <script>scripts\CreateSpawn.gml</script>
         <script>scripts\ResetLevel.gml</script>
         <script>scripts\UpdateLevel.gml</script>
@@ -192,7 +199,6 @@
         <script>scripts\SetLevelSpeed.gml</script>
         <script>scripts\GetLevelSpeed.gml</script>
         <script>scripts\GenerateBackground.gml</script>
-        <script>scripts\BeginUpdateLevel.gml</script>
         <script>scripts\GetNeighbours.gml</script>
         <script>scripts\GetTile.gml</script>
         <scripts name="AutoTiling">
@@ -469,6 +475,17 @@
     </objects>
     <objects name="Game">
       <object>objects\obj_character</object>
+      <objects name="Background">
+        <object>objects\obj_moon</object>
+        <object>objects\obj_cloud_transition</object>
+        <object>objects\obj_bg_window</object>
+        <object>objects\obj_bg_wall</object>
+        <object>objects\obj_painting</object>
+        <object>objects\obj_table</object>
+        <object>objects\obj_chair_left</object>
+        <object>objects\obj_chair_right</object>
+        <object>objects\obj_torch</object>
+      </objects>
       <object>objects\obj_projectile</object>
       <object>objects\obj_mill_single</object>
       <object>objects\obj_fireball</object>
@@ -515,18 +532,15 @@
       <object>objects\obj_checkbox</object>
       <object>objects\obj_settings</object>
     </objects>
-    <objects name="Background">
-      <object>objects\obj_moon</object>
-      <object>objects\cloud_transition</object>
-    </objects>
     <object>objects\particle_tester</object>
     <object>objects\screen_shake</object>
     <object>objects\bg</object>
+    <object>objects\root_background</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainmenu</room>
-    <room>rooms\rm_play_area</room>
     <room>rooms\rm_particle_test</room>
+    <room>rooms\rm_play_area</room>
     <room>rooms\rm_credits</room>
     <room>rooms\rm_level_editor</room>
     <room>rooms\rm_startgame</room>

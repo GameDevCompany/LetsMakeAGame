@@ -73,6 +73,7 @@ image_speed = 0.5;
           <argument>
             <kind>1</kind>
             <string>DrawDragon();
+
 </string>
           </argument>
         </arguments>

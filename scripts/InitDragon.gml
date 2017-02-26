@@ -1,4 +1,4 @@
-depth = 100;
+depth = 10000;
 attackPattern = "fot";
 dir = 1;
 sprite = spr_dragon;

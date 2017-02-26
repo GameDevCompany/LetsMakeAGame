@@ -1,7 +1,6 @@
 InitCollision();
 InitTranslate();
-
-
+layer = 0;
 verticalSpeed = -GetLevelSpeed();
 maxVerticalSpeed = 10;
 grav = 0.5;
